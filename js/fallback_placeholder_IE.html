@@ -1,0 +1,54 @@
+
+<input type="text" name="initiales" id="initiales" placeholder="Vos initiales" value="" maxlength="4" />
+<!--[if lte IE 9]>
+    <script type="text/javascript">
+        /*Fallback pour les placeholder sur IE*/
+        $(document).ready(function(){
+            var $input = $("input[type='text']").each(function(){
+                var placeholder = $(this).attr("placeholder");
+                $(this).bind("focusin",focusin);
+                $(this).bind("change",change);
+                $(this).bind("focusout",focusout);
+                if( $(this).val() == "" ) 
+                {
+                    if (placeholder != null && placeholder != "" ){
+                        $(this).val(placeholder);
+                    }                   
+                }
+                else 
+                {
+                    if(placeholder == $(this).val())
+                    {
+                        $(this).addClass('error');
+                    }
+                }
+            });
+            function focusin(){
+                $(this).val("");
+                $(this).unbind("focusin");
+            }
+            function focusout(){
+                if($(this).val() == ""){
+                    var placeholder = $(this).attr("placeholder");
+                    $(this).val(placeholder);
+                    $(this).bind("focusin",focusin);
+                }
+            }
+            function change(){
+                if($(this).val() == ""){
+                    var placeholder = $(this).attr("placeholder");
+                    $(this).val(placeholder);
+                    $(this).bind("focusin",focusin);
+                }                }
+            $('form').submit(function(){
+                $(this).find("input[type='text']").each(function(){
+                    var placeholder = $(this).attr("placeholder");
+                    if( $(this).val() == placeholder ) 
+                    {
+                        $(this).val("");
+                    }
+                 });
+            });
+        });
+    </script>
+<![endif]-->

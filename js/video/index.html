@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>home</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="inner">
+			<style>
+			/*Pseudo FUllSCREEN*/
+				.videoPlaying,
+				.videoPlaying body{max-width: 100%; max-height: 100%; overflow: hidden;}
+				.mejs-video,.mejs-overlay{max-width: 100%; max-height: 100%;}
+				.mejs-video,.mejs-inner{width:100%!important; height: 100%!important;}
+				.mejs-inner{width: 100%; height: 100%; }
+				/*HIDE loader*/
+					/*.mejs-overlay-button,
+					.mejs-overlay-loading{display: none;}*/
+				.playerFullscreenContent{position: absolute; top:0; left:0; width:100%; height: 100%; max-height: 100%; z-index: 100; background: #000; overflow: hidden;}
+				.skip{position: absolute; top: 0; right: 0; color: #fff; padding: 10px 30px; font-size: 25px; cursor: pointer; z-index:100;}
+				#playerFullscreen{width: 100%;  max-height:100%!important; height:100%;}
+			</style>
+			<link rel="stylesheet" type="text/css" href="./public/css/mediaelementplayer.css">
+			<div class="playerFullscreenContent" >
+				<span class="skip" style="">Passer</span>
+				<video width="640" height="360" id="playerFullscreen" autoplay="true">
+				    <!-- Pseudo HTML5 -->
+				    <source type="video/mp4" src="./public/video/Teaser_00.mp4" />
+				    <source type="video/ogv" src="./public/video/Teaser_00.ogv" />
+				    <source type="video/webm" src="./public/video/Teaser_00.webm" />
+				    <object width="320" height="240" type="application/x-shockwave-flash" data="flashmediaelement.swf">
+				        <param name="movie" value="./public/js/flashmediaelement.swf.swf" />
+				        <param name="flashvars" value="controls=true&file=myvideo.mp4" />
+				        <!-- Image as a last resort -->
+				    </object>
+				</video>
+			</div>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+	<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>
+	<script type="text/javascript" src="public/js/script.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+=' ie10';
+		}
+	</script>
+	<script src="./public/js/mediaelement-and-player.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		/*cache/supprime la video*/
+		function hideVideo(){
+			$(".playerFullscreenContent").fadeOut(500);
+	        	$("html").removeClass("videoPlaying");
+			setTimeout(function(){$(".playerFullscreenContent").remove();},500);
+		}
+		/*on créé l'objet mediaelement*/
+		$('video').mediaelementplayer({
+	        success: function(element) {
+				/*appelé a chaque update du temps */
+				function timeupdate(){
+			        if(element.currentTime >= element.duration-1){
+			        	element.pause();
+			        	hideVideo();
+			        }
+			        console.log("update time : " + element.currentTime);
+				}
+	        	// console.log(document.getElementById("playerFullscreen").duration)
+	        	$("html").addClass("videoPlaying");
+	        	$("video").height($(window).height());
+	        	
+	        	element.addEventListener('timeupdate', timeupdate, false);
+
+				element.addEventListener('ended', function(){
+					hideVideo();
+				});
+	        }
+		});
+		$(".skip").click(function(e){
+			hideVideo();
+		});
+	});
+	</script>
+</body>
+</html>

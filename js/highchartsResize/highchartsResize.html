@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>	<html class="no-js ie lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js ie lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>	<html class="no-js ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>FDM Cassiopée</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- <meta name="viewport" content="width=device-width"> -->
+	<meta name="viewport" content="initial-scale=1.0">
+	<link rel="stylesheet" href="public/css/reset.css">
+	<link rel="stylesheet" href="public/css/bootstrap.css">
+	<link rel="stylesheet" href="public/css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+
+	<span id="OriginMoveTo2" class="span6"><!--colonne droite-->
+		<div class="dashboardElement rounded">
+			<div class="tableHeader">Total flights analysed</div>
+			<div class="contentDashboard">
+				<div id="flightAnalized">
+				</div>
+			</div>
+		</div>
+	</span>
+
+	<span id="OriginMoveTo2" class="span6"><!--colonne droite-->
+		<div class="dashboardElement rounded">
+			<div class="tableHeader">Top 10 events during last 30 days</div>
+			<div id="chart1">
+			</div>
+		</div>
+	</span>
+	<script type="text/javascript" src="public/js/libs/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="public/js/highcharts.js"></script>
+	<script type="text/javascript">
+
+		/**************************************************
+		 *	Graphiques via highcharts
+		 *	Doc : http://api.highcharts.com/Highcharts    *
+		 **************************************************/
+
+		//	tableau qui va recevoir tout les graphiques, 
+		//	il sera parcouru au resize de la fenetre pour les redimensionner selon si on est en resolution tablette ou en desktop
+		//	Si on ne veux pas changer la taile d'un graphique selon la résolution, il suffit de mettre le graphique dans une vairable à part
+		var charts = new Array();
+
+		charts["flightAnalized"] = flightAnalized;
+		$(document).ready(function() {
+			charts["flightAnalized"] = new Highcharts.Chart({
+				chart: {
+					renderTo: 'flightAnalized',// l'ID de la div qui va recevoir le graphique 
+					type: 'line',//le type de graphique
+					marginRight: 0,
+					marginBottom: 30,
+					events: {
+						load: function(event) {
+							//Selon si on est en mode tablette ou en desktop, on change la hauteur des graphiques
+							var thisWidth = event["currentTarget"]["containerWidth"];
+							if($(window).width() < 865){
+								event["currentTarget"].setSize(thisWidth, 250, false);
+							}else{
+								event["currentTarget"].setSize(thisWidth, 500, false);
+							}
+		                }
+					}
+				},
+				credits: {
+					enabled: false//cache les credit de highchart
+				},
+				title:{
+					text:''//permet d'afficher un titre au graphique
+				},
+				xAxis: {
+					categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+				},
+				yAxis: {
+					title: {
+						text: ''
+					}
+				},
+				legend: {
+					layout: 'vertical',
+					align: 'right',
+					verticalAlign: 'top',
+					x: -10,
+					y: 100,
+					borderWidth: 0
+				},
+				legend:{
+					enabled:false
+				},
+				series: [{
+					name: 'Tokyo',
+					data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+					//}, {
+					//name: 'London',
+					//data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+				}]
+			});
+		});
+
+		charts['chart1'] = chart1;
+		$(document).ready(function() {
+			charts['chart1'] = new Highcharts.Chart({
+				chart: {
+					renderTo: 'chart1',
+					type: 'bar',
+					events: {
+						load: function(event) {
+							//Selon si on est en mode tablette ou en desktop, on change la hauteur des graphiques
+							var thisWidth = event["currentTarget"]["containerWidth"];
+							if($(window).width() < 865){
+								event["currentTarget"].setSize(thisWidth, 250, false);
+							}else{
+								event["currentTarget"].setSize(thisWidth, 500, false);
+							}
+		                }
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				title:{
+					text:''
+				},
+				xAxis: {
+					categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+					title: {
+						text: null
+					}
+				},
+				yAxis: {
+					title: {
+					   text: 'Population (millions)'
+					}
+				},
+				legend:{
+					enabled:false
+				},
+				series: [{
+						name: 'serie1',
+						data: [1, 5, 4, 2, 3]
+					}]
+			});
+		});
+		console.log(charts);
+		console.log(charts["flightAnalized"]);
+
+		//lorsqu'on change la taille de la fenêtre, on appelle la fonction resize
+
+		if(window.addEventListener){
+			window.addEventListener('resize', resizeChart, false);
+		}else{
+			window.attachEvent ('onresize', resizeChart);
+		}
+		//	Change la hauteur des graphiques si on est en mode tablette/Desktop
+		function resizeChart(){
+			console.log(charts["flightAnalized"]);
+			if($(window).width() < 865){
+				for(var i in charts){
+					charts[i].setSize(charts[i]["containerWidth"], 250, false);
+				}
+			}else{
+				for(var i in charts){
+					charts[i].setSize(charts[i]["containerWidth"], 500, false);
+				}
+			}
+		}
+	</script>
+</body>

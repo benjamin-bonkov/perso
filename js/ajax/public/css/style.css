@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'flamabold_italic';
+    src: url('../font/flama-bi-webfont.eot');
+    src: url('../font/flama-bi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/flama-bi-webfont.woff') format('woff'),
+         url('../font/flama-bi-webfont.ttf') format('truetype'),
+         url('../font/flama-bi-webfont.svg#flamabold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*general*/
+a{text-decoration: none; color: #000;}
+button{cursor: pointer;}
+.wrapper{width:960px;position: relative; margin: 0 auto,}
+.clear{clear:both;}
+
+/*si pas de js :*/
+.no-js{}
+/*si on est sur ie :*/
+.ie{}
+/*si on est sur ie<9 :*/
+.lt-ie9{}
+/*si on est sur ie<8 :*/
+.lt-ie8{}
+/*si on est sur ie<7 :*/
+.lt-ie7{}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Slider</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+
+	<script type="text/javascript" src="public/js/libs/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+	<h1 class="title">Slider</h1>
+
+
+	<h2 class="title">Slider simple</h2>
+	<div id="slider">
+		<button class="control prev">precedent</button>
+		<div class="slide">
+			<img src="public/images/slider/teamwork1.jpg" alt="" />
+			slide 1
+		</div>
+		<div class="slide">
+			<img src="public/images/slider/teamwork2.jpg" alt="" />
+			slide 2
+		</div>
+		<div class="slide">
+			<img src="public/images/slider/koala.jpg" height="500" alt="" />
+			slide 3
+		</div>
+		<div class="slide">
+			<img src="public/images/slider/Penguins.jpg" height="500" alt="" />
+			slide 4
+		</div>
+		<div class="slide">
+			<img src="public/images/slider/portSalut.jpg" alt="" />
+			slide 5
+		</div>
+		<div class="slide">
+			<img src="public/images/slider/cow.jpg" alt="" />
+			slide 6
+		</div>
+		<button class="control next">suivant</button>
+	</div><!-- / #slider -->
+	<script type="text/javascript" src="public/js/slider.js"></script>
+
+
+	<h2 class="title">Slider avec gestion de catégories</h2>
+    <ul id="navSlider" class="navPart">
+        <li>
+        	<a class="part1 active" href="#part1">Part 1</a>
+        </li>
+        <li>
+        	<a class="part2" href="#part2">Part 2</a>
+        </li>
+        <li>
+        	<a class="part3" href="#part3">Part 3</a>
+        </li>
+    </ul>
+	<div id="sliderCategories">
+		<button class="control prev">precedent</button>
+		<div class="contentSlides">
+			<div id="part1" class="part">
+				<div class="slide">
+					<img src="public/images/slider/teamwork1.jpg" alt="" />
+					slide 1
+				</div>
+				<div class="slide">
+					<img src="public/images/slider/teamwork2.jpg" alt="" />
+					slide 2
+				</div>
+			</div>
+			<div id="part2" class="part">
+				<div class="slide">
+					<img src="public/images/slider/koala.jpg" height="500" alt="" />
+					slide 3
+				</div>
+				<div class="slide">
+					<img src="public/images/slider/Penguins.jpg" height="500" alt="" />
+					slide 4
+				</div>
+			</div>
+			<div id="part3" class="part">
+				<div class="slide">
+					<img src="public/images/slider/portSalut.jpg" alt="" />
+					slide 5
+				</div>
+				<div class="slide">
+					<img src="public/images/slider/cow.jpg" alt="" />
+					slide 6
+				</div>
+			</div>
+		</div>
+		<button class="control next">suivant</button>
+	</div><!-- / #slider -->
+	<script type="text/javascript" src="public/js/sliderCategories.js"></script>
+
+	<div id="footer">
+		Un footer qu'il est joli !
+	</div><!--fin #footer-->
+</div><!--fin .wrapper-->
+
+</body>
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="public/js/PIE.js"></script>
+		<script type="text/javascript">
+			/*fallback js pour les bords arrondis*/
+			$(function() {
+			    if (window.PIE) {
+			        $('.rounded').each(function() {
+			            PIE.attach(this);
+			        });
+			    }
+			});
+		</script>
+	<![endif]-->
+</html>

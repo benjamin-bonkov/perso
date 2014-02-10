@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-utf-8" />
+		<title>Show checked</title>
+	</head>
+	<body>
+		<div>
+			<span class="span2 noMediaQ"><input type="radio" name="riskIndex" id="fixed-index" checked="checked" data-target="indexEnd" /></span>
+			<span class="span10 noMediaQ"><label for="fixed-index" class="labelRadio">Fixed index</label></span>
+		</div>
+		<div>
+			<span class="span2 noMediaQ"><input type="radio" name="riskIndex" id="interval" data-target="indexEnd" class="showChecked" /></span>
+			<span class="span10 noMediaQ"><label for="interval" class="labelRadio">Interval</label></span>
+		</div>
+
+		<input type="text" name="index-start" id="index-start" />
+		<input type="text" name="index-end" id="index-end" style="display: none;" class="indexEnd"/>
+		
+		<script src="public/js/libs/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.showChecked').each(function(){
+					var name = $(this).attr("name")
+					,	selectName = "[name='"+name+"']";
+					$(selectName).each(function(){
+						$(this).change(function(){
+							var $this = $(this)
+							,	selector = "."+$this.attr("data-target")
+							,	checked = ($this.attr("checked") == "checked" && $this.hasClass("showChecked")) ? true : false;
+
+								console.log(selector)
+							if(checked){
+								$(selector).show();
+							}else{
+								$(selector).hide().addClass("active");
+							}
+						});
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

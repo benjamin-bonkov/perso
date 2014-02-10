@@ -1,0 +1,735 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>	<html class="no-js ie lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js ie lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>	<html class="no-js ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Analysis - FDM Cassiopée</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="initial-scale=1.0"> -->
+	<link rel="stylesheet" href="public/css/reset.css">
+	<link rel="stylesheet" href="public/css/bootstrap.css">
+	<link rel="stylesheet" href="public/css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<!-- <body onload="touchScroll('scrollMe')"> -->
+<body>
+	<div class="wrapper">
+		<div class="wrapperContent inner row-fluid">
+			<span class="span12">
+				<table id="latestFlights" class="table table-bordered table-striped dataTable hasClear hasExportList">
+					<thead>
+						<tr>
+							<th class="infos" colspan="5" rowspan="1">
+								Infos <a href="#" rel="tooltip" class="toolTip" data-placement="right" data-trigger="hover" data-html="true" data-original-title="
+									<div><i class='icon icon-fav'>Favorite</i> <span>Favorite</span></div>
+									<div><i class='icon icon-eye'>Consulted</i> <span>Consulted</span></div>
+									<div><i class='icon icon-inProgress'>Request in progress</i> <span>Request in progress</span></div>
+									<div><i class='icon icon-analysis'>Analysis available</i> <span>Analysis available</span></div>
+									<div><i class='icon icon-techValid'>Technical validation done</i> <span>Technical validation done</span></div>
+									<div><i class='icon icon-opValid'>Operational validation done</i> <span>Operational validation done</span></div>
+								"><i class="icon-infos"></i></a>
+								<div class="filter filterSelect infosFilter"><div class="numCol hide">0</div></div>
+							</th>
+							<th class="date" colspan="1" rowspan="2">
+								Date
+							</th>
+							<th class="flight" colspan="1" rowspan="2">
+								Flight
+								<div class="filter filterInput">
+									<div class="numCol hide">6</div>
+									<input type="text" name="" value="" class="search_init">
+								</div>
+							</th>
+							<th class="from" colspan="1" rowspan="2">
+								From
+								<div class="filter filterInput">
+									<div class="numCol hide">7</div>
+									<input type="text" name="" value="" class="search_init">
+								</div>
+							</th>
+							<th class="rwy" colspan="1" rowspan="2">
+								RWY
+							</th>
+							<th class="to" colspan="1" rowspan="2">
+								To
+								<div class="filter filterInput">
+									<div class="numCol hide">9</div>
+									<input type="text" name="" value="" class="search_init">
+								</div>
+							</th>
+							<th class="rwy" colspan="1" rowspan="2">
+								RWY
+								<div class="filter filterInput">
+									<div class="numCol hide">10</div>
+									<input type="text" name="" value="" class="search_init hide">
+								</div>
+							</th>
+							<th class="tail" colspan="1" rowspan="2">
+								Tail
+							</th>
+							<th class="type" colspan="1" rowspan="2">
+								Type
+								<div class="filter filterInput">
+									<div class="numCol hide">12</div>
+									<input type="text" name="" value="" class="search_init">
+								</div>
+							</th>
+							<th class="tko" colspan="1" rowspan="2">
+								TKO
+								<div class="filter filterSelect"><div class="numCol hide">13</div></div>
+							</th>
+							<th class="cr" colspan="1" rowspan="2">
+								CR
+								<div class="filter filterSelect"> <div class="numCol hide">14</div></div>
+							</th>
+							<th class="app" colspan="1" rowspan="2" >
+								APP
+								<div class="filter filterSelect"> <div class="numCol hide">15</div></div>
+							</th>
+							<th class="details" colspan="1" rowspan="2">
+								Details
+							</th>
+						</tr>
+						<tr style="display:none;">
+							<th colspan="1" rowspan="1">
+							</th>
+							<th colspan="1" rowspan="1">
+							</th>
+							<th colspan="1" rowspan="1">
+							</th>
+							<th colspan="1" rowspan="1">
+							</th>
+							<th colspan="1" rowspan="1">
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon"></td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon"></td>
+							<td class="icon icon-opValid">Operational validation done</td>
+							<td>09/20/12</td>
+							<td>AAF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="nb two">2</td>
+							<td class="nb"></td>
+							<td class="nb"></td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon"></td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon"></td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-opValid">Operational validation done</td>
+							<td>09/21/12</td>
+							<td>BBF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B138</td>
+							<td class="nb"></td>
+							<td class="nb"></td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon"></td>
+							<td class="icon"></td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon"></td>
+							<td>09/22/12</td>
+							<td>CCF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>C137</td>
+							<td class="nb"></td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb"></td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon"></td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon"></td>
+							<td class="icon icon-opValid">Operational validation done</td>
+							<td>09/23/12</td>
+							<td>DDF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>A007</td>
+							<td class="nb"></td>
+							<td class="nb two">2</td>
+							<td class="centerBlock nb one">1</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon"></td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-opValid">Operational validation done</td>
+							<td>09/24/12</td>
+							<td>EEF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>D111</td>
+							<td class="nb three">3</td>
+							<td class="nb"></td>
+							<td class="nb"></td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav"></td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon"></td>
+							<td>09/25/12</td>
+							<td>FFF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="nb two">2</td>
+							<td class="nb"></td>
+							<td class="nb"></td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-opValid">Operational validation done</td>
+							<td>09/25/12</td>
+							<td>GGF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-opValid">Operational validation done</td>
+							<td>09/25/12</td>
+							<td>HHF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb three">3</td>
+							<td class="nb two">2</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-opValid">Operational validation done</td>
+							<td>09/25/12</td>
+							<td>IIF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>JJF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="first-child icon icon-fav">Favorite</td>
+							<td class="icon icon-eye">Consulted</td>
+							<td class="icon icon-inProgress">Request in progress</td>
+							<td class="icon icon-analysis">Analysis available</td>
+							<td class="icon icon-techValid">Technical validation done</td>
+							<td>09/25/12</td>
+							<td>TVF301G</td>
+							<td>BBK</td>
+							<td>21L</td>
+							<td>VTES</td>
+							<td>21L</td>
+							<td>HS-DDQ</td>
+							<td>B137</td>
+							<td class="centerBlock nb one">1</td>
+							<td class="nb two">2</td>
+							<td class="nb three">3</td>
+							<td>
+								<a href="">01456910</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</span><!--fin .span12-->
+
+		</div><!--fin .wrapperContent-->
+	</div><!--/.wrapper-->
+</body>
+	<script type="text/javascript" src="public/js/libs/jquery-1.8.2.min.js"></script>
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="public/js/PIE.js"></script>
+		<script type="text/javascript">
+			/*fallback js pour les bords arrondis*/
+			$(document).ready(function() {
+				$("body").addClass("pie");
+				if (window.PIE) {
+					$('.rounded').each(function() {
+						PIE.attach(this);
+					});
+				}
+			});
+		</script>
+	<![endif]-->
+	<script type="text/javascript" src="public/js/highcharts.js"></script>
+	<script type="text/javascript" src="public/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="public/js/jquery.tinyscrollbar.min.js"></script>
+	<script type="text/javascript" src="public/js/hichart-iPadPatch.js"></script>
+	<script type="text/javascript" src="public/js/jquery.placeholder.min.js"></script>	 
+	<!--	corrige le bug du passage portrait->paysage iPad	-->
+	<script type="text/javascript" src="public/js/ios-orientationchange-fix.js"></script>	
+
+
+	<script type="text/javascript" src="public/js/script.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			*	Déplace le tableau principal si on est en "taille tablette",
+			*	le remet à ça position initiale quand on est en "taille desktop"
+			*/
+			$moveTo2 = $("#moveTo2");
+			if(window.addEventListener){
+				window.addEventListener('resize', moveDash, false);
+			}else{
+				window.attachEvent ('onresize', moveDash);
+			}
+			function moveDash(){
+				if($(window).width() < 865){
+					$moveTo2.insertAfter(".whatNews")
+				}else{
+					$moveTo2.prependTo("#OriginMoveTo2");
+				}
+			}
+			moveDash();
+		});
+	</script>
+	<script type="text/javascript">
+		$(".filterSelect select, .filterInput input").click(function(e){e.stopPropagation();});
+		$('input[placeholder], textarea[placeholder]').placeholder();
+
+		/********************************************************
+		*			dataTables									*
+		*********************************************************/
+
+		/*
+		*	Remove all filtering that has been applied to a DataTable, be it column based filtering or global filtering.
+		*/
+		$.fn.dataTableExt.oApi.fnFilterClear  = function ( oSettings )
+		{
+		    /* Remove global filter */
+		    oSettings.oPreviousSearch.sSearch = "";
+		   
+		    /* Remove the text of the global filter in the input boxes */
+		    if ( typeof oSettings.aanFeatures.f != 'undefined' )
+		    {
+		        var n = oSettings.aanFeatures.f;
+		        for ( var i=0, iLen=n.length ; i<iLen ; i++ )
+		        {
+		            $('input', n[i]).val( '' );
+		        }
+		    }
+		   
+		    /* Remove the search text for the column filters - NOTE - if you have input boxes for these
+		     * filters, these will need to be reset
+		     */
+		    for ( var i=0, iLen=oSettings.aoPreSearchCols.length ; i<iLen ; i++ )
+		    {
+		        oSettings.aoPreSearchCols[i].sSearch = "";
+		    }
+		   
+		    /* Redraw */
+		    oSettings.oApi._fnReDraw( oSettings );
+		};
+
+		(function($) {
+			/*
+			 * Function: fnGetColumnData
+			 * Purpose:  Return an array of table values from a particular column.
+			 * Returns:  array string: 1d data array
+			 * Inputs:   object:oSettings - dataTable settings object. This is always the last argument past to the function
+			 *           int:iColumn - the id of the column to extract the data from
+			 *           bool:bUnique - optional - if set to false duplicated values are not filtered out
+			 *           bool:bFiltered - optional - if set to false all the table data is used (not only the filtered)
+			 *           bool:bIgnoreEmpty - optional - if set to false empty values are not filtered from the result array
+			 * Author:   Benedikt Forchhammer <b.forchhammer /AT\ mind2.de>
+			 */
+			$.fn.dataTableExt.oApi.fnGetColumnData = function ( oSettings, iColumn, bUnique, bFiltered, bIgnoreEmpty ) {
+			    // check that we have a column id
+			    if ( typeof iColumn == "undefined" ) return new Array();
+			    // by default we only want unique data
+			    if ( typeof bUnique == "undefined" ) bUnique = true;
+			    // by default we do want to only look at filtered data
+			    if ( typeof bFiltered == "undefined" ) bFiltered = true;
+			    // by default we do not want to include empty values
+			    if ( typeof bIgnoreEmpty == "undefined" ) bIgnoreEmpty = true;
+			    // list of rows which we're going to loop through
+			    var aiRows;
+			    // use only filtered rows
+			    if (bFiltered == true) aiRows = oSettings.aiDisplay;
+			    // use all rows
+			    else aiRows = oSettings.aiDisplayMaster; // all row numbers
+			    // set up data array   
+			    var asResultData = new Array();
+			    for (var i=0,c=aiRows.length; i<c; i++) {
+			        iRow = aiRows[i];
+			        var aData = this.fnGetData(iRow);
+			        var sValue = aData[iColumn];
+			         
+			        // ignore empty values?
+			        if (bIgnoreEmpty == true && sValue.length == 0) continue;
+			 
+			        // ignore unique values?
+			        else if (bUnique == true && jQuery.inArray(sValue, asResultData) > -1) continue;
+			         
+			        // else push the value onto the result data array
+			        else asResultData.push(sValue);
+			    }
+			    return asResultData;
+			}
+		}(jQuery));
+			  
+		function fnCreateSelect( aData )
+		{
+		    var r='<select><option value="">All</option>', i, iLen=aData.length;
+		    for ( i=0 ; i<iLen ; i++ )
+		    {
+		        r += '<option value="'+aData[i]+'">'+aData[i]+'</option>';
+		    }
+		    return r+'</select>';
+		}
+
+		$(document).ready(function() {
+			/* Initialise the DataTable */
+			var oTable = $('#latestFlights').dataTable({
+				"sDom": '<"top"flTp<"clear">>rt<"bottom"ip<"clear">>',
+			    "oLanguage": {"sSearch": "Search all columns:","oPaginate": {"sPrevious": "&#171;","sNext":"&#187;"},"sInfo":"Show _START_ to _END_ of _TOTAL_ flights"},
+			    "sPaginationType": "full_numbers",
+			    "bSort": false,
+			    "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+			    "iDisplayLength" : 25
+			});
+
+			/* Add a select menu for each TH element in the table footer */
+			$("th .filterSelect").each( function ( i ) {
+				if(!$(this).hasClass("infosFilter")){
+					var numCol = $(this).find(".numCol").html();
+				    this.innerHTML = fnCreateSelect( oTable.fnGetColumnData(numCol) );
+				    $('select', this).change( function () {				    	
+				        oTable.fnFilter( $(this).val(), numCol);
+				    } );
+				}else{
+					var numCol = $(this).find(".numCol").html(),
+						t = new Array(),
+						tabSelect = new Array();
+					for(var i = 0; i < 5; i++){
+						// console.log(i)
+						t = oTable.fnGetColumnData(i);
+						// console.log(t)
+						for(var j = 0; j < t.length; j++){
+							tabSelect.push(t[j]);
+							// console.log(tabSelect[j])
+						}
+					}
+					
+				    this.innerHTML = fnCreateSelect( tabSelect );
+				    $('select', this).change( function () {				    	
+				    	var i = 0;
+				        do{
+				        	if(i-1 >=0) 
+				        		oTable.fnFilter("", i-1);
+					        oTable.fnFilter( $(this).val(), i);
+				    		i++;
+				        }while($(".dataTables_empty").html() == "No matching records found" && i < 5);
+				    } );
+					
+				}
+			} );
+
+			$("th .filterInput input").keyup( function () {
+			    /* Filter on the column (the index) of this element */
+				var numCol = $(this).closest(".filterInput").find(".numCol").html();
+			    oTable.fnFilter( this.value, numCol );
+			} );
+
+			/*ajout d'un bouton clear filter*/
+			$(".clearFilter").live("click", function(){
+				 oTable.fnFilterClear()
+				$("th .filterInput input").each(function(){
+					var numCol = $(this).closest(".filterInput").find(".numCol").html();
+					oTable.fnFilter("", numCol);
+					this.value = "";
+				});
+				$("th .filterSelect").each(function(){
+					var numCol = $(this).closest(".filterInput").find(".numCol").html();
+					
+					$(this).find("select").val(0);
+				});
+			});
+			$(".dataTables_length.hasClear").append("<a href='javascript:void(0)' class='btn clearFilter'><span></span> Clear filter</a>");
+			$(".dataTables_length.hasExportList").append("<a href='javascript:void(0)' class='btn exportList'><span></span> Export list</a>");
+		} );
+	</script>
+</html>
