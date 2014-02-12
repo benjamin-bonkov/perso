@@ -1,0 +1,87 @@
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
+
+
+/***********BOUGIE************/
+@-webkit-keyframes getDown {
+	from {top: -250px;}
+	to {top: -15px;}
+}
+@-moz-keyframes getDown {
+	from {top: -250px;}
+	to {top: -15px;}
+}
+@-ms-keyframes getDown {
+	from {top: -250px;}
+	to {top: -15px;}
+}
+
+@-webkit-keyframes flame {
+	from,to{left: 0;}
+	50% {left: -82px;}
+}
+@-moz-keyframes flame {
+	from,to{left: 0;}
+	50% {left: -82px;}
+}
+@-ms-keyframes flame {
+	from,to{left: 0;}
+	50% {left: -82px;}
+}
+
+.bougieContent{margin: 50px; float: left; position: relative;}
+.bougie{width: 41px; height: 353px; position: relative; overflow: hidden;}
+.bougie .bougie_body{background: url("../images/bougie_body.jpg") no-repeat; width: 41px; height:254px; position: absolute; bottom: 4px;}
+.bougie .bougie_head{ height:353px; position: absolute; top: -250px; background: url("../images/bougie_head.jpg") no-repeat 0 0; width: 123px;}
+.bougieContent .bougie_fondue{display: none;}
+
+.bougieContent.animate .bougie .bougie_head{
+	-moz-transform: translateZ(0);
+	-moz-animation: getDown 5s steps(900, end),
+						flame 0.15s steps(2, end) 200;
+
+	-webkit-transform: translateZ(0);
+	-webkit-animation: getDown 5s steps(900, end),
+						flame 0.15s steps(2, end) 200;
+
+	-ms-transform: translateZ(0);
+	-ms-animation: getDown 5s steps(900, end),
+						flame 0.15s steps(2, end) 200;
+}
+.bougieContent.fondue .bougie{}
+.bougieContent.fondue .bougie_fondue{margin-left: -16px; background: url("../images/bougie_fondue.png") no-repeat 0 100%; width: 123px; position: absolute; bottom: 4px; height: 353px;}
+.bougieContent.fondue .bougie  .bougie_body{display: none;}
+.bougieContent.fondue .bougie .bougie_head{top: -15px;}
+
+/*animation flame1 (bug sous chrome)*/
+@-webkit-keyframes flame1 {
+	0%{left: -0px;}
+	32.999% {left: -0px;}
+	33% {left: -41px;}
+	65.999% {left: -41px;}
+	66% {left: -82px;}
+	99.999% {left: -82px;}
+	100% {left: -0px;}
+}
+@-moz-keyframes flame1 {
+	0%{left: -0px;}
+	32.999% {left: -0px;}
+	33% {left: -41px;}
+	65.999% {left: -41px;}
+	66% {left: -82px;}
+	99.999% {left: -82px;}
+	100% {left: -0px;}
+}
+.bougie .bougie_head.animate2{
+	-webkit-transform: translateZ(0);
+	-webkit-animation: getDown 30s steps(900, end),
+						flame1 0.3s linear infinite;
+
+	-moz-transform: translateZ(0);
+	-moz-animation: getDown 30s steps(900, end),
+						flame1 0.3s linear infinite;
+}
