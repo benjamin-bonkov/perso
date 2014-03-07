@@ -24,6 +24,24 @@ $(document).ready(function(){
 	});
 	$control = $slider.find(".control");
 	console.log(nbSlide)
+
+	//responsivity
+	// function init(){
+	//     $slides = $slider.find(".slide");//MAJ de la liste des slides
+	// 	nbSlide = $slides.length;//MAJ du nombre de slides
+	//        sizeSlide = $slider.width()
+	//        $slides.css({"width" :sizeSlide});
+	//        $slider.css({"height" :$slides.find("img").outerHeight(true)});
+	//        $contentSlides.css({
+	// 		"width" : nbSlide*sizeSlide,
+	// 		"left" : -sizeSlide*numActif
+	// 	});
+	// }
+
+    $(window).resize(function(){
+    	init();
+    });
+    init();
 	/*
 	*	Au click sur un bouton suivant/précédent
 	*/
