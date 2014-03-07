@@ -55,53 +55,48 @@
 
 
 	<h2 class="title">Slider avec gestion de catégories</h2>
-    <ul id="navSlider" class="navPart">
-        <li>
-        	<a class="part1 active" href="#part1">Part 1</a>
-        </li>
-        <li>
-        	<a class="part2" href="#part2">Part 2</a>
-        </li>
-        <li>
-        	<a class="part3" href="#part3">Part 3</a>
-        </li>
-    </ul>
-	<div id="sliderCategories">
-		<button class="control prev">precedent</button>
-		<div class="contentSlides">
-			<div id="part1" class="part">
-				<div class="slide">
-					<img src="public/images/slider/teamwork1.jpg" alt="" />
-					slide 1
+
+	<div class="slider">
+		<button class="control btn red prev">prev</button>
+		<ul id="navSlider" class="navPart">
+			<li>
+				<a class="slide1" href="#slide1">slide 1</a>
+			</li>
+			<li>
+				<a class="slide2" href="#slide2">slide 2</a>
+			</li>
+			<li>
+				<a class="slide3" href="#slide3">slide 3</a>
+			</li>
+		</ul>
+		<button class="control btn red next">next</button>
+		<div class="ovh">
+			<div class="contentSlides">
+				<div id="slide1" class="part">
+					<a  href="#" class="slide">
+						<img src="public/images/slider/teamwork1.jpg" alt="" />
+					</a>
+					<a  href="#" class="slide">
+						<img src="public/images/slider/teamwork2.jpg" alt="" />
+					</a>
 				</div>
-				<div class="slide">
-					<img src="public/images/slider/teamwork2.jpg" alt="" />
-					slide 2
+
+				<div id="slide2" class="part">
+					<a  href="#" class="slide">
+						<img src="public/images/slider/koala.jpg" height="500" alt="" />
+					</a>
+					<a  href="#" class="slide">
+						<img src="public/images/slider/Penguins.jpg" height="500" alt="" />
+					</a>
 				</div>
-			</div>
-			<div id="part2" class="part">
-				<div class="slide">
-					<img src="public/images/slider/koala.jpg" height="500" alt="" />
-					slide 3
-				</div>
-				<div class="slide">
-					<img src="public/images/slider/Penguins.jpg" height="500" alt="" />
-					slide 4
-				</div>
-			</div>
-			<div id="part3" class="part">
-				<div class="slide">
-					<img src="public/images/slider/portSalut.jpg" alt="" />
-					slide 5
-				</div>
-				<div class="slide">
-					<img src="public/images/slider/cow.jpg" alt="" />
-					slide 6
+				<div id="slide3" class="part">
+					<a  href="#" class="slide">
+						<img src="public/images/slider/cow.jpg" alt="" />
+					</a>
 				</div>
 			</div>
 		</div>
-		<button class="control next">suivant</button>
-	</div><!-- / #slider -->
+	</div><!-- / .slider -->
 	<script type="text/javascript" src="public/js/sliderCategories.js"></script>
 
 	<div id="footer">

@@ -100,7 +100,7 @@ a{color: #000;
 	transition: 		all 0.3s ease-out;
 }
 a:hover,a:focus,a.active{color: #6b0;}
-.wrapper{width:960px;position: relative; margin: 0 auto;background: #fff;padding: 0 10px;}
+.wrapper{max-width:960px;position: relative; margin: 0 auto;background: #fff;padding: 0 10px;}
 
 h1{font-size: 40px;font-weight: bold; padding:40px 0;}
 
@@ -129,14 +129,25 @@ h2{font-size:18px;margin:15px 0;font-weight: bold;}
 /* /#slider */
 
 /* #sliderCategories*/
-.no-js #sliderCategories{overflow: auto;}
-.no-js #sliderCategories .slide{float: none;}
 
-.navPart a{padding: 5px;float: left;}
-#sliderCategories{width: 900px;height:400px;overflow: hidden;border: 2px solid grey;position: relative;}
-#sliderCategories .contentSlides{position:absolute;}
-#sliderCategories .slide{width: 900px;height:400px;float: left;}
-#sliderCategories .control{border: none;position: absolute;top: 175px;z-index: 1;width: 50px;height: 50px;}
-#sliderCategories .control.prev{left:0;}
-#sliderCategories .control.next{right:0;}
+/* .slider */
+.no-js .slider{overflow: auto;}
+.no-js .slider .slide{float: none;}
+
+.slider{max-width: 920px; height: 370px; position: relative; margin: 0 0 40px;}
+.slider .ovh{overflow: hidden; width: 100%;height: 100%; position: relative;}
+.slider .navPart{position: absolute; bottom: -20px; /*bottom: -webkit-calc(-35px);*/ width: 100%; max-width: 920px; z-index: 1; text-align: center; list-style: circle;}
+.slider .navPart li{display: inline-block;}
+.slider .navPart li a{text-indent: -9999px; display: block; width: 10px; height: 10px; margin: 0 5px; border-radius: 10px; background: #cecece;}
+.lt-ie8 .slider .navPart {left:45%;}
+.lt-ie8 .slider .navPart li{float: left;}
+.slider .navPart li a.active{background: #f00;}
+.slider .contentSlides{position:absolute;}
+.slider .slide{width: 920px; float: left; position: relative;}
+.slider .slide .text-slide{position: absolute; right: 30px; top: 15px; width: 340px; text-align: center;}
+.slider .control{position: absolute; top: 175px; z-index: 1; width: 50px;height: 50px; border-radius: 50px; min-width: 0;}
+.slider .control.prev{left:-35px;}
+.slider .control.next{right:-35px;}
+.slider .control img{position: absolute; top: 0; left: 0;}
+.lt-ie8  .slider .control img{position: absolute; top: -4px; left: -4px;}
 /* /#sliderCategories */
