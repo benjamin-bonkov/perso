@@ -1,5 +1,5 @@
 /*********general kickstart !*********/
-	button{cursor: pointer;}
+	button{cursor: pointer; outline: none;}
 	a{text-decoration: none;}
 
 	.clear{clear: both;}
@@ -70,7 +70,7 @@
 	/*pause les animation css3*/
 	.paused{ -webkit-animation-play-state: paused; -moz-animation-play-state: paused; -o-animation-play-state: paused; animation-play-state: paused;}
 
-	.btn{display: block; margin: 0 auto; color: #fff; border-radius: 2px; text-transform: uppercase; text-align: center; font-size:11px; border:none; cursor: pointer;
+	.btn{display: block; margin: 0 auto; color: #fff; border-radius: 2px; text-transform: uppercase; text-align: center; font-size:11px; border:none; outline: none; cursor: pointer;
 		background: #89004d;
 		background: -moz-linear-gradient(top, #d40078 0%, #89004d 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d40078), color-stop(100%,#89004d));
