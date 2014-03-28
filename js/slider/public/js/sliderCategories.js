@@ -29,13 +29,6 @@ $(document).ready(function(){
 		        sizeSlide = $slider.width()
 		        $slides.css({"width" :sizeSlide});
 		        $slider.css({"height" :$slides.find("img").outerHeight(true)});
-		        if($slider.hasClass("iphone") || $slider.hasClass("ipad")){
-		        	sizeSlide = $slider.find(".ovh").outerWidth()
-		        	$slides.css({"width" :sizeSlide});
-		        }
-	    		if ($slider.hasClass("circle")) {
-		        	$slider.css({"border-radius" :$slides.find("img").outerHeight(true)});
-		        }
 		        $contentSlides.css({
 					"width" : nbSlide*sizeSlide,
 					"left" : -sizeSlide*numActif
