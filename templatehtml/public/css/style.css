@@ -1,5 +1,5 @@
 /*********general kickstart !*********/
-	button{cursor: pointer;}
+	button{cursor: pointer; font: inherit;}
 	a{text-decoration: none;}
 
 	.clear{clear: both;}
