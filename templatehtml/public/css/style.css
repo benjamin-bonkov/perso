@@ -50,7 +50,7 @@
 	body{font-family: sans-serif;}
 	strong{font-weight: bold;}
 	em{font-style: italic;}
-	em strong, strong em,{font-weight: bold; font-style: italic;}
+	em strong, strong em{font-weight: bold; font-style: italic;}
 	sup{ top: -0.5em; line-height: 0; position: relative; vertical-align: baseline; font-size: 0.6em;}
 	sub{ top: 0.5em; line-height: 0; position: relative; vertical-align: baseline; font-size: 0.6em;}
 	.ttu{text-transform: uppercase;}

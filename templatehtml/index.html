@@ -30,8 +30,17 @@
 	<script>
 		/*target ie10*/
 		if (Function('/*@cc_on return document.documentMode===10@*/')()){
-		    document.documentElement.className+=' ie10';
+		    document.documentElement.className+='lt-ie10 ie10';
 		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= "lt-ie11 ie+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
 	</script>
 </body>
 </html>
