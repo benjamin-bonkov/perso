@@ -1,3 +1,18 @@
+
+/*FIX TYPO*/
+/*	
+	//dans la déclaration font
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+	//dans le node html
+	-webkit-transform: rotate(0.01deg);
+	-moz-transform: rotate(0.01deg);
+	-ms-transform: rotate(0.01deg);
+	-o-transform: rotate(0.01deg);
+	transform: rotate(0.01deg);
+*/
+
 /*********general kickstart !*********/
 	button{cursor: pointer; outline: none; font: inherit;}
 	a{text-decoration: none;}
@@ -30,6 +45,15 @@
 		line-height:1; /* on rétablit le line-height */
 		text-align:left; /* ... et l'alignement du texte */
 	}/* http://www.alsacreations.com/tuto/lire/1032-comment-centrer-verticalement-sur-tous-les-navigateurs.html */
+
+	/*
+	<div class="alignMiddle">
+		<span>Center me verticaly</span>
+	</span>
+	*/
+	.alignMiddle{}/*must have a fixed width*/
+	.alignMiddle:before{content: " "; display: inline-block; vertical-align: middle; height: 100%; width: 0.1%; padding: 0!important;}
+	.alignMiddle>span{display: inline-block; vertical-align: middle; width: 99%;}
 
 	/*general state*/
 	.hide{display: none;}/*carefull, this hide to screen readers too*/

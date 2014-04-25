@@ -12,6 +12,6 @@
 		$("#cookie").fadeOut().remove();
 		var date = new Date();
 		date.setYear(date.getUTCFullYear() + 1);
-		document.cookie="cookie-babybel=true expires="+ date.toUTCString() +"; path=/";
+		document.cookie="cookie-babybel=true; expires="+ date.toUTCString() +"; path=/";
 	});
 </script>

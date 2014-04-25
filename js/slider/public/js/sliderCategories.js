@@ -10,7 +10,10 @@ $(document).ready(function(){
 			$control,
 			numActif = 1,
 			$navSlider = $("#navSlider"),
-			$navLink = $navSlider.find("a");
+			$navLink = $navSlider.find("a"),
+			isAutoSlide = $slider.hasClass("auto-slide"),
+			idInterval = null;
+
 		$("html").removeClass("no-js");
 
 		$navLink.eq(0).addClass("active")
@@ -42,11 +45,16 @@ $(document).ready(function(){
 	    setTimeout(init,50)
 	    // init();
 	    
-	    if ($slider.hasClass("auto-slide")) {
-	    	setInterval(function(){$slider.find(".next").click()},4000)
-	    }
-		$control = $slider.find(".control");
-		
+		function autoslide(){
+		    if (isAutoSlide) {
+				if(idInterval != null) clearInterval(idInterval);
+				idInterval = setInterval(function(){
+					$slider.find(".control.next").click();
+				},5000);
+
+		    }
+		}autoslide();
+
 		//fix chrome un peu sale
 			$control.css({"position":"relative"});
 			setTimeout(function(){$control.css({"position":"absolute"});},5)
@@ -63,11 +71,11 @@ $(document).ready(function(){
 				if($this.hasClass("prev")){//click sur precedant
 					numActif--;
 					slideOne(1);
-
 				}else{//click sur suivant
 					numActif++;
 					slideOne(-1);
 				}
+				autoslide();//reset le timer de l'autoslide
 			}
 		});
 
@@ -104,6 +112,7 @@ $(document).ready(function(){
 		*/
 		$navLink.click(function(e){
 			e.preventDefault();//empêche l'execution du lien
+			autoslide();//reset le timer de l'autoslide
 			if ($slider.attr("id") == undefined){
 				$slider.attr("id", "currentSliderInPartMove");
 				var id = "currentSliderInPartMove";
@@ -113,9 +122,7 @@ $(document).ready(function(){
 			var $this = $(this),
 				$target = $slider.find($this.attr("href")),//on recup' la partie vers laquel pointe le lien
 				num = $target.find(".slide").eq(0).index("#"+id+" .slide");//on recup l'index du premier slide de cette catégorie
-console.log($target);
-console.log(num);
-console.log($("#"+id).find(".slide"));
+
 			//on slide jusqu'à ce slide
 			$contentSlides.animate({
 				"left" : -sizeSlide*num
