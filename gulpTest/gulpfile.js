@@ -9,7 +9,7 @@ var rename = require('gulp-rename');
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('public/js/**/*.js')
+    return gulp.src('public/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		    separator: ';', // permet d'ajouter un point-virgule entre chaque fichier concaténé.
 		  },
 		  dist: {
-		    src: ['src/intro.js', 'src/project.js', 'src/outro.js'], // la source
+		    src: ['public/**/*.js'], // la source
 		    dest: 'dist/built.js' // la destination finale
 		  }
 		},
@@ -16,13 +16,13 @@ module.exports = function(grunt) {
 				separator: ';'
 			},
 			dist: {
-				src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
+				src: ['public/**/*.js'],
 				dest: 'dist/built.js'
 			}
 		},
 		watch: {
 			scripts: {
-				files: '**/*.js', // tous les fichiers JavaScript de n'importe quel dossier
+				files: 'public/**/*.js',
 				tasks: ['concat:dist']
 			}
 		}
@@ -33,6 +33,6 @@ module.exports = function(grunt) {
 
 	// Définition des tâches Grunt
 	grunt.registerTask('default', ['dev', 'watch'])
-	grunt.registerTask('dev', , ['concat:dist'])
+	grunt.registerTask('dev', ['concat:dist'])
 	grunt.registerTask('dist', ['uglify:dist'])
 }
