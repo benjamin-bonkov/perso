@@ -9,7 +9,7 @@ var rename = require('gulp-rename');
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('public/js/**/*.js')
+    return gulp.src('public/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
@@ -18,10 +18,10 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
     return gulp.src('public/js/**/*.js')
         .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('public/dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('public/dist'));
 });
 
 // Watch Files For Changes
