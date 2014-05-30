@@ -1,11 +1,11 @@
-// install gulp global
+:: install gulp global
 npm install -g gulp
 
-// install gulp locally
+:: install gulp locally
 npm install --save-dev gulp
 
-// -Lint JS
-// -Concatenate JS
-// -Minify
-// -Rename
+:: -Lint JS
+:: -Concatenate JS
+:: -Minify
+:: -Rename
 npm install gulp-jshint gulp-concat gulp-uglify gulp-rename gulp-concat-css gulp-minify-css --save-dev
