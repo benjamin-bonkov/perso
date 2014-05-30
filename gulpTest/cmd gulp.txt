@@ -8,4 +8,4 @@ npm install --save-dev gulp
 // -Concatenate JS
 // -Minify
 // -Rename
-npm install gulp-jshint gulp-concat gulp-uglify gulp-rename --save-dev
+npm install gulp-jshint gulp-concat gulp-uglify gulp-rename gulp-concat-css gulp-minify-css --save-dev

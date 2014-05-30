@@ -13,6 +13,11 @@
 	transform: rotate(0.01deg);
 */
 
+/* GPU
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+*/
+
 /*********general kickstart !*********/
 	button{cursor: pointer; outline: none; font: inherit;}
 	a{text-decoration: none;}
