@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>home</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<style>
+		/*Requis*/
+		.animateScroll{opacity: 0; filter: alpha(opacity=0);}
+		/*Pour demo*/
+		h1{font-size: 42px;}
+		h2{font-size: 36px;}
+	</style>
+	<div class="wrapper">
+		<div class="inner tac">
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<h1 class="animateScroll" data-animScroll='{"animate":{"top":0, "opacity":1}}'>From TOP</h1>
+		<h2 class="animateScroll" data-animScroll='{"animate":{"transform":"scale(1)", "opacity":1}, "delay":500, "animateTime":250}'>Scale + delay + animate time</h2>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+			<h1>
+				<span class="animateScroll" data-animScroll='{"animate":{"left":0, "opacity":1}}'>From left</span>
+			</h1>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+			<h1>
+				<span class="animateScroll" data-animScroll='{"animate":{"right":0, "opacity":1}}'>From right</span>
+			</h1>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+			<h1 class="animateScroll" data-animScroll='{"animate":{"bottom":"0", "opacity":1}}'>From bottom</h1>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<script type="text/javascript" src="public/js/script.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+='lt-ie10 ie10';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= "lt-ie11 ie+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
+	</script>
+</body>
+</html>

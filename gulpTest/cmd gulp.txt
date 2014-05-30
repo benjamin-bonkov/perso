@@ -1,5 +1,5 @@
 // install gulp global
-sudo npm install -g gulp
+npm install -g gulp
 
 // install gulp locally
 npm install --save-dev gulp
