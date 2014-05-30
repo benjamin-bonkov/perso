@@ -18,7 +18,7 @@ gulp.task('lint', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-	return gulp.src('public/js/**/*.js')
+	return gulp.src('public/js/*.js')
 		.pipe(concat('all.js'))
 		.pipe(gulp.dest('public/dist/js'))
 		.pipe(rename('all.min.js'))
