@@ -7,7 +7,9 @@ var jshint = require('gulp-jshint')
 ,	uglify = require('gulp-uglify')
 ,	rename = require('gulp-rename')
 ,	concatCss = require('gulp-concat-css')
-,	minifyCSS = require('gulp-minify-css');
+,	minifyCSS = require('gulp-minify-css')
+,	imagemin = require('gulp-imagemin')
+,	cache = require('gulp-cache');
 
 // Lint Task
 gulp.task('lint', function() {
@@ -36,6 +38,12 @@ gulp.task('css', function () {
 		.pipe(gulp.dest('public/dist/'));
 });
 
+gulp.task('images', function() {
+  return gulp.src('public/images/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('public/dist/images'));
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
 	gulp.watch('public/js/**/*.js', ['lint', 'scripts']);
@@ -43,4 +51,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('default', ['lint', 'scripts', 'css', 'watch']);
+gulp.task('default', ['lint', 'scripts', 'css', 'images', 'watch']);
