@@ -12,6 +12,7 @@
 				this.elem.css({"opacity":"1"});
 				return "ERROR";
 			}
+			this.sTopModifier = this.option.sTopModifier || 0;
 			this.animate = this.option.animate;
 			this.animateTime = this.option.animateTime || 500;
 			this.delay = this.option.delay || 0;
@@ -21,10 +22,10 @@
 		ElemToAnim.prototype = {
 			mustAnimate : function(sTop){
 				var yTop =this.elem.offset()["top"]
-				if(sTop + $(window).height()*0.8 > yTop){
+				if(sTop + $(window).height()*0.8 > yTop - this.sTopModifier){
 					this.triggerAnim();
 				}
-				if(sTop + $(window).height()*0.9 <= yTop){
+				if(sTop + $(window).height()*0.9 <= yTop - this.sTopModifier){
 					this.hideBeforeAnim();
 				}
 			},
@@ -41,6 +42,7 @@
 				}
 				if(this.animate.bottom != null){
 					css.bottom = -this.elem.outerHeight()*2;
+					this.sTopModifier += this.elem.outerHeight()*2;
 				}
 				if(this.animate.right != null){
 					css.right = -this.elem.outerWidth();
