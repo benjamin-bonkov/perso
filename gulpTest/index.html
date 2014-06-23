@@ -8,12 +8,55 @@
 <head>
 	<meta charset="utf-8">
 	<title>home</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="public/dist/css/style.min.css">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="">
+
+	<!-- social -->
+		<meta property="og:url" content="http://<?php echo $_SERVER['HTTP_HOST'] . $this->baseUrl(''); ?>" />
+		<meta property="og:site_name" content="<?php echo $this->translate('Eurosport 25 Years | We Live For Live For You'); ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="<?php echo $this->translate('Eurosport 25 Years | We Live For Live For You'); ?>" />
+		<meta property="og:image" content="http://<?php echo $_SERVER['HTTP_HOST'] . $this->baseUrl('public/images/euro25fb.jpg'); ?>" />
+		<meta property="og:description" content="<?php echo $this->translate('Eurosport is giving its fans access to its most existing videos so that the fans can become the commentators') ?>" />
+	<!-- /social -->
+
+	<!-- favicon -->
+        <!-- http://realfavicongenerator.net/ -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/public/images/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/public/images/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/public/images/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/public/images/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/public/images/favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/public/images/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/public/images/favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/public/images/favicon/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#b91d47">
+        <meta name="msapplication-TileImage" content="/public/images/favicon//mstile-144x144.png">
+	<!-- /favicon -->
 </head>
 <body>
+	<!-- analytics -->
+        <script>
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-xxxxxxxx-x']);
+              _gaq.push(['_trackPageview']);
+
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+              // _gaq.push(['_trackEvent', 'categorie', 'action', 'label', 'value']);
+        </script>
+	<!-- /analytics -->
 	<div class="wrapper">
 		<div class="inner">
 			

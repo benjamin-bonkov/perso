@@ -7,7 +7,7 @@ $(document).ready(function(){
 			nbSlide = $slides.length,
 			sizeSlide = $slides.width(),
 			$contentSlides = $slider.find(".contentSlides"),
-			$control,
+			$control = $(".control"),
 			numActif = 1,
 			$navSlider = $("#navSlider"),
 			$navLink = $navSlider.find("a"),
