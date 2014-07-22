@@ -56,7 +56,7 @@
 		<span>Center me verticaly</span>
 	</span>
 	*/
-	.alignMiddle{}/*must have a fixed width*/
+	.alignMiddle{letter-spacing: -0.3em;}/*must have a fixed width*/
 	.alignMiddle:before{content: " "; display: inline-block; vertical-align: middle; height: 100%; width: 0.1%; padding: 0!important;}
 	.alignMiddle>span{display: inline-block; vertical-align: middle; width: 99%;}
 
