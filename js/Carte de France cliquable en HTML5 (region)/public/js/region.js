@@ -2,6 +2,9 @@ window.onload = function() {
 
 	var rsr = new Raphael(document.getElementById('region'), 270, 200, 0, 0);
 	var Calque_1 = rsr.set();
+	
+	rsr.setViewBox(0, 0,530, 550, true);
+	
 	var path_a = rsr.path("M74.901,48.8l0.237,0.635l0.023,0.001C75.112,49.321,75.025,49.105,74.901,48.8z");
 	path_a.attr({fill: '#4EB95D',stroke: '#FFFFFF',parent: 'Calque_1','stroke-width': '1.2','stroke-opacity': '1', 'href':'?region=path_a', 'title':'path_a'});
 	var path_b = rsr.path("M74.556,114.952c-0.491-0.205-0.865-0.329-1.158-0.379   c-0.274-0.048-0.503-0.13-0.67-0.243l3.657,2.04C75.821,115.698,75.211,115.221,74.556,114.952z");

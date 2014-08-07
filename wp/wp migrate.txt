@@ -1,0 +1,5 @@
+
+Update BDD_NAME.wp_posts Set    guid= replace(guid, 'OLD_URL', 'NEW_URL');
+Update BDD_NAME.wp_posts Set    post_content= replace(post_content, 'OLD_URL', 'NEW_URL');
+Update BDD_NAME.wp_options Set    option_value= replace(option_value, 'OLD_URL', 'NEW_URL');
+Update BDD_NAME.wp_postmeta Set    meta_value= replace(meta_value, 'OLD_URL', 'NEW_URL');

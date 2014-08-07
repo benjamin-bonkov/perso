@@ -1,0 +1,8 @@
+
+C:\wamp\bin\apache\apachex.x.x\conf\httpd.conf
+
+Add these two lines anywhere, then restart your Apache server:
+
+# Fix IE crashing Apache
+AcceptFilter http none
+AcceptFilter https none
