@@ -1,0 +1,52 @@
+<style>
+	.video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;}
+	 
+	.video-container iframe,
+	.video-container object,
+	.video-container embed {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+</style>
+<div id="video" class="section">				
+	<div class="video-container">
+		<iframe id="playerYT" src="//www.youtube.com/embed/KSRTEI816kI?autohide=1&enablejsapi=1" autohide="1" enablejsapi="1" frameborder="0" allowfullscreen onclick="_gaq.push(['_trackEvent', 'video', 'VideoPlay']);"></iframe>
+	</div>
+</div>
+
+<script src="https://www.youtube.com/player_api"></script>
+<script>
+	function onYouTubeIframeAPIReady(playerId) {
+		console.log("YT");
+		window.player = new YT.Player($('#playerYT').get(0), {
+			events:	{
+				// onReady:	this.event.onReady,
+				onStateChange: onytplayerStateChange
+			}
+		});
+	}
+	/*	newState.data
+	 *	BUFFERING: 3
+	 *	CUED: 5
+	 *	ENDED: 0
+	 *	PAUSED: 2
+	 *	PLAYING: 1
+	 *	UNSTARTED: -1
+	*/
+	function onytplayerStateChange(newState) {
+		//console.log("Player's new state: ", newState);
+		switch(newState.data){
+			// playing
+			case 1:
+				_gaq.push(['_trackEvent', 'video', 'playing']);
+			break;
+
+			// paused
+			case 2:
+				_gaq.push(['_trackEvent', 'video', 'paused']);
+			break;
+
+			// ended
+			case 0:
+				_gaq.push(['_trackEvent', 'video', 'finished']);
+			break;
+		}
+	}
+</script>

@@ -1,0 +1,28 @@
+<style>
+	form .radio{padding-left: 20px;}
+	form .radio [type="radio"]{display: none;}
+	form .radio{position: relative;}
+	form .radio:before{content: ""; z-index: 1; position: absolute; left: 0; top: 0; display: inline-block; width: 15px; height: 15px; vertical-align: middle; background: url(./check.jpg) 100% 0;}
+	form .radio.checked:before{background-position: 0 0;}
+</style>
+<form action="">
+	<label for="check1" class="radio checked"><input type="radio" name="action" value="check1" id="check1" checked>  check 1</label>
+	<label for="check2" class="radio"><input type="radio" name="action" value="check2" id="check2"> check 2</label>
+</form>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("[type='radio']").change(function(){
+				var $this = $(this)
+				,	$same = $("[name='"+$this.attr("name")+"']");
+				// console.log($this);
+				console.log($same);
+				if($this[0].checked){
+					$same.parent().removeClass("checked");
+					$this.parent().addClass("checked");
+				}else{
+					$this.parent().removeClass("checked");
+				}
+			});
+		});
+	</script>

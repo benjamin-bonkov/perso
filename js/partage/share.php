@@ -91,3 +91,50 @@
       }
     </script>
 </div>
+
+<script>
+    /**** share ****/
+    /**** fb ****/
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=837150796315378&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        window.baseUrl  = '';
+        window.fb = { 
+          permissions :'', 
+          share: {
+            title: 'Skin-Absolute®', 
+            description: "Le nouveau soin anti-âge ultime nuit Filorga à l’extrait de Météorite.",
+            picture: 'http://skin-absolute.filorga.com/public/dist/images/Filorga_Skin-Absolute-ShareFacebook.png',
+            link: 'http://skin-absolute.filorga.com/'
+          }
+        };
+
+        $('a.fb').click(function(e){
+          e.preventDefault();
+          FB.ui({
+            method:'feed',
+            name: window.fb.share.title,
+            description: window.fb.share.description,
+            picture: window.fb.share.picture,
+            link: window.fb.link
+          })
+          
+        })
+
+    /**** twitter ****/
+        window.twitter = {
+            text: "Le nouveau soin anti-âge ultime nuit Filorga à l’extrait de Météorite.",
+            url: "http://skin-absolute.filorga.com",
+            hashtag: ''
+        };
+        $('a.twitter').click(function(e){
+            e.preventDefault();
+            var url = 'http://' + window.location.host + window.baseUrl;
+            window.open('https://twitter.com/share?url=' + encodeURI(window.twitter.url) + '&text=' + window.twitter.text + '&hashtags=' + window.twitter.hashtag , 'twitter', 'menubar=no, location=no, width=400, height=300');
+        })
+</script>

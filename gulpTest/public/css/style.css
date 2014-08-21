@@ -56,7 +56,7 @@
 		<span>Center me verticaly</span>
 	</span>
 	*/
-	.alignMiddle{}/*must have a fixed width*/
+	.alignMiddle{letter-spacing: -0.3em;}/*must have a fixed width*/
 	.alignMiddle:before{content: " "; display: inline-block; vertical-align: middle; height: 100%; width: 0.1%; padding: 0!important;}
 	.alignMiddle>span{display: inline-block; vertical-align: middle; width: 99%;}
 
@@ -115,7 +115,19 @@
 	/*hauteur du site = hauteur du navigateur*/
 	/*html, body{height: 100%; padding: 0; margin: 0;}*/
 	
-
+	.flex-parent{
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+		display: -ms-flexbox;      /* TWEENER - IE 10 */
+		display: -webkit-flex;     /* NEW - Chrome */
+		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		-webkit-flex-flow: row wrap;
+		-moz-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+	}
+	.flex-parent .flex{flex:1; flex-basis:48%; flex-grow:0;}
+	
 /**************** CSS du site ci-après ***************/
 .wrapper{}
 .inner{width: 960px;margin:0 auto;}

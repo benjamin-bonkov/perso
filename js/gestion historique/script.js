@@ -3,8 +3,8 @@
 	//var regExpSplit = new RegExp("[#/ ,;]+", "g");
     function getHashInit(){
         if(window.location.hash != ""){//si on a une ancre d'active
-            var hash =  window.location.hash
-            ,	hashSplit =  hash.split(regExpSplit);
+            var hash =  window.location.hash;
+            // ,	hashSplit =  hash.split(regExpSplit);
         }
     }
     getHashInit();
