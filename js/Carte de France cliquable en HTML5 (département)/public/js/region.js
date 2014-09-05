@@ -383,4 +383,15 @@ window.onload = function() {
 	    });
 
 	}
+	if($("html").hasClass("ie") || $("html").hasClass("ie10")){
+		function resizeRegion(){
+			$("#region").height($("#region").width()/1.5);
+			$(".lt-ie9 #region div").css({"zoom": $("#region").height()/200})
+		}resizeRegion();
+		if(window.addEventListener){
+			window.addEventListener('resize', resizeRegion, false);
+		}else{
+			window.attachEvent ('onresize', resizeRegion);
+		}
+	}
 }
