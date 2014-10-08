@@ -1,0 +1,220 @@
+/*MEMO CSS*/
+/* :nth-child / :odd => pair/impair*/
+
+/****************************************************
+*****************general kickstart !*****************
+****************************************************/
+	button{cursor: pointer;}
+	a{text-decoration: none;}
+
+	/*Meilleur solution que .clear{clear:both;}*/
+		.clearfix:before,
+		.clearfix:after {
+		    content: " ";
+		    display: table;
+		}
+		.clearfix:after {
+		    clear: both;
+		}
+		/* IE6/7 support */
+		.clearfix {
+		    *zoom: 1;
+		}
+
+	/*empèche les padding de dépasser la width fixé*/
+	*, *:before, *:after {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	}
+
+	/*force une longue chaine de caracteres à "casser" sur une autre ligne plutôt que de dépasser de son conteneur*/
+	.break {
+	    -ms-word-break: break-all;
+	    word-break: break-all;
+	 
+	    word-break: break-word;
+	 
+	    -webkit-hyphens: auto;
+	    -moz-hyphens: auto;
+	    hyphens: auto;
+	}
+	/*cache le text et remplace par "..." lorsqu'il dépace la taille fixée*/
+	.ellipsis {
+	    width: 250px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    -ms-text-overflow: ellipsis; /* Required for IE8 */
+	    -o-text-overflow: ellipsis; /* Required for Opera */
+	    text-overflow: ellipsis;
+	}
+
+
+	/*general positionning*/
+	.left{float: left;}
+	.right{float: right;}
+	.centerBlock{margin-left: auto;margin-right: auto;text-align: center; }
+
+	/*remove text from image, better than -9999px & C*/
+	.ir {text-indent: 100%;white-space: nowrap;overflow: hidden;}
+
+	/*general state*/
+	.hide{display: none;}/*carefull, this hide to screen readers too*/
+	.show{display: block;}
+	.disabled{pointer-events: none;opacity: 0.5;}
+	.visuallyhidden{/*hide to humans only, screenreaders can still read it*/
+	    position: absolute;
+	    width: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+	    height: 1px; /* Setting this to 0 make it invisible for VoiceOver */
+	    padding: 0;
+	    margin: -1px;
+	    border: 0;
+	    clip: rect(0 0 0 0);
+	    overflow: hidden;    
+	}
+
+	/*general font*/
+	.title{font-family: serif;}
+	.code{font-family: monospace;}
+	body{font-family: sans-serif;}
+	strong{font-weight: bold;}
+	em{font-style: italic;}
+	em strong, strong em,{font-weight: bold; font-style: italic;}
+
+	/*si pas de js :*/
+	.no-js{}
+	/*si on est sur ie :*/
+	.ie{}
+	/*si on est sur ie<9 :*/
+	.lt-ie9{}
+	/*si on est sur ie<8 :*/
+	.lt-ie8{}
+	/*si on est sur ie<7 :*/
+	.lt-ie7{}
+
+	/*PIE*/
+	.pie .rounded{position: relative;z-index: 0;}
+
+	.btn{display: block; margin: 0 auto; color: #fff; border-radius: 5px; text-transform: uppercase; text-align: center; font-size:22px; font-family: 'castrolsanscon-mediumregular'; height: 50px; line-height: 50px; width: 230px; border:none; cursor: pointer;
+		background: #89004d;
+		background: -moz-linear-gradient(top, #d40078 0%, #89004d 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d40078), color-stop(100%,#89004d));
+		background: -webkit-linear-gradient(top, #d40078 0%,#89004d 100%);
+		background: -o-linear-gradient(top, #d40078 0%,#89004d 100%);
+		background: -ms-linear-gradient(top, #d40078 0%,#89004d 100%);
+		background: linear-gradient(top, #d40078 0%,#89004d 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d40078', endColorstr='#89004d');/*gradient IE*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d40078', endColorstr='#89004d')";/*gradient IE*/
+	}/* /!\ le gradient IE fait bugger les arrondis de PIE /!\
+
+	/*remplace le logo par sa version retina*/
+	@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+	  #header .logo a{background: url("../images/logo_FDM-CASSIOPEE@2x.png") no-repeat 0 0; width:127px; height:57px; background-size: 100%; margin-left: auto;margin-right: auto; z-index: 10; display: block; }
+	  /*a#logopqr:after {position: absolute; top: 0; text-align: left; width: 199px; height:97px; display: block;}*/
+	  .header a[id=logopqr] img#PhotoPQR {display: none;}
+	}
+
+/****************************************************
+*************** CSS du site ci-après ****************
+****************************************************/
+::selection{
+	background: #b01055;
+	color: #fff;
+}
+body{background-color: #EFEEEC;}
+a{color: #000;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: 	all 0.3s ease-out;
+	-ms-transition: 	all 0.3s ease-out;
+	-o-transition: 		all 0.3s ease-out;
+	transition: 		all 0.3s ease-out;
+}
+a:hover,a:focus,a.active{color: #6b0;}
+a.wahou{
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.2s ease-out;
+	-moz-transition: 	-moz-transform 0.2s ease-out;
+	-ms-transition: 	-ms-transform 0.2s ease-out;
+	-o-transition: 		-o-transform 0.2s ease-out;
+	transition: 		transform 0.2s ease-out;
+}
+a.wahou:hover{
+	-webkit-transform:  scale(1.1);
+	-moz-transform:   	scale(1.1);
+	-ms-transform:		scale(1.1);
+	-o-transform:		scale(1.1);
+}
+a.wahou:active{
+	-webkit-transform:  scale(1.04);
+	-moz-transform:   	scale(1.04);
+	-ms-transform:		scale(1.04);
+	-o-transform:		scale(1.04);
+}
+
+.wrapper{}
+.inner{width: 960px;margin:0 auto;}
+
+.titleFAT{font-size: 40px; font-weight: bold;text-align: right;line-height: 40px; }
+.titleFAT span{display: block;font-size: 20px;line-height: 20px;margin:10px 0 0; }
+
+#header{background: #444;height: 40px;line-height: 40px; color: #fff;margin:0 0 40px;}
+#header .logo{float: left;padding: 5px 0 0;}
+#navTop{float: left;}
+#navTop li{float: left; margin-left: 10px;}
+#navTop li a{color: #fff;}
+#navTop a:hover,
+#navTop a:focus,
+#navTop a.active{color: #b4d455;}
+
+#header form{float: right;padding: 8px 0 0;}
+#header form input{ display: block;float: left;height: 25px;margin:0;border: none;}
+#header form #search{padding-left: 5px;
+    border-radius: 20px 0 0 20px;
+    padding: 5px 8px;
+    color: #333;
+    box-shadow: inset 0 2px 0 rgba(0,0,0,.2), 
+				0 0 4px rgba(0,0,0,0.1);
+}
+#header form #search:focus{
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.2), 
+				0 0 4px rgba(0,0,0,0.1);
+
+}
+#header form #submitSearch{
+	width: 35px;
+	cursor: pointer;
+	margin-left: -10px;
+    border-radius: 0 20px 20px 0;
+    color: #333;
+	box-shadow: -1px 0px 0 #EFEEEC;
+}
+#header form #submitSearch:focus{}
+#header form #submitSearch:hover,#header form #submitSearch:focus{
+	box-shadow: inset 0 2px 0 rgba(0,0,0,.2),
+				0px 0px 0 #EFEEEC;
+}
+
+#banner{overflow: hidden;}
+#banner h1{width: 30%; float: left;color: #333;}
+
+#navBanner{float: left; font-size: 20px;margin:20px 0 0 5%; padding: 0 0 10px; border-bottom: 2px solid #bada55;width: 65%;}
+#navBanner li{float: left; margin-right: 25px;}
+#navBanner li a{color: #555;}
+#navBanner a:hover,
+#navBanner a:focus,
+#navBanner a.active{color: #b4d455;}
+
+.wrapperContent{overflow:hidden;clear:both;padding-top:30px;}
+
+.sidebar{width:30%;position: relative;position:fixed;}
+#navScroll{float: right; font-size:18px;font-weight: bold;}
+#navScroll a{display:block;margin:15px;}
+
+.content{width: 60%;margin: 0 5% 10px 10%;}
+.section{background: #EFEBE0;padding: 20px 40px;margin:0 0 25px;border-radius: 3px;
+box-shadow: 1px 1px 3px #777;}
+.section h2{font-size:25px;margin:15px 0;font-weight: bold;}
+.section p{margin:0 0 10px;}
+.section.active h2{color: #6b0;}
+
+#footer{clear:both;padding:20px;background:#fff;text-align:center;background:#EFEBE0}
