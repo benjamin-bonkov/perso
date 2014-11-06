@@ -110,11 +110,18 @@
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d40078', endColorstr='#89004d');/*gradient IE*/
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#d40078', endColorstr='#89004d')";/*gradient IE*/
 	}
+	.btn-none{border: none; background: transparent;}
+	.btn-reset{margin: 0; padding: 0; border: none; background: transparent;}
+	.btn-none:hover,
+	.btn-none:focus,
+	.btn-none:active,
+	.btn-reset:hover,
+	.btn-reset:focus,
+	.btn-reset:active{border: none; background: transparent;}
 
 
 	/*hauteur du site = hauteur du navigateur*/
 	/*html, body{height: 100%; padding: 0; margin: 0;}*/
-	
 	.flex-parent{
 		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
@@ -133,8 +140,8 @@
 .inner{width: 960px;margin:0 auto;}
 
 ::selection{
-	background: #b01055;
-	color: #fff;
+	/*background: #b01055;
+	color: #fff;*/
 }
 
 body{background-color: #EFEEEC;}

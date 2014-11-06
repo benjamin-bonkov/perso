@@ -123,7 +123,6 @@
             picture: window.fb.share.picture,
             link: window.fb.link
           })
-          
         })
 
     /**** twitter ****/
@@ -137,4 +136,26 @@
             var url = 'http://' + window.location.host + window.baseUrl;
             window.open('https://twitter.com/share?url=' + encodeURI(window.twitter.url) + '&text=' + window.twitter.text + '&hashtags=' + window.twitter.hashtag , 'twitter', 'menubar=no, location=no, width=400, height=300');
         })
+
+
+    //twitter follow
+
+    $(".twitter-follow").bind("click", function(e){
+      e.preventDefault();
+          var width  = 680,
+            height = 575,
+            // left   = ($(window).width()  - width)  / 2,
+            // top    = ($(window).height() - height) / 2,
+            url    = "https://twitter.com/intent/follow/?screen_name=@pqr66",
+            opts   = 'status=1' +
+                     ',width='  + width  +
+                     ',height=' + height //+
+                     // ',top='    + top    +
+                     // ',left='   + left
+                     ;
+        
+        window.open(url, 'twitter', opts);
+     
+        return false;
+    });
 </script>
