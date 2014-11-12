@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="mobile no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="mobile no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="mobile no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="mobile no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="mobile no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Canvas examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/dist/css/style.min.css">
+
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<script type="text/javascript" src="public/dist/js/all.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+='ie10';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
+	</script>
+</head>
+<body>
+<h1>CANVAS EXAMPLES</h1>
+
+<div id="detectClick" class="exemple clearfix">
+	<h2>click</h2>
+</div>
+
+<div id="draw" class="exemple clearfix">
+	<h2>draw</h2>
+</div>
+
+
+</body>
+</html>
+</html>
