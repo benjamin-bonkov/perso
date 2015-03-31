@@ -1,19 +1,22 @@
 
 /*FIX TYPO*/
-/*	
-	//dans la déclaration font
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
+	/*	
+		// typo baveuse fix
+		.fontfix{
+		    -webkit-font-smoothing:antialiased;
+		    -moz-osx-font-smoothing:grayscale;
+	    }
+	*/
+	/*
+		//dans le node html
+		-webkit-transform: rotate(0.01deg);
+		-moz-transform: rotate(0.01deg);
+		-ms-transform: rotate(0.01deg);
+		-o-transform: rotate(0.01deg);
+		transform: rotate(0.01deg);
+	*/
 
-	//dans le node html
-	-webkit-transform: rotate(0.01deg);
-	-moz-transform: rotate(0.01deg);
-	-ms-transform: rotate(0.01deg);
-	-o-transform: rotate(0.01deg);
-	transform: rotate(0.01deg);
-*/
-
-/* GPU
+/* GPU /!\ check perf, use carefully /!\
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 */
@@ -64,12 +67,15 @@
 	.hide{display: none;}/*carefull, this hide to screen readers too*/
 	.show{display: block;}
 	.disabled{pointer-events: none; cursor: not-allowed; opacity: 0.5; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); }
-	.visuallyhidden{/*hide to humans only, screenreaders can still read it*/ position: absolute; width: 1px; /* Setting this to 0 make it invisible for VoiceOver */ height: 1px; /* Setting this to 0 make it invisible for VoiceOver */ padding: 0; margin: -1px; border: 0; clip: rect(0 0 0 0); overflow: hidden;}
+	.visuallyHidden{/*hide to humans only, screenreaders can still read it*/ position: absolute; width: 1px; /* Setting this to 0 make it invisible for VoiceOver */ height: 1px; /* Setting this to 0 make it invisible for VoiceOver */ padding: 0; margin: -1px; border: 0; clip: rect(0 0 0 0); overflow: hidden;}
 
 	::-webkit-input-placeholder {
 	   font-style: italic;
 	}
 	:-moz-placeholder {  
+	   font-style: italic;
+	}
+	::-moz-placeholder  {  
 	   font-style: italic;
 	}
 	input[type="submit"]{cursor: pointer;}
@@ -84,6 +90,7 @@
 	sub{ top: 0.5em; line-height: 0; position: relative; vertical-align: baseline; font-size: 0.6em;}
 	.ttu{text-transform: uppercase;}
 	.tac{text-align: center;}
+	.tal{text-align: left;}
 	
 	/*si pas de js :*/
 	.no-js{}
@@ -99,7 +106,7 @@
 	/*pause les animation css3*/
 	.paused{ -webkit-animation-play-state: paused; -moz-animation-play-state: paused; -o-animation-play-state: paused; animation-play-state: paused;}
 
-	.btn{display: block; margin: 0 auto; color: #fff; border-radius: 2px; text-transform: uppercase; text-align: center; font-size:11px; border:none; outline: none; cursor: pointer;
+	.btn{display: inline-block; margin: 0 auto; color: #fff; border-radius: 2px; text-transform: uppercase; text-align: center; font-size:11px; border:none; outline: none; cursor: pointer;
 		background: #89004d;
 		background: -moz-linear-gradient(top, #d40078 0%, #89004d 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d40078), color-stop(100%,#89004d));
@@ -144,6 +151,10 @@
 	color: #fff;*/
 }
 
-body{background-color: #EFEEEC;}
+body{background-color: #EFEEEC; 
+	/* typo baveuse fix*/
+	    -webkit-font-smoothing:antialiased;
+	    -moz-osx-font-smoothing:grayscale;
+}
 a{color: #000;}
 .errors{color: #ff0000;}

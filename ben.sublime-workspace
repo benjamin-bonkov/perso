@@ -1,0 +1,1368 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"co",
+				"color"
+			],
+			[
+				"ro",
+				"rotateList"
+			],
+			[
+				"sa",
+				"state"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"mh",
+				"max-height"
+			],
+			[
+				"im",
+				"imgToLoad"
+			],
+			[
+				"sz",
+				"font-size"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"in",
+				"initMultiplier"
+			],
+			[
+				"ha",
+				"hashSplit"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"bo",
+				"box-shadow"
+			],
+			[
+				"re",
+				"removeClass	removeClass"
+			],
+			[
+				"c",
+				"console	consolelog"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"p",
+				"padding-bottom"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"su",
+				"subtitle"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"ou",
+				"outerHeight"
+			],
+			[
+				"la",
+				"latobold"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"ls",
+				"letter-spacing"
+			],
+			[
+				"nav",
+				"navbar-top"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"fr",
+				"franchiseHome"
+			],
+			[
+				"custom",
+				"customCheck"
+			],
+			[
+				"cui",
+				"cuisine-plus-enseigne"
+			],
+			[
+				"sub",
+				"subNav"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"pin",
+				"pin-cuisinePlus-existant"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"wh",
+				"white-space"
+			],
+			[
+				"bor",
+				"border	border"
+			],
+			[
+				"bco",
+				"border-color"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"tr",
+				"trf-scx	transform: scaleX(${1:x});"
+			],
+			[
+				"but",
+				"bouton"
+			],
+			[
+				"has",
+				"hasClass"
+			],
+			[
+				"to",
+				"toggleClass"
+			],
+			[
+				"trt",
+				"trstf	transition-timing-function: ${1:tfunc};"
+			],
+			[
+				"ma",
+				"max-height"
+			],
+			[
+				"sta",
+				"statuss"
+			],
+			[
+				"mul",
+				"multiInput"
+			],
+			[
+				"ul",
+				"urls"
+			],
+			[
+				"check",
+				"checkbox"
+			],
+			[
+				"se",
+				"selected	Attr"
+			],
+			[
+				"new",
+				"newTag"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
+				"vcom-",
+				"vcom-hide"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"bra",
+				"border-radius"
+			],
+			[
+				"sc",
+				"scrollTop"
+			],
+			[
+				"lato",
+				"latobold"
+			],
+			[
+				"bn",
+				"bd-n	border: none;"
+			],
+			[
+				"lat",
+				"latobold"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"mw",
+				"max-width"
+			],
+			[
+				"cu",
+				"cursor"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"wo",
+				"wow	word-wrap"
+			],
+			[
+				"ip",
+				"important"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"m-r",
+				"margin-right"
+			],
+			[
+				"latob",
+				"latoblack"
+			],
+			[
+				"l",
+				"lato-black"
+			],
+			[
+				"t",
+				"trs	transition: ${1:prop} ${2:time};"
+			],
+			[
+				"bx",
+				"bxsh	box-shadow: ${1:inset }${2:hoff} ${3:voff} ${4:blur} ${5:color};"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"po",
+				"pointinfo"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"scr",
+				"scrollMac"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"stop",
+				"stopPropagation"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"img",
+				"images"
+			],
+			[
+				"pus",
+				"pushVideo"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"de",
+				"delta"
+			],
+			[
+				"num",
+				"numActif"
+			],
+			[
+				"f",
+				"fixed"
+			],
+			[
+				"bgp",
+				"bgpx	background-position-x"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"s",
+				"style	Attr"
+			],
+			[
+				"line",
+				"lineTo"
+			],
+			[
+				"start",
+				"startPos"
+			],
+			[
+				"cn",
+				"canvas"
+			],
+			[
+				"of",
+				"offset"
+			],
+			[
+				"margoi",
+				"margin-top"
+			],
+			[
+				"scal",
+				"scaleRatio"
+			],
+			[
+				"ho",
+				"horsChamp"
+			],
+			[
+				"trigg",
+				"triggerClick"
+			],
+			[
+				"pause",
+				"paused"
+			],
+			[
+				"pag",
+				"page-video"
+			],
+			[
+				"ti",
+				"ti--	text-indent: -9999px;"
+			],
+			[
+				"sca",
+				"scaleRatio"
+			],
+			[
+				"dra",
+				"drawingArea"
+			],
+			[
+				"blue",
+				"blueViolet"
+			],
+			[
+				"blu",
+				"blueDark"
+			],
+			[
+				"rec",
+				"rectGuid"
+			],
+			[
+				"drawin",
+				"drawingArea"
+			],
+			[
+				"fiu",
+				"function"
+			],
+			[
+				"add",
+				"addClass	addClass"
+			],
+			[
+				"es",
+				"else"
+			],
+			[
+				"ver",
+				"vertRightSide"
+			],
+			[
+				"vert",
+				"vertRightSide"
+			],
+			[
+				"lent",
+				"length-1"
+			],
+			[
+				"point",
+				"isPointInPoly"
+			],
+			[
+				"rectG",
+				"rectGuid"
+			],
+			[
+				"rect",
+				"setRectGuid"
+			],
+			[
+				"hor",
+				"horTopSide"
+			],
+			[
+				"can",
+				"canvasWidth"
+			],
+			[
+				"clear",
+				"clearTimeout"
+			],
+			[
+				"LT",
+				"LTPolygon"
+			],
+			[
+				"RT",
+				"RTRect"
+			],
+			[
+				"pt",
+				"ptR1"
+			],
+			[
+				"draP",
+				"drawPolygon"
+			],
+			[
+				"leng",
+				"length"
+			],
+			[
+				"pol",
+				"mainPolygonSide"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/backupOS/Users/ben/Desktop/single-product-template.html",
+			"settings":
+			{
+				"buffer_size": 9784,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/backupOS/Users/ben/Desktop/product.html",
+			"settings":
+			{
+				"buffer_size": 339716,
+				"line_ending": "Windows",
+				"name": "POSSESSION MOBILE NANOSITE"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/wamp/www/perso/perso/templatehtml",
+		"/D/wamp/www/perso/perso/templatehtml/public",
+		"/D/wamp/www/perso/perso/templatehtml/public/css",
+		"/D/wamp/www/kingcom/fbd/wp-content",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/page-templates",
+		"/D/wamp/www/84paris/pia-nanosite-possession",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/css",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/js",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/js/libs/fancybox",
+		"/D/wamp/www/84paris/piaget-mobile",
+		"/D/wamp/www/84paris/piaget-mobile/media",
+		"/D/wamp/www/84paris/piaget-mobile/media/nanosites",
+		"/D/wamp/www/84paris/piaget-mobile/media/nanosites/possession",
+		"/D/wamp/www/84paris/piaget-mobile/media/nanosites/possession/mobile",
+		"/D/wamp/www/84paris/piaget-mobile/media/nanosites/possession/mobile/css",
+		"/D/wamp/www/84paris/piaget-mobile/media/nanosites/possession/mobile/js"
+	],
+	"file_history":
+	[
+		"/D/wamp/www/84paris/piaget-mobile/mobile.html",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/css/styles.css",
+		"/D/wamp/www/84paris/pia-nanosite-possession/mobile.html",
+		"/D/wamp/www/84paris/piaget-mobile/media/nanosites/possession/mobile/css/styles.css",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/js/script.js",
+		"/D/wamp/www/84paris/piaget-mobile/media/nanosites/possession/mobile/js/script.js",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/footer.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/header.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/page-templates/chiffres.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/page-templates/concept-store.php",
+		"/D/wamp/www/perso/perso/js/datatable custom/public/js/jquery.dataTables.min.js",
+		"/D/wamp/www/videoplus/site-ecommerce/thelia/core/vendor/leafo/lessphp/tests/inputs/media.less",
+		"/D/wamp/www/perso/perso/templatehtml/public/css/style.css",
+		"/D/backupOS/Users/ben/Desktop/product.html",
+		"/D/wamp/www/perso/perso/canvas/canvas-examples/public/js/03-toolbox.js",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/js/imgReady.js",
+		"/D/wamp/www/addiction/bel-insight/public/js/tiny_mce/plugins/advlink/css/advlink.css",
+		"/D/backupOS/Users/ben/Desktop/pqr366/public/js/04-canvas.js",
+		"/D/wamp/www/perso/perso/js/datatable custom/public/css/bootstrap.css",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/js/libs/fancybox/jquery.fancybox.pack.js",
+		"/D/backupOS/Users/ben/Desktop/pqr366/public/js/01-imgReady.js",
+		"/D/wamp/www/perso/perso/canvas/canvas-examples/public/js/01-imgReady.js",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/desktop/resources/full/javascripts/parser.js",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/desktop/full/javascripts/app.js",
+		"/D/wamp/www/84paris/parrot-old/wp-content/themes/pinable/includes/js/responsive.js",
+		"/D/wamp/www/perso/perso/css/ResponsiveIframeYoutube.html",
+		"/D/wamp/www/addiction/minibabybel/application/layouts/scripts/layout.phtml",
+		"/D/wamp/www/addiction/minibabybel/public/js/script.js",
+		"/D/wamp/www/sooyoos/site/public/js/script.js",
+		"/D/wamp/www/sooyoos/site/public/js/app.js",
+		"/D/wamp/www/perso/perso/js/slick-reflow.js",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/styles-mobile.css",
+		"/D/wamp/www/84paris/pia-nanosite-possession/desktop.html",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/js/libs/slick-theme.css",
+		"/D/backupOS/Users/ben/Desktop/mobile-save.html",
+		"/D/wamp/www/84paris/pia-nanosite-possession/README.md",
+		"/D/wamp/www/perso/perso/js/scrollSmooth.js",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/js/slick.css",
+		"/D/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+		"/D/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
+		"/D/backupOS/Users/ben/Desktop/hosts",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/desktop/resources/full/gulpfile.js",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/mobile/style-mobile.css",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/desktop/resources/full/sass/styles.scss",
+		"/D/wamp/www/84paris/pia-nanosite-possession/media/nanosites/possession/js/demo-prices.js",
+		"/D/wamp/ssh/public",
+		"/D/wamp/ssh/private.ppk",
+		"//BEN-SSD/Users/Ben/.ssh/known_hosts",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/forms/standard-text-field.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/account-order.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/order-placed.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/cart.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/assets/css/style.css",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/contact.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/ajax/order/delivery-address.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/order.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/misc/checkout-progress.tpl",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/address-update.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/address.html",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/public/css/style.css",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/404.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fbd/page-templates/cuisinePlus.php",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/404.html",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/temoignages.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/header.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/chiffres.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/concept-store.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/cuisinePlus-landing.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/cuisinePlus.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/franchise.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/home-page.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/ixina-landing.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/ixina.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/philosophie-misssions-page.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/reseaux-accompagnement.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/temoignages.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page-templates/training-academy.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/public/js/script.js",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/account.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/account-update.html",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/footer.php",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/account-password.html",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/public/js/map.js",
+		"/D/wamp/www/perso/perso/js/gmapGeocode.js",
+		"/D/wamp/www/perso/perso/css/gridPourcent.css",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/communications.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/landing.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/public/css/style.css",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/brand.html",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/content-gallery.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/functions.php",
+		"/C/Users/Ben/AppData/Local/Temp/scp57980/.htaccess",
+		"/D/wamp/www/kingcom/fbd/.htaccess",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/style.css",
+		"/C/Users/Ben/AppData/Local/Temp/Temp1_viewport-units-buggyfill-master.zip/viewport-units-buggyfill-master/viewport-units-buggyfill.hacks.js",
+		"/C/Users/Ben/AppData/Local/Temp/Temp1_viewport-units-buggyfill-master.zip/viewport-units-buggyfill-master/viewport-units-buggyfill.js",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/cuisine-plus-visite.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/ixina-visite.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/subnav.php",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/single-product.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/brand/brand-category-product-list.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/product.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/assets/js/script.js",
+		"/C/Users/Ben/AppData/Local/Temp/Temp1_Animating-Numbers-Counting-Up-with-jQuery-Counter-Up-Plugin.zip/Animating-Numbers-Counting-Up-with-jQuery-Counter-Up-Plugin/jquery.counterup.js",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/search/search-toolbar.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/layout.tpl",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/search/list-filter.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/search/radio-filter.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/search/cursor-filter.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/search/filters.html",
+		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/search.html",
+		"/C/Users/Ben/AppData/Local/Temp/Temp1_jquery-ui-1.11.3.custom.zip/jquery-ui-1.11.3.custom/jquery-ui.min.css",
+		"/D/wamp/www/videoplus/site-ecommerce/modules/HookNavigation/templates/frontOffice/default/main-navbar-primary.html",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/services.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/wp-includes/support.php",
+		"/D/wamp/www/perso/perso/js/partage/share.php",
+		"/D/wamp/www/perso/perso/wp/custom-meta.php",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/public/js/animateScroll.js",
+		"/C/Users/Ben/AppData/Local/Temp/Temp1_iCheck-1.x.zip/iCheck-1.x/skins/minimal/minimal.css",
+		"/D/backupOS/Users/ben/Desktop/wp_posts.sql",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/page.php",
+		"/D/wamp/www/perso/perso/js/facebook-pushLike.html",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/content-image.php",
+		"/C/Users/Ben/AppData/Roaming/Sublime Text 3/Packages/User/border.sublime-snippet",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/public/js/libs/fancybox/jquery.fancybox.js",
+		"/D/wamp/www/kingcom/fbd/wp-content/themes/fdb/public/js/libs/fancybox/jquery.fancybox.pack.js",
+		"/D/wamp/www/force-republicaine/site-web/wp-content/themes/force-republicaine/content-category.php",
+		"/D/wamp/www/force-republicaine/site-web/wp-content/themes/force-republicaine/part-templates/loop-thematiques.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 116.0,
+		"where_history":
+		[
+			"D:\\wamp\\www\\",
+			"D:\\wamp\\www\\84paris\\pia-nanosite-possession",
+			"D:\\wamp\\www\\",
+			"D:\\wamp\\www\\84paris\\pia-nanosite-possession",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce\\templates\\frontOffice\\videoplus",
+			"D:\\wamp\\www\\kingcom\\fbd\\wp-content\\themes\\fdb",
+			"D:\\wamp\\www\\kingcom\\fbd\\wp-content\\themes\\fdb\\wp-includes",
+			"D:\\wamp\\www\\kingcom\\fbd\\wp-content\\themes\\fdb\\page-templates",
+			"D:\\wamp\\www\\kingcom\\fbd\\wp-content\\themes\\fdb",
+			"D:\\wamp\\www\\kingcom\\fbd",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce\\templates\\frontOffice\\videoplus",
+			"D:\\wamp\\www\\",
+			"D:\\wamp\\www\\kingcom\\fbd\\wp-content\\themes\\fdb",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce\\",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce\\templates\\frontOffice\\videoplus",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce",
+			"D:\\wamp\\www\\kingcom\\fbd\\wp-content\\themes\\fdb",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce",
+			"D:\\wamp\\www\\addiction\\validcom",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce",
+			"D:\\wamp\\www\\addiction\\validcom",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce",
+			"D:\\wamp\\www\\addiction\\validcom",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce",
+			"D:\\wamp\\www\\84paris\\parrot\\wp-content\\themes",
+			"D:\\wamp\\www\\84paris\\parrot\\wp-content\\",
+			"D:\\wamp\\www\\84paris\\parrot\\wp-content\\themes\\pinable3",
+			"D:\\wamp\\www\\videoplus\\site-ecommerce",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\sooyoos\\site",
+			"D:\\wamp\\www\\sooyoos\\siteTest",
+			"D:\\wamp\\www\\nouscitoyens\\veilleurs",
+			"D:\\wamp-backup",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content",
+			"D:\\wamp\\www\\peclers\\spring-2016",
+			"D:\\wamp\\www\\pqr\\pqr366",
+			"D:\\wamp\\www\\addiction\\minibabybel",
+			"D:\\wamp\\www\\addiction\\filorga-absolute-fb\\web",
+			"D:\\wamp\\www\\acadomia\\reseau-social\\src\\Acadomia\\CoreBundle\\Resources\\public\\less",
+			"D:\\wamp\\www\\acadomia\\reseau-social\\src\\Acadomia\\CoreBundle\\Resources\\public\\less\\acadomia",
+			"D:\\wamp\\www\\force-republicaine",
+			"D:\\wamp\\www\\fondapol\\opendata",
+			"D:\\wamp\\www\\force-republicaine",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens\\wp-content\\themes\\aquilo",
+			"D:\\wamp\\www\\acadomia\\reseau-social\\src\\Acadomia\\",
+			"D:\\wamp\\www\\acadomia\\reseau-social\\src\\Acadomia\\CoreBundle\\Resources",
+			"D:\\wamp\\www\\force-republicaine\\site-web",
+			"D:\\wamp\\www\\acadomia\\reseau-social",
+			"D:\\wamp\\www\\acadomia\\reseau-social\\src\\Acadomia",
+			"D:\\wamp\\www\\nouscitoyens\\veilleurs",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\nouscitoyens\\veilleurs\\php",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine\\page-custom",
+			"D:\\wamp\\www\\force-republicaine",
+			"D:\\wamp\\www\\sooyoos\\dataville",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes",
+			"D:\\wamp\\www\\projets\\ajefa\\wp-content\\themes\\ajefa",
+			"D:\\wamp\\www\\projets\\ajefa\\wp-content\\plugins\\good-old-gallery",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine",
+			"D:\\wamp\\www\\projets\\dentiste\\src\\Dentiste\\Bundle",
+			"D:\\wamp\\www\\projets\\dentiste\\src\\Dentiste\\Bundle\\AdminBundle",
+			"D:\\wamp\\www\\force-republicaine",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens",
+			"D:\\wamp\\www\\addiction\\filorga",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\addiction\\soge-espace-coaching",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\addiction\\soge-espace-coaching",
+			"D:\\wamp\\www\\addiction\\soge-espace-coaching-apps",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens\\wp-content\\themes\\aquilo",
+			"D:\\wamp\\www\\force-republicaine",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine",
+			"D:\\wamp\\www\\projets\\ajefa\\wp-content\\themes\\ajefa",
+			"D:\\wamp\\www\\projets\\dentiste\\src\\Dentiste\\Bundle\\AdminBundle",
+			"D:\\wamp\\www\\fondapol\\fondapol-org",
+			"D:\\wamp\\www\\fondapol\\fondapol-org\\wp-content\\themes\\Fondapol",
+			"D:\\wamp\\www\\peclers\\winter-15-16",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine,D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine\\css,D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine\\inc,D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine\\js,D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine\\languages,D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine\\page-templates",
+			"D:\\wamp\\www\\force-republicaine\\site-web\\wp-content\\themes\\force-republicaine",
+			"D:\\wamp\\www\\force-republicaine\\site-web",
+			"D:\\wamp\\www\\peclers\\winter-15-16",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\addiction\\eurosport25",
+			"D:\\wamp\\www\\peclers\\winter-15-16",
+			"D:\\wamp\\www\\projets\\dentiste,-\\cache\\*",
+			"D:\\wamp\\www\\projets\\dentiste,-D:\\wamp\\www\\projets\\dentiste\\app\\cache\\*",
+			"D:\\wamp\\www\\projets\\dentiste,-D:\\wamp\\www\\projets\\dentiste\\app\\cache\\",
+			"D:\\wamp\\www\\projets\\dentiste,-D:\\wamp\\www\\projets\\dentiste\\app\\cache",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\backupOS\\Users\\ben\\Desktop\\wordpress\\wp-content\\themes\\ken",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens\\wp-content\\themes\\aquilo",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens\\nouscitoyens",
+			"D:\\wamp\\www\\sooyoos\\dataville",
+			"D:\\wamp\\www\\projets\\dentiste\\src\\Dentiste",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens\\nouscitoyens\\application",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens\\nouscitoyens\\application\\modules\\admin\\views\\scripts\\fiche",
+			"D:\\wamp\\www\\nouscitoyens\\nouscitoyens",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\test\\device_orientation",
+			"D:\\wamp\\www\\test\\threeVR-master\\examples",
+			"D:\\wamp\\www\\projets\\dentiste\\src",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\addiction\\eurosport25",
+			"D:\\wamp\\www\\sooyoos\\site",
+			"D:\\wamp\\www\\projets\\dentiste\\",
+			"D:\\wamp\\www\\projets\\dentiste\\app",
+			"D:\\wamp\\www\\projets\\dentiste\\web",
+			"D:\\wamp\\www\\projets\\dentiste\\src\\Dentiste",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\addiction\\eurosport25",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\projet\\dentiste",
+			"D:\\wamp\\www\\addiction\\cousteron",
+			"D:\\wamp\\www\\projets\\dentiste\\",
+			"D:\\wamp\\www\\projets\\dentiste\\src\\Dentiste\\Bundle\\DefaultBundle\\Resources\\views",
+			"D:\\wamp\\www\\projets\\dentiste",
+			"D:\\wamp\\www\\projets\\frederic-sofia"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"/media",
+			"slick",
+			"slick-dot",
+			"\"/media",
+			"<a href=\"pub/media/cache/img_product/sized/1695/600/600/0/1424083993v6.png\" dat",
+			"\n                                            <span data-target=\".rotate\" class=\"action showtab\"><i class=\"icon-rotate\"></i></span>\n                                            <span data-target=\".wear\"   class=\"action showtab\"><i class=\"icon-wear\"></i></span>",
+			".wear",
+			"<div class=\"title\">Découvrez",
+			"\"/media",
+			"h2",
+			"p",
+			"h2",
+			"\n                                        <p class=\"product__price\">\n                                        </p>",
+			"product",
+			"\"/media",
+			"\n                                            <p class=\"sep\"></p>\n                                            <div class=\"titlePiaget\">",
+			"ss2",
+			"\"/media",
+			"\n                                        <div class=\"sep\"></div>\n                                        <div class=\"titleProduct\">",
+			"\n                                        </div>\n                                        <div class=\"titleProduct\">",
+			"\n                                        </div>\n                                        <div class=\"titleProduct\">Bagues</div>",
+			"\n                                                <div>\n                                                    <div class=\"\">\n                                                        <div class=\"visuel\">",
+			"\n                                                    <div class=\"inner\">\n                                                        <div class=\"visuel\">",
+			"\n                                                <div>\n                                                    <div class=\"inner\">\n                                                        <div class=\"visuel\">",
+			"<div class=\"title\">Bague",
+			"intro",
+			"\"/media",
+			"font-family: 'agaramondpro-regular-webfont', serif;",
+			"du mouvement na",
+			"video-possession",
+			"\"/media",
+			"à®",
+			"à¨",
+			"àª",
+			"Ã",
+			"â€™",
+			"â‚¬",
+			"Â£",
+			"iÃ¨",
+			"Ã©",
+			"\"/media",
+			"\n                                        <div class=\"tab anim\">\n                                            \n                                        </div>\n                                        <div class=\"tab rotate\">\n                                            \n                                        </div>\n                                        <div class=\"tab wear\">\n                                            \n                                        </div>",
+			"down",
+			"<div class=\"tab anim\">\n                                            \n                                        </div>\n                                        <div class=\"tab rotate\">\n                                            \n                                        </div>\n                                        <div class=\"tab wear\">\n                                            \n                                        </div>",
+			"Chung\"",
+			"video-chung\"",
+			"blogger",
+			"bloggerz",
+			"button",
+			"class",
+			"menuTab",
+			"rotate",
+			"coord.set(",
+			"getCursorPos",
+			".click",
+			"_load",
+			"load",
+			"get",
+			"isReady",
+			"onReady",
+			"isReady",
+			"_load",
+			"loading",
+			"readyCallbacks",
+			"loading",
+			"resourceCache",
+			"function ",
+			"G34P4B00",
+			"imagesList",
+			"anim",
+			"imagesList",
+			"qty",
+			"img",
+			"\\",
+			"class=\"product__medias block inner\">",
+			"product__medias",
+			"<div class=\"product__widgets\">",
+			"product",
+			"prod",
+			"medias__wrapper",
+			"media/nanosites/possession/desktop/full/images/products/360/G34P6A00/1.png",
+			"/media/nanosites/possession/desktop",
+			"/media/nanosites/possession/desktop/full/",
+			"/media/nanosites/possession/desktop/full/images/",
+			"/media/nanosites/possession/desktop/full/images/products/",
+			"/media/nanosites/possession/desktop/full/images/products/360/",
+			"/media/nanosites/possession/desktop/full/images/products/360/G34P6A00/",
+			"/media/nanosites/possession/desktop/full/images/products/360/G34P6A00/1.png",
+			"g-blue",
+			"g-blue-",
+			"data-category=\"pendant\"",
+			"pendant",
+			"product__medias__fullscreen",
+			"product__medias__carousel",
+			"product",
+			"product inner2\">\n                                        <div class=\"visuel\">",
+			"product page wrapper",
+			"hidemobile",
+			"scroll",
+			".delay(1000)",
+			"product__bottom",
+			"product__details",
+			"product__resume inner",
+			"class=\"product\"",
+			"class=\"product__resume\"",
+			"class=\"product__medias\"",
+			"product__medias",
+			">\n",
+			" <!-",
+			"Montre Possession",
+			"G0A35083",
+			"                            ",
+			"G34PU400",
+			"ry=\"bra",
+			"Bracelet",
+			"bracelet",
+			"Bracelet",
+			"bracelet",
+			"Bracelet",
+			"bracelet",
+			"Bracelet",
+			"bracelet",
+			"Bracelet",
+			"bracelet",
+			"Bracelet",
+			"bracelet",
+			"data-category=\"bracelet\"",
+			"data-category=\"ring\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"./media",
+			"î",
+			"è",
+			"ê",
+			"à",
+			"'",
+			"€",
+			"£",
+			"è",
+			"é",
+			"FBD",
+			"fbd",
+			"",
+			"while ( have_posts() ) : the_post(); ?>\n\n				<?php /*\n					<article id=\"post-<?php the_ID(); ?>\" <?php post_class(); ?>>\n					<header class=\"entry-header\">\n						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>\n						<div class=\"entry-thumbnail\">\n							<?php the_post_thumbnail(); ?>\n						</div>\n						<?php endif; ?>\n\n						<!-- <h1 class=\"entry-title\"><?php the_title(); ?></h1> -->\n					</header><!-- .entry-header -->\n\n					<div class=\"entry-content\">\n				*/?>\n						<?php the_content(); ?>\n				<?php /*\n						<?php wp_link_pages( array( 'before' => '<div class=\"page-links\"><span class=\"page-links-title\">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>\n					</div><!-- .entry-content -->\n\n					<footer class=\"entry-meta\">\n						<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class=\"edit-link\">', '</span>' ); ?>\n					</footer><!-- .entry-meta -->\n				</article><!-- #post -->\n\n				<?php comments_template(); ?>\n				*/?>\n			<?php endwhile;",
+			"row-push-blue",
+			"row-push-green",
+			"row-block",
+			"btn-border-black",
+			"btn-border-white",
+			"<h1 class=\"vcom-logo\"><a href=\"./index.html\"><img src=\"./public/images/validcom.png\" alt=\"Validcom\"></a></h1>",
+			"\n									<div class=\"vcom-tag\">\n										<input type=\"checkbox\" checked=\"\" name=\"copy-to\" id=\"\" value=\"hjmkl\"><span class=\"value\">John Doe</span><i class=\"vcom-icon-close\"></i>\n									</div>",
+			"vcom-global-library",
+			"<body id=\"vcom\" class=\"vcom\"",
+			"\n<!--[if lte IE 9]>\n    <script type=\"text/javascript\">\n        /*Fallback pour les placeholder sur IE*/\n        $(document).ready(function(){\n            var $input = $(\"input[type='text'], textarea\").each(function(){\n                var placeholder = $(this).attr(\"placeholder\");\n                $(this).bind(\"focusin\",focusin);\n                $(this).bind(\"change\",change);\n                $(this).bind(\"focusout\",focusout);\n                if( $(this).val() == \"\" || $(this).val() == placeholder) \n                {\n                    if (placeholder != null && placeholder != \"\" ){\n                        $(this).val(placeholder).addClass(\"placeholder\");\n                    }                   \n                }\n                else \n                {\n                    if(placeholder == $(this).val())\n                    {\n                        $(this).addClass('error');\n                    }\n                }\n            });\n            function focusin(){\n            	if($(this).hasClass(\"placeholder\")){\n	                $(this).val(\"\");\n	                $(this).unbind(\"focusin\");\n					$(this).removeClass(\"placeholder\");\n            	}\n            }\n            function focusout(){\n                if($(this).val() == \"\"|| $(this).val() == placeholder){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder).addClass(\"placeholder\");\n                    $(this).bind(\"focusin\",focusin);\n					$(this).addClass(\"placeholder\");\n                }\n            }\n            function change(){\n                if($(this).val() == \"\" || $(this).val() == placeholder){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder);\n                    $(this).bind(\"focusin\",focusin);\n                    $(this).val(placeholder).addClass(\"placeholder\");\n                }else{\n					$(this).removeClass(\"placeholder\");\n                }\n            }\n            $('form').submit(function(){\n                $(this).find(\"input[type='text']\").each(function(){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    if( $(this).val() == placeholder ) \n                    {\n                        $(this).val(\"\");\n                    }\n                 });\n            });\n        });\n    </script>\n<![endif]-->",
+			"\n<!--[if lte IE 9]>\n    <script type=\"text/javascript\">\n        /*Fallback pour les placeholder sur IE*/\n        $(document).ready(function(){\n            var $input = $(\"input[type='text'], textarea\").each(function(){\n                var placeholder = $(this).attr(\"placeholder\");\n                $(this).bind(\"focusin\",focusin);\n                $(this).bind(\"change\",change);\n                $(this).bind(\"focusout\",focusout);\n                if( $(this).val() == \"\" || $(this).val() == placeholder) \n                {\n                    if (placeholder != null && placeholder != \"\" ){\n                        $(this).val(placeholder).addClass(\"placeholder\");\n                    }                   \n                }\n                else \n                {\n                    if(placeholder == $(this).val())\n                    {\n                        $(this).addClass('error');\n                    }\n                }\n            });\n            function focusin(){\n            	if($(this).hasClass(\"placeholder\")){\n	                $(this).val(\"\");\n	                $(this).unbind(\"focusin\");\n            	}\n            }\n            function focusout(){\n                if($(this).val() == \"\"){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder).addClass(\"placeholder\");\n                    $(this).bind(\"focusin\",focusin);\n                }\n            }\n            function change(){\n                if($(this).val() == \"\"){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder);\n                    $(this).bind(\"focusin\",focusin);\n                }else{\n					$(this).removeClass(\"placeholder\");\n                }\n            }\n            $('form').submit(function(){\n                $(this).find(\"input[type='text']\").each(function(){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    if( $(this).val() == placeholder ) \n                    {\n                        $(this).val(\"\");\n                    }\n                 });\n            });\n        });\n    </script>\n<![endif]-->",
+			"\n<!--[if lte IE 9]>\n    <script type=\"text/javascript\">\n        /*Fallback pour les placeholder sur IE*/\n        $(document).ready(function(){\n            var $input = $(\"input[type='text'], textarea\").each(function(){\n                var placeholder = $(this).attr(\"placeholder\");\n                $(this).bind(\"focusin\",focusin);\n                $(this).bind(\"change\",change);\n                $(this).bind(\"focusout\",focusout);\n                if( $(this).val() == \"\" ) \n                {\n                    if (placeholder != null && placeholder != \"\" ){\n                        $(this).val(placeholder).addClass(\"placeholder\");\n                    }                   \n                }\n                else \n                {\n                    if(placeholder == $(this).val())\n                    {\n                        $(this).addClass('error');\n                    }\n                }\n            });\n            function focusin(){\n            	if($(this).hasClass(\"placeholder\")){\n	                $(this).val(\"\");\n	                $(this).unbind(\"focusin\");\n            	}\n            }\n            function focusout(){\n                if($(this).val() == \"\"){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder).addClass(\"placeholder\");\n                    $(this).bind(\"focusin\",focusin);\n                }\n            }\n            function change(){\n                if($(this).val() == \"\"){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder);\n                    $(this).bind(\"focusin\",focusin);\n                }else{\n					$(this).removeClass(\"placeholder\");\n                }\n            }\n            $('form').submit(function(){\n                $(this).find(\"input[type='text']\").each(function(){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    if( $(this).val() == placeholder ) \n                    {\n                        $(this).val(\"\");\n                    }\n                 });\n            });\n        });\n    </script>\n<![endif]-->",
+			"\n					<li><a href=\"./index.html\" class=\"\">Home</a></li>\n					<li><a href=\"./my-dashboard.html\">My Dashboard</a></li>\n					<li><a href=\"./my-library.html\">My Library</a></li>\n					<li><a href=\"./global-library.html\">Global Library</a></li>\n					<li class=\"vcom-right\"><a href=\"./new-request.html\" class=\"vcom-btn active\"><i class=\"fa fa-plus\"></i> New Request</a></li>",
+			"<div class=\"vcom-title vcom-title-bigmargin\">Global informations</div>",
+			"\n					<i class=\"fa fa-chevron-up\"></i> <br>\n					Back to top",
+			"\n					<i class=\"fa fa-chevron-up\"></i>\n					<p>Back to top</p>",
+			"\n							<label for=\"copy-to\">Copy your validation request to\n								<span class=\"vcom-hoverInfo\">\n									? \n									<span class=\"vcom-infoMsg\">\n									    In case of Marketing Director not being your Manager, please add systematically this person in the copy list. <br>\n									    Please, note that the people put in copy will be able to access to the validation request throughout the whole validation process\n									</span>\n								</span>\n							</label>",
+			"					<div class=\"vcom-formRow vcom-inlineRow\">\n							<label for=\"copy-to\">Copy your validation request to\n								<span class=\"vcom-hoverInfo\">\n									? \n									<span class=\"vcom-infoMsg\">Optional. <br>To give more context to the communication to be validated</span>\n								</span>\n							</label>\n							<div class=\"multiInput\">								\n								<input type=\"text\" name=\"copy-to\" id=\"copy-to\" placeholder=\"Type name\">\n								<div class=\"vcom-tagged\">\n								</div>\n							</div>\n					</div><!-- ./vcom-formRow -->",
+			"<span class=\"vcom-no-break\">Document(s) to be validated</span>",
+			"<div class=\"vcom-col vcom-col-1 vcom-country\">\n							<label for=\"country\">Contry</label>\n							<p class=\"vcom-detail vcom-subSelect\">(multiple countries authorized)</p>",
+			"<div class=\"vcom-col vcom-col-1 vcom-country\">\n							<label for=\"country\">Contry</label>\n							<p class=\"vcom-detail\">(multiple countries authorized)</p>",
+			"\n							<label for=\"launch\">Launch timing in market</label>\n							<input type=\"text\" name=\"launch\" id=\"launch\" placeholder=\"Enter month and year of launch in the market\">",
+			" var $input = $(\"input[type='text'], textarea\").each(function(){",
+			"Marketing initiatior :",
+			"icon-dl",
+			"\n\n\n\nicon-dl\n",
+			"",
+			"<a href=\"./versions.html\" target=\"_blank\" class=\"vcom-btn vcom-right\">View all versions</a>",
+			"<a href=\"./delegation.html\">Delegation</a>",
+			"    <script src=\"http://cdn.kendostatic.com/2014.3.1119/js/jquery.min.js\"></script>\n    <script src=\"http://cdn.kendostatic.com/2014.3.1119/js/kendo.all.min.js\"></script>\n	<link rel=\"stylesheet\" href=\"./public/js/libs/select2/select2.css\">\n	<link rel=\"stylesheet\" href=\"./public/js/libs/slick/slick.css\">\n	<link rel=\"stylesheet\" href=\"./public/css/style.css\">",
+			"	<script type=\"text/javascript\" src=\"./public/js/libs/select2/select2.min.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/libs/select2/select2_locale_fr.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/libs/icheck.min.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/libs/slick/slick.min.js\"></script>",
+			"<li><a href=\"http://connecting-for-growth\" target=\"_blank\">CFG</a></li>",
+			"<li><a href=\"http://weshare/mark\" target=\"_blank\">WeShare</a></li>",
+			"<li><a href=\"http://spark-dev.bel.com\" target=\"_blank\">Spark</a></li>",
+			"class=\"vcom-num vcom-num-red",
+			"active\n\n\nclass=\"vcom-num vcom-num-red\n",
+			"active",
+			"<p class=\"vcom-status\"",
+			"class=\"vcom-value",
+			"			<div class=\"vcom-block vcom-requestInfos\">\n				<div class=\"vcom-left\"><p>Marketing initiatior",
+			"<div class=\"vcom-block vcom-requestInfos\">\n				<div class=\"vcom-left\">\n					<p>Marketing initiatior ",
+			"\n	<script type=\"text/javascript\" src=\"./public/js/libs/select2/select2.min.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/libs/select2/select2_locale_fr.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/libs/icheck.min.js\"></script>\n	<script type=\"text/javascript\"  src=\"communication.js\"></script>",
+			"href=\"./public/pdf/examplePDF.pdf\" download",
+			"href=\"./public/pdf/examplePDF.pdf\" download\n",
+			"examplePDF.pdf",
+			"<li><a href=\"./public/pdf/languedebois.pdf\" target=\"_blank\">Process<i class=\"fa fa-download\"></i></a></li>\n					<li><a href=\"./public/pdf/languedebois.pdf\" target=\"_blank\">User Guides<i class=\"fa fa-download\"></i></a></li>\n					<li><a href=\"./public/pdf/languedebois.pdf\" target=\"_blank\">Contacts Lists<i class=\"fa fa-download\"></i></a></li>",
+			"<body id=\"vcom\">",
+			"	<script type=\"text/javascript\" src=\"./public/js/libs/select2/select2.min.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/libs/select2/select2_locale_fr.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/libs/icheck.min.js\"></script>\n	<script type=\"text/javascript\" src=\"./public/js/script.js\"></script>\n<!--[if lte IE 9]>\n    <script type=\"text/javascript\">\n        /*Fallback pour les placeholder sur IE*/\n        $(document).ready(function(){\n            var $input = $(\"input[type='text']\").each(function(){\n                var placeholder = $(this).attr(\"placeholder\");\n                $(this).bind(\"focusin\",focusin);\n                $(this).bind(\"change\",change);\n                $(this).bind(\"focusout\",focusout);\n                if( $(this).val() == \"\" ) \n                {\n                    if (placeholder != null && placeholder != \"\" ){\n                        $(this).val(placeholder);\n                    }                   \n                }\n                else \n                {\n                    if(placeholder == $(this).val())\n                    {\n                        $(this).addClass('error');\n                    }\n                }\n            });\n            function focusin(){\n                $(this).val(\"\");\n                $(this).unbind(\"focusin\");\n            }\n            function focusout(){\n                if($(this).val() == \"\"){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder);\n                    $(this).bind(\"focusin\",focusin);\n                }\n            }\n            function change(){\n                if($(this).val() == \"\"){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    $(this).val(placeholder);\n                    $(this).bind(\"focusin\",focusin);\n                }                }\n            $('form').submit(function(){\n                $(this).find(\"input[type='text']\").each(function(){\n                    var placeholder = $(this).attr(\"placeholder\");\n                    if( $(this).val() == placeholder ) \n                    {\n                        $(this).val(\"\");\n                    }\n                 });\n            });\n        });\n    </script>\n<![endif]-->\n</body>\n</html>",
+			"    <script src=\"http://cdn.kendostatic.com/2014.3.1119/js/kendo.all.min.js\"></script>\n	<link rel=\"stylesheet\" href=\"./public/js/libs/select2/select2.css\">\n	<link rel=\"stylesheet\" href=\"./public/css/style.css\">",
+			"<span id=\"userName\">Lionel DUPONT</span>",
+			"",
+			"<li><a href=\"./new-request.html\">+ New Request</a></li>",
+			"<li><a href=\"./global-library.html\">Global Library</a></li>",
+			"<li><a href=\"./my-library.html\">My library</a></li>",
+			"<li><a href=\"./index.html\">Home</a></li>",
+			"<li><a href=\"./my-dashboard.html\">My Dashboard</a></li>",
+			"<li><a href=\"./index.html\">Home</a></li>",
+			"					<li><a href=\"./new-request.html\" class=\"vcom-btn vcom-right\"><i class=\"fa fa-plus\"></i> New Request</a></li>\n				</ul>",
+			"\n					<li><a href=\"./new-request.html\" class=\"vcom-btn vcom-right\"><i class=\"fa fa-plus\"></i> New Request</a></li>\n				</ul>",
+			"wamp",
+			"wamp\n",
+			"}\n",
+			"flash_mode_femme_spring2016",
+			"<li><a href=\"./theme-2.html\">glitz</a></li>",
+			"<a href=\"./theme-62.html\">match point</a>",
+			"<li><a href=\"./theme-2.html\">match point</a></li>",
+			"theme-4.html\">glitz",
+			"theme-5.html\">pretty <br>on the inside",
+			"/theme-4.html\">pretty <br>on the inside",
+			"theme-2.html\">match point",
+			"theme-3.html\">ORDINARY?",
+			"theme-1.html\">concrete waves",
+			"theme-5.html\">glitz",
+			"theme-3.html\">match point",
+			"theme-6.html\">Leisure",
+			"pretty <br>on the inside</a></li>",
+			"/theme-4.html\">pretty <br>\non the inside",
+			"/theme-2.html\">ORDINARY?",
+			"spring-2016",
+			"Flash Mode Femme Spring 2016",
+			"flash_mode_femme_spring_2016",
+			"'_trackEvent', 'SIteSkinAbsolute-",
+			"site-content col-sm-8",
+			";}\n",
+			"flash_mode_femme_winter_2015-16.html",
+			"flash_mode_femme_winter_2015-16",
+			"flash_mode_femme_winter_2015-16\n\n<body>\n    <script type=\"text/javascript\" src=\"public/js/script.js\"></script>",
+			"\n\n<body>\n    <script type=\"text/javascript\" src=\"public/js/script.js\"></script>",
+			"\n\n    <script type=\"text/javascript\" src=\"public/js/script.js\"></script>\n<body>",
+			"",
+			"<?php include(\"./cookie.php\"); ?>",
+			"",
+			"e",
+			"e\n",
+			">\n",
+			"euro25fb",
+			"exhib",
+			"exhibition",
+			"./public/",
+			"/public/",
+			"public/images",
+			"Tour de France 2013 <br>Givors - Mt Ventoux <br>15th stage",
+			"Tour de France 2013 <br>Givors - Mt Ventoux <br>15th stage\nWomen’s Final <br> S.Williams vs V.Azarenka",
+			"US OPEN 2013\nWomen’s Final <br> S.Williams vs V.Azarenka",
+			"AUSTRALIAN Open 2014 <br> Men’s ¼ Finals <br>N.Djokovic vs S.Wawrinka",
+			"'/public/images",
+			".png'); ?>\"",
+			".jpg'); ?>\"",
+			"src=\"<?php echo $this->baseUrl('",
+			"	",
+			"<a href=\"https://www.nos-bel-idees.fr/\" class=\"btn green nos-idees\" target=\"_blank\"",
+			"../images",
+			"\"",
+			"<li><a href=\"./theme-2.html\">Solar Folklore</a></li>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\perso\\perso\\php"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\perso\\perso\\js"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\perso\\perso\\templatehtml"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\perso\\perso\\css"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\84paris\\parrot\\wp-content\\themes\\pinable3"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\addiction\\bel-insight"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\addiction\\validcom"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\videoplus\\videoplusinte"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\addiction\\eurosport-regie"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\videoplus\\site-ecommerce"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\kingcom\\fbd"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\84paris\\pia-nanosite-possession"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "D:\\wamp\\www\\84paris\\piaget-mobile"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/backupOS/Users/ben/Desktop/single-product-template.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2131,
+								2131
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1197.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/backupOS/Users/ben/Desktop/product.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 339716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325063,
+								325063
+							]
+						],
+						"settings":
+						{
+							"auto_name": "POSSESSION MOBILE NANOSITE",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 81440.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"147",
+				"dentiste\\app\\cache\\dev_old\\profiler\\17\\9e\\479e17"
+			],
+			[
+				"doc",
+				"dentiste\\vendor\\sonata-project\\easy-extends-bundle\\Mapper\\DoctrineCollector.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 335.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

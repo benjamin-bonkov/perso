@@ -1,10 +1,11 @@
 
 <input type="text" name="initiales" id="initiales" placeholder="Vos initiales" value="" maxlength="4" />
+<textarea name="" id="" cols="30" rows="4" placeholder="Enter a short description of your communication and its main objectives"></textarea>
 <!--[if lte IE 9]>
     <script type="text/javascript">
         /*Fallback pour les placeholder sur IE*/
         $(document).ready(function(){
-            var $input = $("input[type='text']").each(function(){
+            var $input = $("input[type='text'], textarea").each(function(){
                 var placeholder = $(this).attr("placeholder");
                 $(this).bind("focusin",focusin);
                 $(this).bind("change",change);
@@ -12,7 +13,7 @@
                 if( $(this).val() == "" ) 
                 {
                     if (placeholder != null && placeholder != "" ){
-                        $(this).val(placeholder);
+                        $(this).val(placeholder).addClass("placeholder");
                     }                   
                 }
                 else 
@@ -24,13 +25,15 @@
                 }
             });
             function focusin(){
-                $(this).val("");
-                $(this).unbind("focusin");
+                if($(this).hasClass("placeholder")){
+                    $(this).val("");
+                    $(this).unbind("focusin");
+                }
             }
             function focusout(){
                 if($(this).val() == ""){
                     var placeholder = $(this).attr("placeholder");
-                    $(this).val(placeholder);
+                    $(this).val(placeholder).addClass("placeholder");
                     $(this).bind("focusin",focusin);
                 }
             }
@@ -39,7 +42,10 @@
                     var placeholder = $(this).attr("placeholder");
                     $(this).val(placeholder);
                     $(this).bind("focusin",focusin);
-                }                }
+                }else{
+                    $(this).removeClass("placeholder");
+                }
+            }
             $('form').submit(function(){
                 $(this).find("input[type='text']").each(function(){
                     var placeholder = $(this).attr("placeholder");

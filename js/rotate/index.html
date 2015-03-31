@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Rotate</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="inner">
+			
+            <section class="product page wrapper" id="product-G34PU400" data-reference="G34PU400" data-category="ring">
+                <header class="product__header">
+                    <div class="product__medias block inner">
+                        <div class="tab main active">
+                            <img class="product__medias__main" src="./public/images/products/360/G34P4B00/1.png">
+                        </div>
+                        <div class="tab anim" data-src="./public/images/products/rituel/G34P4B00/" data-qty="60" data-action="anim">
+                            <div class="loader">
+                                <div class="sk-spinner sk-spinner-double-bounce">
+                                  <div class="sk-double-bounce1"></div>
+                                  <div class="sk-double-bounce2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab rotate" data-src="./public/images/products/360/G34P4B00/" data-qty="60" data-action="rotate"> 
+                            <div class="loader">
+                                <div class="sk-spinner sk-spinner-double-bounce">
+                                  <div class="sk-double-bounce1"></div>
+                                  <div class="sk-double-bounce2"></div>
+                                </div>              
+                            </div>                           
+                        </div>
+                        <div class="menuTab">
+                            <span data-target=".main"   class="action showtab active"><i class="icon-main"></i></span>
+                            <span data-target=".anim"   class="action showtab"><i class="icon-anim"></i></span>
+                            <span data-target=".rotate" class="action showtab"><i class="icon-rotate"></i></span>
+                            <a href="pub/media/cache/img_product/sized/909/600/600/0/1424084030v6.png" data-target=".zoom" class="fancybox fancybox-images"><i class="icon-zoom"></i></a>
+                        </div>
+                        <!-- <img class="product__medias__carousel" src="pub/media/cache/img_product/sized/909/150/150/FFFFFF/1424084030v6.jpg"> -->
+                        <!-- <img class="product__medias__fullscreen" data-src="pub/media/cache/img_product/sized/909/600/600/0/1424084030v6.png"> -->
+                    </div>
+                </header>
+            </section>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+	<script src="./public/js/libs/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="public/js/imgReady.js"></script>
+	<script type="text/javascript" src="public/js/script.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+=' lt-ie10 ie10 ';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " lt-ie11 ie+ua.substring(rv + 3, ua.indexOf('.', rv))";
+		    }
+	</script>
+</body>
+</html>
