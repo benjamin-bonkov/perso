@@ -79,8 +79,12 @@
 	   font-style: italic;
 	}
 	input[type="submit"]{cursor: pointer;}
-
+	/*fix safari */
+		input[type="search"] {-webkit-appearance: none;}
+		
 	/*general font*/
+	.html,
+	code,
 	.code{font-family: monospace;}
 	body{font-family: sans-serif;}
 	strong{font-weight: bold;}

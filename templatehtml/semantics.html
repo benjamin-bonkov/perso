@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>semantics</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header id="header">
+			<div class="inner">
+				<div id="logo">Rocking Stone</div>
+				<div class="search">
+					<input type="search" role="search" name="search" id="search">
+					<button type="submit"> → </button>					
+				</div>
+				<nav role="navigation">
+					<ul>
+						<li><a href="#chapter-one">Chapter One</a></li>
+						<li><a href="#chapter-two">Chapter Two</a></li>
+						<li><a href="#chapter-three">Chapter Three</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header><!-- /#header -->
+
+		<main role="main" class="page inner">
+			<h1>Semantics</h1>
+	
+			<article>
+				<h2>HTML5 semantics</h2>
+
+				<p>html5doctor : <a href="http://html5doctor.com/lets-talk-about-semantics/">Let’s Talk about Semantics</a></p>
+				<p>Treehouse : <a href="http://blog.teamtreehouse.com/use-html5-sectioning-elements">How to Use The HTML5 Sectioning Elements</a></p>
+			</article>
+	
+			<article>
+				<h2>ARIA</h2>
+
+				<p>A list apart : <a href="http://alistapart.com/article/aria-and-progressive-enhancement/">Aria and progressive enhancement</a></p>
+				<p>A list apart : <a href="http://alistapart.com/article/waiaria">Accessible Web 2.0 Applications with WAI-ARIA</a></p>				
+				<p>W3C : <a href="http://www.w3.org/TR/wai-aria/roles">wai aria roles</a></p>
+			</article>
+
+			<article>
+				<header>
+					<h1>Blog Post Title</h1>
+					<p>Posted 13th February 2014</p>
+				</header>
+				<p>...</p>
+				<p>...</p>
+				<p>...</p>
+				<section>
+					<h2>Comments</h2>
+					<article>
+						<footer>
+							<p>Posted by: Joe Balochio</p>
+						</footer>
+						<p>This was a great article</p>
+					</article>
+					<article>
+						<footer>
+							<p>Posted by: Casey Brock</p>
+						</footer>
+						<p>How do you think this applies to the plan for world domination?</p>
+					</article>
+				</section>
+			</article>
+		</main><!-- ./page -->
+		<footer>
+			<nav role="navigation">
+				<ul>
+					<li><a href="#chapter-one">Chapter One</a></li>
+					<li><a href="#chapter-two">Chapter Two</a></li>
+					<li><a href="#chapter-three">Chapter Three</a></li>
+				</ul>
+			</nav>
+			<div role="contentinfo">Copyright Matt West 2014</div>
+			<address>
+			  	Contact <a href="mailto:@machin">@machin</a>
+			</address>
+		</footer>
+	</div>
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<script type="text/javascript" src="public/js/script.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+=' lt-ie10 ie10 ';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " lt-ie11 ie+ua.substring(rv + 3, ua.indexOf('.', rv))";
+		    }
+	</script>
+</body>
+</html>
