@@ -1,0 +1,795 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="mobile no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="mobile no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="mobile no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="mobile no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="mobile no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Régie 366# Communities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/dist/css/style.min.css">
+
+	<meta name="description" content="366, le regroupement des éditeurs PQR, pour s’adapter à vos stratégies médias les plus audacieuses. Simplification, innovation, adaptation.
+	Print, digital, mobile, média, Crossmédia, régional, national.
+	" />
+	<meta name="keywords" content="">
+
+	<!-- social -->
+		<meta property="og:url" content="http://366.fr" />
+		<meta property="og:site_name" content="" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:image" content="./public/images/200x200_FB.png" />
+		<meta property="og:description" content="366, le regroupement des éditeurs PQR, pour s’adapter à vos stratégies médias les plus audacieuses. Simplification, innovation, adaptation.
+		Print, digital, mobile, média, Crossmédia, régional, national.
+		" />
+	<!-- /social -->
+
+	<!-- favicon -->
+        <!-- http://realfavicongenerator.net/ -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./public/images/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./public/images/favicon/apple-touch-icon-60x60.png">
+        <link rel="icon" type="image/png" href="./public/images/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="./public/images/favicon/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#da532c">
+	<!-- /favicon -->
+</head>
+<body class="loading">
+	<!-- FB -->
+		<script>
+		// 	window.fbAsyncInit = function() {
+		//     FB.init({
+		//       appId      : 472159069558883, // App ID
+		//       status     : true,    // check login status
+		//       cookie     : true,    // enable cookies to allow the
+		//                             // server to access the session
+		//       xfbml      : true,     // parse page for xfbml or html5
+		//                             // social plugins like login button below
+		//       version        : 'v2.0',  // Specify an API version
+		//     });
+
+		//     // Put additional init code here
+		//   };
+
+		//   // Load the SDK Asynchronously
+		//   (function(d, s, id){
+		//      var js, fjs = d.getElementsByTagName(s)[0];
+		//      if (d.getElementById(id)) {return;}
+		//      js = d.createElement(s); js.id = id;
+		//      js.src = "//connect.facebook.net/en_US/sdk.js";
+		//      fjs.parentNode.insertBefore(js, fjs);
+		//    }(document, 'script', 'facebook-jssdk'));
+
+		// 	function followFB(){
+		// 		console.log("try like");
+		// 		FB.api(
+		// 			"/111974635544775/likes",
+		// 			function (response) {
+		// 					console.log(response);
+		// 				if (response && !response.error) {
+		// 					/* handle the result */
+		// 					console.error("error like");
+		// 				}
+		// 			}
+		// 		);
+		// 		// FB.api(
+		// 		// 	"/me/og.likes",
+		// 		// 	"POST",
+		// 		// 	{
+		// 		// 		"object": "http:\/\/samples.ogp.me\/111974635544775"
+		// 		// 	},
+		// 		// 	function (response) {
+		// 		// 		if (response && !response.error) {
+		// 		// 			/* handle the result */
+		// 		// 		}
+		// 		// 	}
+		// 		// );
+		// 	}
+		// </script>
+	<!-- /FB -->
+	<!-- analytics -->
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-26578824-3', 'auto');
+	  ga('send', 'pageview');
+		/*
+			ga('send', {
+				'hitType': 'event',          // Required.
+				'eventCategory': 'button',   // Required.
+				'eventAction': 'click',      // Required.
+				'eventLabel': 'nav buttons',
+				'eventValue': 4
+			});
+		*/
+	</script>
+	<!-- /analytics -->
+	
+	<div id="menu">
+		<div class="hide" data-replace='
+			<a href="#" class="btn-reset rejouer">
+				<div class="slide">
+					<img src="./public/dist/images/rejouer.png" alt="Rejouer">
+					<span>revivre l’expérience</span>
+				</div>
+			</a>
+		'>
+		</div>
+		
+		<div class="bot">
+
+			<a href="#interview" class="interview" data-replace=''
+				onclick="
+				ga('send', {
+					'hitType': 'event',          // Required.
+					'eventCategory': 'home',   // Required.
+					'eventAction': 'Voir les interview',      // Required.
+					'eventLabel': 'Clic', 'Chargement de la template',
+					// 'eventValue': 4
+				});
+				">
+				Interview
+			</a>
+			<a href="#contact" class="showPageHorsChamp contact" 
+				onclick="
+				ga('send', {
+					'hitType': 'event',          // Required.
+					'eventCategory': 'home',   // Required.
+					'eventAction': 'Contact',      // Required.
+					'eventLabel': 'Ouverture page Contact',
+					// 'eventValue': 4
+				});"
+				data-target="#contact">
+				<span data-replace='
+					<img src="./public/dist/images/contact.png" alt="Contact">
+				'>Contact</span>
+			</a>
+			<a href="https://www.facebook.com/PQR66?fref=ts" target="_blank" class="fb facebook"
+				onclick="
+				ga('send', {
+					'hitType': 'event',	// Required.
+					'eventCategory': 'home',	// Required.
+					'eventAction': 'Facebook',	// Required.
+					'eventLabel': 'Lien vers Facebook',
+					// 'eventValue': 4
+				});">
+				<div class="slide">
+					<img src="./public/dist/images/fb.png" alt="Facebook">
+					<span>Suivez-nous sur facebook</span>
+				</div>
+			</a>
+			<a href="https://twitter.com/pqr66" class="twitter" target="_blank"
+				onclick="
+				ga('send', {
+					'hitType': 'event',	// Required.
+					'eventCategory': 'home',	// Required.
+					'eventAction': 'Twitter',	// Required.
+					'eventLabel': 'Lien vers Twitter',
+					// 'eventValue': 4
+				});
+				">
+				<div class="slide">
+					<img src="./public/dist/images/twitter.png" alt="Twitter">
+					<span>Suivez-nous sur twitter</span>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div id="home" class="page">
+		<img src="./public/dist/images/logo-mobile.png" alt="PQR366 #communities" class="logo" data-replace="<img src='./public/dist/images/logo.png' alt='PQR366 #communities' class='logo'>">
+		<div data-replace="<img src='./public/dist/images/ANIMATION.gif' alt='PQR366 #communities' class='example_drawing'>"></div>
+		
+		<div class="txt">
+			<a href="#interview" class="btn skip hide"
+				onclick="
+				ga('send', {
+					'hitType': 'event',          // Required.
+					'eventCategory': 'home',   // Required.
+					'eventAction': 'Voir les interview',      // Required.
+					'eventLabel': 'Chargement de la template',
+					// 'eventValue': 4
+				});
+				">
+				Voir les interviews
+			</a>
+			<p class="dessineRegie">				
+				Dessine-moi une régie !
+			</p>
+			<p>
+				<strong>Les éditeurs</strong> de PQR se regroupent <br>
+				pour créer une nouvelle régie, <br>
+				unique, plus simple <br>
+				et plus efficace : <br>
+				<strong>366#Communities.</strong>
+			</p>
+			<p>
+				Une régie qui se réinvente autour de <br>
+				3 idées majeures : <br>
+				<strong>la simplification, l’innovation et <br>
+				l’adaptation.</strong>  <br>
+				Print, Digital, ou Mobile ? <br>
+				Média ou Crossmédia ? <br>
+				Régional ou National ?
+			</p>
+			<p>
+				Dès aujourd’hui, 366 a la capacité de <br>
+				s’adapter <br>
+				à vos stratégies médias <br>
+				<strong>les plus audacieuses</strong>.
+			</p>
+			<p class="pushDraw">
+				dessinez  <br>
+				<span>
+					vos envies de communication, <br>
+					366 y répondra !
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div id="interview" class="content-videos">
+
+		<div id="video1" class="page page-video horsChamp hidden" data-next="#video2" data-prev="#video4">
+			<img src="./public/dist/images/video/xs-video1.jpg" class="coverVideoMobile show-mobile" />
+			<a href="#video1" class="playVideoMobile">
+				<i class="icon-play"></i> <br>
+				Isabelle <br> DECAMP 
+
+			</a>
+			<div class="content video-container">
+				<button class="btn-reset close"
+					onclick="
+						ga('send', {
+							'hitType': 'event',          // Required.
+							'eventCategory': 'page ITW',   // Required.
+							'eventAction': 'click',      // Required.
+							'eventLabel': 'Bouton fermer',
+							'eventValue': 4
+						});
+					">Fermer la page</button>
+				<div class="hide" data-replace="<img src='./public/dist/images/masque-1.png' alt='' class='masque'>"></div>
+				<video id="player1" poster="./public/dist/images/video/video1.jpg" class="player-video" controls="controls" preload="none">
+					<!-- MP4 source must come first for iOS -->
+					<source type="video/mp4" src="./public/video/echo-hereweare.mp4" />
+					<!-- WebM for Firefox 4 and Opera -->
+					<source type="video/webm" src="./public/video/echo-hereweare.webm" />
+					<!-- OGG for Firefox 3 -->
+					<source type="video/ogg" src="./public/video/echo-hereweare.ogv" />
+					<!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+					<object width="640" height="360" type="application/x-shockwave-flash" data="./public/video/flashmediaelement.swf"> 		
+						<param name="movie" value="./public/video/flashmediaelement.swf" /> 
+						<param name="flashvars" value="controls=true&poster=./public/dist/images/video/video1.jpg&file=./public/video/echo-hereweare.mp4" /> 		
+						<!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+						<img src="./public/dist/images/video/video1.jpg" width="640" height="360" alt="" 
+							title="No video playback capabilities" />
+					</object> 	
+				</video>
+				<div class="videoLegend">
+					<div class="presentation">
+						<span class="big">Isabelle <br>DECAMP</span>
+						<br>
+						<span>fonction dans l’entreprise</span>
+					</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<button class="control prev" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW précédente',
+								'eventValue': 4
+							});">
+					</button>
+					<button class="control next" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW suivante',
+								'eventValue': 4
+							});">
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="video2" class="page page-video horsChamp hidden" data-next="#video3" data-prev="#video1">
+			<img src="./public/dist/images/video/xs-video2.jpg" class="coverVideoMobile show-mobile" />
+			<a href="#video2" class="playVideoMobile">
+				<i class="icon-play"></i> <br>
+				Stéphane <br> Delaporte
+			</a>
+			<div class="content video-container">
+				<button class="btn-reset close"
+					onclick="
+						ga('send', {
+							'hitType': 'event',          // Required.
+							'eventCategory': 'page ITW',   // Required.
+							'eventAction': 'click',      // Required.
+							'eventLabel': 'Bouton fermer',
+							'eventValue': 4
+						});
+					">Fermer la page</button>
+				<div class="hide" data-replace="<img src='./public/dist/images/masque-2.png' alt='' class='masque'>"></div>
+				<video id="player2" poster="./public/dist/images/video/video2.jpg" class="player-video" controls="controls" preload="none">
+					<!-- MP4 source must come first for iOS -->
+					<source type="video/mp4" src="./public/video/echo-hereweare.mp4" />
+					<!-- WebM for Firefox 4 and Opera -->
+					<source type="video/webm" src="./public/video/echo-hereweare.webm" />
+					<!-- OGG for Firefox 3 -->
+					<source type="video/ogg" src="./public/video/echo-hereweare.ogv" />
+					<!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+					<object width="640" height="360" type="application/x-shockwave-flash" data="./public/video/flashmediaelement.swf"> 		
+						<param name="movie" value="./public/video/flashmediaelement.swf" /> 
+						<param name="flashvars" value="controls=true&poster=./public/dist/images/video/video2.jpg&file=./public/video/echo-hereweare.mp4" /> 		
+						<!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+						<img src="./public/dist/images/video/video2.jpg" width="640" height="360" alt="" 
+							title="No video playback capabilities" />
+					</object> 	
+				</video>
+				<div class="videoLegend">
+					<div class="presentation">
+						<span class="big">Stéphane<br>Delaporte</span>
+						<br>
+						<span>fonction dans l’entreprise</span>
+					</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<button class="control prev" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW précédente',
+								'eventValue': 4
+							});">
+					</button>
+					<button class="control next" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW suivante',
+								'eventValue': 4
+							});">
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="video3" class="page page-video horsChamp hidden" data-next="#video4" data-prev="#video2">
+			<img src="./public/dist/images/video/xs-video3.jpg" class="coverVideoMobile show-mobile" />
+			<a href="#video3" class="playVideoMobile">
+				<i class="icon-play"></i> <br>
+				Bruno  <br> Ricard
+			</a>
+			<div class="content video-container">
+				<button class="btn-reset close"
+					onclick="
+						ga('send', {
+							'hitType': 'event',          // Required.
+							'eventCategory': 'page ITW',   // Required.
+							'eventAction': 'click',      // Required.
+							'eventLabel': 'Bouton fermer',
+							'eventValue': 4
+						});
+					">Fermer la page</button>
+				<div class="hide" data-replace="<img src='./public/dist/images/masque-3.png' alt='' class='masque'>"></div>
+				<video id="player3" poster="./public/dist/images/video/video3.jpg" class="player-video" controls="controls" preload="none">
+					<!-- MP4 source must come first for iOS -->
+					<source type="video/mp4" src="./public/video/echo-hereweare.mp4" />
+					<!-- WebM for Firefox 4 and Opera -->
+					<source type="video/webm" src="./public/video/echo-hereweare.webm" />
+					<!-- OGG for Firefox 3 -->
+					<source type="video/ogg" src="./public/video/echo-hereweare.ogv" />
+					<!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+					<object width="640" height="360" type="application/x-shockwave-flash" data="./public/video/flashmediaelement.swf"> 		
+						<param name="movie" value="./public/video/flashmediaelement.swf" /> 
+						<param name="flashvars" value="controls=true&poster=./public/dist/images/video/video3.jpg&file=./public/video/echo-hereweare.mp4" /> 		
+						<!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+						<img src="./public/dist/images/video/video3.jpg" width="640" height="360" alt="" 
+							title="No video playback capabilities" />
+					</object> 	
+				</video>
+				<div class="videoLegend">
+					<div class="presentation">
+						<span class="big">Bruno <br>Ricard</span>
+						<br>
+						<span>fonction dans l’entreprise</span>
+					</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<button class="control prev" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW précédente',
+								'eventValue': 4
+							});">
+					</button>
+					<button class="control next" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW suivante',
+								'eventValue': 4
+							});">
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="video4" class="page page-video horsChamp hidden" data-next="#video1" data-prev="#video3">
+			<img src="./public/dist/images/video/xs-video4.jpg" class="coverVideoMobile show-mobile" />
+			<a href="#video4" class="playVideoMobile">
+				<i class="icon-play"></i> <br>
+				Jacques <br> Hardouin
+			</a>
+			<div class="content video-container">
+				<button class="btn-reset close"
+					onclick="
+						ga('send', {
+							'hitType': 'event',          // Required.
+							'eventCategory': 'page ITW',   // Required.
+							'eventAction': 'click',      // Required.
+							'eventLabel': 'Bouton fermer',
+							'eventValue': 4
+						});
+				">
+					Fermer la page
+				</button>
+				<div class="hide" data-replace="<img src='./public/dist/images/masque-4.png' alt='' class='masque'>"></div>
+				<video id="player4" poster="./public/dist/images/video/video4.jpg" class="player-video" controls="controls" preload="none">
+					<!-- MP4 source must come first for iOS -->
+					<source type="video/mp4" src="./public/video/echo-hereweare.mp4" />
+					<!-- WebM for Firefox 4 and Opera -->
+					<source type="video/webm" src="./public/video/echo-hereweare.webm" />
+					<!-- OGG for Firefox 3 -->
+					<source type="video/ogg" src="./public/video/echo-hereweare.ogv" />
+					<!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+					<object width="640" height="360" type="application/x-shockwave-flash" data="./public/video/flashmediaelement.swf"> 		
+						<param name="movie" value="./public/video/flashmediaelement.swf" /> 
+						<param name="flashvars" value="controls=true&poster=./public/dist/images/video/video4.jpg&file=./public/video/echo-hereweare.mp4" /> 		
+						<!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+						<img src="./public/dist/images/video/video4.jpg" width="640" height="360" alt="" 
+							title="No video playback capabilities" />
+					</object> 	
+				</video>
+				<div class="videoLegend">
+					<div class="presentation">
+						<span class="big">Jacques <br>Hardouin</span>
+						<br>
+						<span>fonction dans l’entreprise</span>
+					</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<div class="left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</div>
+					<button class="control prev" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW précédente',
+								'eventValue': 4
+							});">
+					</button>
+					<button class="control next" 
+						onclick="
+							ga('send', {
+								'hitType': 'event',          // Required.
+								'eventCategory': 'page ITW',   // Required.
+								'eventAction': 'click',      // Required.
+								'eventLabel': 'Go to ITW suivante',
+								'eventValue': 4
+							});">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="contact" class="page horsChamp hidden">
+		<button class="btn-reset close"
+			onclick="
+						ga('send', {
+							'hitType': 'event',          // Required.
+							'eventCategory': 'page ITW',   // Required.
+							'eventAction': 'click',      // Required.
+							'eventLabel': 'Bouton fermer',
+							'eventValue': 4
+						});
+			">Fermer la page</button>
+		<div class="vrac">
+			<div data-replace="<img src='./public/dist/images/bg_contact.jpg' class='bg' alt=''>"></div>
+			<a href="#" class="dg">
+				<span class="big">
+					directeur <br>
+					général
+				</span>
+				<br>
+				<span>Stéphane DELAPORTE</span>
+			</a>
+			<a href="#" class="dga">
+				<span class="big">
+					directeur <br>
+					général <br>
+					associé <br>
+					Commerce
+				</span>
+				<br>
+				<span>Isabelle DECAMP</span>
+			</a>
+			<a href="#" class="dgam">
+				<span class="big">
+					directeur général <br>
+					associé marketing
+				</span>
+				<br>
+				<span>Bruno RICARD</span>
+			</a>
+			<a href="#" class="dc">
+				<span class="big">
+					directeurs <br>
+					commerciaux
+				</span>
+				<br>
+				<span>Sylvie POIRE</span>
+				<br>
+				<span>Olivier PIQUEMAL</span>
+				<br>
+				<span>Benoît SÉGUIN</span>
+				<br>
+				<span>Dominique CARCANADE</span>
+				<br>
+				<span>Nicolas RAMBAULT</span>
+			</a>
+			<a href="#" class="rtp">
+				<span class="big">
+					responsable du trafic print
+				</span>
+				<br>
+				Catherine VACCA
+			</a>
+			<a href="#" class="rtw">
+				<span class="big">
+					responsable du trafic digital
+				</span>
+				<br>
+				Patrice TAVARES
+			</a>
+		</div>
+		<div class="list">			
+			<a href="mailto:catherine.ruault@366.fr" class="violetLight">
+				<span class="big">Stéphane DELAPORTE</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_stephane_delaporte.png" alt=""></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_stephane_delaporte.png" alt=""></span> <br>
+			</a>
+			
+			<a href="mailto:radia.oukkal@366.fr" class="orange">
+				<span class="big">Isabelle DECAMP</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_isabelle_decamp.png" alt=""></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_isabelle_decamp.png" alt=""></span> <br>
+			</a>
+			
+			<a href="mailto:radia.oukkal@366.fr" class="blue">
+				<span class="big">Sylvie POIRE</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_isabelle_decamp.png" alt=""></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_isabelle_decamp.png" alt=""></span> <br>
+			</a>
+			
+			<a href="mailto:radia.oukkal@366.fr" class="red">
+				<span class="big">Olivier PIQUEMAL</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_isabelle_decamp.png" alt=""></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_isabelle_decamp.png" alt=""></span> <br>
+			</a>
+			
+			<a href="mailto:radia.oukkal@366.fr" class="greenBlue">
+				<span class="big">Benoît SÉGUIN</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_isabelle_decamp.png" alt=""></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_isabelle_decamp.png" alt=""></span> <br>
+			</a>
+			
+			<a href="mailto:radia.oukkal@366.fr" class="violetLight">
+				<span class="big">Dominique CARCANADE</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_isabelle_decamp.png" alt=""></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_isabelle_decamp.png" alt=""></span> <br>
+			</a>
+			
+			<a href="mailto:radia.oukkal@366.fr" class="orange">
+				<span class="big">Nicolas RAMBAULT</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_isabelle_decamp.png" alt=""></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_isabelle_decamp.png" alt=""></span> <br>
+			</a>
+			
+			<a href="mailto:catherine.vacca@366.fr" class="blue">
+				<span class="big">Catherine VACCA</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_catherine_vacca.png"></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_catherine_vacca.png"></span> <br>
+			</a>						
+
+			<a href="mailto:patrice.tavares@366.fr" class="red">
+				<span class="big">Patrice TAVARES</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_patrice_tavares.png"></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_patrice_tavares.png"></span> <br>
+			</a>
+			
+			<a href="mailto:marie-claire.danican@366.fr" class="greenBlue">
+				<span class="big">Bruno RICARD</span> <br>
+				<span class="tel"><img src="./public/images/icon-tel.png" alt="" class="icon-tel"> <img src="./public/images/contact/tel_bruno_ricard.png"></span> <br>
+				<span class="mail"><img src="./public/images/icon-mail.png" alt="" class="icon-mail"> <img src="./public/images/contact/mail_bruno_ricard.png"></span> <br>
+			</a>
+
+		</div>
+	</div>
+
+	<div class="drawingArea page">
+		<div class="monitor">
+			<div class="state">
+				State : <span class="val"></span>
+			</div>
+			<div>
+				x : <span class="x"></span>
+			</div>
+			<div>
+				y : <span class="y"></span>
+			</div>
+		</div>
+		<!--[if LT IE 9]>
+			<div class="toScale">
+				<img src="./public/dist/images/ie/ie-blueBot.png" alt="" class="ie-blueBot">
+				<img src="./public/dist/images/ie/ie-violetBot.png" alt="" class="ie-violetBot">
+				<img src="./public/dist/images/ie/ie-blueRight.png" alt="" class="ie-blueRight">
+				<img src="./public/dist/images/ie/ie-violetRight.png" alt="" class="ie-violetRight">
+				<img src="./public/dist/images/ie/ie-redRight.png" alt="" class="ie-redRight">
+				<img src="./public/dist/images/ie/ie-greenRight.png" alt="" class="ie-greenRight">
+				<img src="./public/dist/images/ie/ie-orange.png" alt="" class="ie-orange">
+				<img src="./public/dist/images/ie/ie-violetTop.png" alt="" class="ie-violetTop">
+				<img src="./public/dist/images/ie/ie-greenTop.png" alt="" class="ie-greenTop">
+				<img src="./public/dist/images/ie/ie-greenRight.png" alt="" class="ie-greenRight">
+				<img src="./public/dist/images/ie/ie-violetRight.png" alt="" class="ie-violetRight">
+				<img src="./public/dist/images/ie/ie-redRight.png" alt="" class="ie-redRight">
+				<img src="./public/dist/images/ie/ie-blueRight.png" alt="" class="ie-blueRight">
+				<img src="./public/dist/images/ie/ie-red.png" alt="" class="ie-red">
+				<img src="./public/dist/images/ie/ie-blue.png" alt="" class="ie-blue">
+				<img src="./public/dist/images/ie/ie-green.png" alt="" class="ie-green">
+				<img src="./public/dist/images/ie/ie-366communities.png" alt="" class="ie-366communities">
+				<img src="./public/dist/images/ie/ie-lt.png" alt="" class="ie-lt">
+				<img src="./public/dist/images/ie/ie-rt.png" alt="" class="ie-rt">
+				<img src="./public/dist/images/ie/ie-rb.png" alt="" class="ie-rb">
+				<img src="./public/dist/images/ie/ie-lb.png" alt="" class="ie-lb">
+			</div>
+		<!--<![endif]-->
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<!--<script type="text/javascript" src="public/dist/js/all.min.js"></script>-->
+
+	<script src="public/js/00-mediaelement-and-player.min.js"></script>
+	<script src="public/js/01-isTouch.js"></script>
+	<script>
+		// Affichage site
+			ga('send', {
+				'hitType': 'event',	// Required.
+				'eventCategory': 'home',	// Required.
+				'eventAction': 'Affichage site',	// Required.
+				'eventLabel': 'Affichage de la home',
+				// 'eventValue': 4
+			});
+		// lancement animation
+			ga('send', {
+				'hitType': 'event',	// Required.
+				'eventCategory': 'home',	// Required.
+				'eventAction': 'lancement animation',	// Required.
+				'eventLabel': 'lancement de l\'animation',
+				// 'eventValue': 4
+			});
+		isMobile = true;
+		// $(document).ready(function(){
+			$('video,audio').mediaelementplayer({
+			    features: ['playpause','progress',/*'current','duration','tracks','volume','fullscreen'*/]
+			});
+			function stopVideos(){
+			    $('video,audio').each(function() {
+			      $(this)[0].pause();
+			    });
+			}
+
+		    $("#menu .twitter").bind(triggerClick, function(e){
+		        e.preventDefault();
+		            var width  = 680,
+		            height = 575,
+		            left   = ($(window).width()  - width)  / 2,
+		            top    = ($(window).height() - height) / 2,
+		            url    = "https://twitter.com/intent/follow/?screen_name=@pqr66",
+		            opts   = 'status=1' +
+		                     ',width='  + width  +
+		                     ',height=' + height //+
+		                     // ',top='    + top    +
+		                     // ',left='   + left
+		                     ;
+
+		        window.open(url, 'twitter', opts);
+		        return false;
+		    });
+
+		    // $("#menu .facebook").bind(triggerClick, function(e){
+		    //     e.preventDefault();
+		    //     followFB();
+		    // });
+
+			$('.playVideoMobile, .mejs-container').bind(triggerClick, function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				if($('html').hasClass("mobile")){
+					var $this = $(this)
+					,	$container = $(this).closest(".page-video")
+					,	$video = $container.find('video');
+				    // $(this).find('video')[0].pause();
+					if ($video[0].paused) {
+						if($(".playing").length > 0){
+							$(".playing").find('video')[0].pause();
+							$(".playing").removeClass("playing");
+						}
+						$container.addClass("playing");
+						$video[0].play();
+					} else {
+						$container.removeClass("playing");
+						$video[0].pause();
+					}
+				}
+			});
+
+			if($(window).width() >= 600){
+				$("html").removeClass("mobile");
+				$("[data-replace]").each(function(){
+					var $this = $(this)
+					,	$elem = $($this.attr("data-replace"));
+					$elem.addClass("hideMobile");
+					$this.replaceWith($elem);
+				});
+				isMobile = false;
+				document.write('<script src="public/dist/js/all.min.js"><\/script>');
+
+				setTimeout(function(){
+					$("body").removeClass("loading")
+				},500)
+			}
+		// });
+	</script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+='ie10';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
+	</script>
+</body>
+</html>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/dist/css/style.min.css">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="">
+
+	<!-- social -->
+		<meta property="og:url" content="http://<?php echo $_SERVER['HTTP_HOST'] . $this->baseUrl(''); ?>" />
+		<meta property="og:site_name" content="" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:description" content="" />
+	<!-- /social -->
+
+	<!-- favicon -->
+        <!-- http://realfavicongenerator.net/ -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/public/images/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/public/images/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/public/images/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/public/images/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/public/images/favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/public/images/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/public/images/favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/public/images/favicon/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/public/images/favicon/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#b91d47">
+        <meta name="msapplication-TileImage" content="/public/images/favicon//mstile-144x144.png">
+	<!-- /favicon -->
+</head>
+<body>
+	<!-- analytics -->
+        <script>
+              // var _gaq = _gaq || [];
+              // _gaq.push(['_setAccount', 'UA-xxxxxxxx-x']);
+              // _gaq.push(['_trackPageview']);
+
+              // (function() {
+              //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              // })();
+              // // _gaq.push(['_trackEvent', 'categorie', 'action', 'label', 'value']);
+        </script>
+	<!-- /analytics -->
+		<div class="monitor" style="z-index:999">
+			<button class="btn-reset rejouer">
+				<div class="slide">
+					<img src="./public/dist/images/rejouer.png" alt="Rejouer">
+					revivre l’expérience
+				</div>
+			</button>
+			<div class="state">
+				State : <span class="val"></span>
+			</div>
+			<div>
+				x : <span class="x"></span>
+			</div>
+			<div>
+				y : <span class="y"></span>
+			</div>
+		</div>
+	<div class="drawingArea">
+
+
+	</div>
+
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<script type="text/javascript" src="public/dist/js/all.min.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+='ie10';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= "lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
+	</script>
+</body>
+</html>
+</html>
