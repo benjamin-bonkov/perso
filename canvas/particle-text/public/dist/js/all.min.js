@@ -46,50 +46,6 @@ function isTouchDevice(){
             clearTimeout(id);
         };
 }());
-/**********************
-**** TABLE CONTENT ****
-***********************
-
-Object 
-    -Object coordonnées
-    -Object Particule
-    -Object liste de coordonnées
-    -Object Polygon
-    -Object LINE
-
-tests/math
-
-drawing
-
-ARRAY UPPGRADE
-
-***************************
-**** END TABLE CONTENT ****
-**************************/
-
-// Objects
-    // Object coordonnées
-        function Coord(x,y){
-            this.x = x || 0;
-            this.y = y || 0;
-        }
-
-        Coord.prototype.set = function (x, y){
-            this.x = x || 0;
-            this.y = y || 0;
-        }
-
-        Coord.prototype.isEqual = function (coord, lissage){
-            lissage = lissage || 0.5;
-            if((this.x >= coord.x-lissage && this.x <= coord.x+lissage)
-                &&
-                (this.y >= coord.y-lissage && this.y <= coord.y+lissage)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-
     // Object Particule
         //params {
         //     coordStart: Coord, 
@@ -159,6 +115,51 @@ ARRAY UPPGRADE
             // this.ctx.arc(this.coorCurrent.x, this.coorCurrent.y, 1, 0, 2 * Math.PI, false);
             // this.ctx.moveTo(this.coorCurrent.x, this.coorCurrent.y);
             // this.ctx.stroke();
+        }
+
+
+/**********************
+**** TABLE CONTENT ****
+***********************
+
+Object 
+    -Object coordonnées
+    -Object Particule
+    -Object liste de coordonnées
+    -Object Polygon
+    -Object LINE
+
+tests/math
+
+drawing
+
+ARRAY UPPGRADE
+
+***************************
+**** END TABLE CONTENT ****
+**************************/
+
+// Objects
+    // Object coordonnées
+        function Coord(x,y){
+            this.x = x || 0;
+            this.y = y || 0;
+        }
+
+        Coord.prototype.set = function (x, y){
+            this.x = x || 0;
+            this.y = y || 0;
+        }
+
+        Coord.prototype.isEqual = function (coord, lissage){
+            lissage = lissage || 0.5;
+            if((this.x >= coord.x-lissage && this.x <= coord.x+lissage)
+                &&
+                (this.y >= coord.y-lissage && this.y <= coord.y+lissage)){
+                return true;
+            }else{
+                return false;
+            }
         }
 
     // Object liste de coordonnées 

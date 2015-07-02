@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>home</title>
+	
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<style>
+		#parallaxMouse{position: relative; height: 630px; width: 100%; overflow: hidden;}
+		.layer0{background: url(./public/images/layer0.jpg) no-repeat center;}
+		.layer1{background: url(./public/images/layer1.png) no-repeat center;}
+		.layer2{background: url(./public/images/layer2.png) no-repeat center;}
+		.layer{position: absolute; top: -10%; right: -10%; left: -10%; bottom: -10%;  background-size: cover;}
+	</style>
+	<div class="wrapper">
+		<div class="inner">
+			<div id="parallaxMouse">
+				<div class="layer layer0"></div>
+				<div class="layer layer1"></div>
+				<div class="layer layer2"></div>
+			</div>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<script type="text/javascript" src="public/js/script.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+=' lt-ie10 ie10 ';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " lt-ie11 ie+ua.substring(rv + 3, ua.indexOf('.', rv))";
+		    }
+	</script>
+</body>
+</html>

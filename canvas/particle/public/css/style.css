@@ -1,0 +1,112 @@
+
+
+/*********general kickstart !*********/
+	button{cursor: pointer;}
+	a{text-decoration: none;}
+
+	.clear{clear: both;}
+
+	.clearfix:before, .clearfix:after {content: " ";display: table;}
+	.clearfix:after{clear: both;}
+	/* IE6/7 support */
+	.clearfix {*zoom: 1;}
+
+	/*empèche les padding de dépasser la width fixé*/
+	*, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+	/*empeche le retour à la ligne*/
+	.no-break{white-space: nowrap;}
+
+	/*force une longue chaine de caracteres à "casser" sur une autre ligne plutôt que de dépasser de son conteneur*/
+	.break {-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+	/*cache le text et remplace par "..." lorsqu'il dépace la taille fixée*/
+	.ellipsis {width: 250px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; /* Required for IE8 */ -o-text-overflow: ellipsis; /* Required for Opera */ text-overflow: ellipsis;}
+
+	/*general positionning*/
+	.left{float: left;}
+	.right{float: right;}
+
+	.verticalCenter{ 
+		vertical-align:middle;
+		display:inline-block;
+		line-height:1; /* on rétablit le line-height */
+		text-align:left; /* ... et l'alignement du texte */
+	}/* http://www.alsacreations.com/tuto/lire/1032-comment-centrer-verticalement-sur-tous-les-navigateurs.html */
+
+	/*general state*/
+	.hide{display: none;}/*carefull, this hide to screen readers too*/
+	.show{display: block;}
+	.disabled{pointer-events: none;opacity: 0.5; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); }
+	.visuallyhidden{/*hide to humans only, screenreaders can still read it*/ position: absolute; width: 1px; /* Setting this to 0 make it invisible for VoiceOver */ height: 1px; /* Setting this to 0 make it invisible for VoiceOver */ padding: 0; margin: -1px; border: 0; clip: rect(0 0 0 0); overflow: hidden;}
+
+	::-webkit-input-placeholder {
+	   font-style: italic;
+	}
+	:-moz-placeholder {  
+	   font-style: italic;
+	}
+	input[type="submit"]{cursor: pointer;}
+
+	/*general font*/
+	.title{font-family: serif;}
+	.code{font-family: monospace;}
+	body{font-family: sans-serif;}
+	strong{/*font-weight: bold;*/ font-family: 'knockouthtf48-featherweight';}
+	em{font-style: italic;}
+	em strong, strong em,{font-weight: bold; font-style: italic;}
+	sup{ top: -0.5em; line-height: 0; position: relative; vertical-align: baseline; font-size: 0.7em;}
+	.ttu{text-transform: uppercase;}
+	.tac{text-align: center;}
+	
+	/*si pas de js :*/
+	.no-js{}
+	/*si on est sur ie :*/
+	.ie{}
+	/*si on est sur ie<9 :*/
+	.lt-ie9{}
+	/*si on est sur ie<8 :*/
+	.lt-ie8{}
+	/*si on est sur ie<7 :*/
+	.lt-ie7{}
+
+	/*pause les animation css3*/
+	.paused{ webkit-animation-play-state: paused; -moz-animation-play-state: paused; -o-animation-play-state: paused; animation-play-state: paused;}
+
+	.btn{padding: 15px; border: 2px solid #000; background: #fff; text-transform: uppercase;}
+	.btn-none{border: none; background: transparent;}
+	.btn-reset{margin: 0; padding: 0; border: none; background: transparent;}
+	.btn-none:hover,
+	.btn-none:focus,
+	.btn-none:active,
+	.btn-reset:hover,
+	.btn-reset:focus,
+	.btn-reset:active{border: none; background: transparent;}
+
+	
+/****************************************************
+*************** CSS du site ci-après ****************
+****************************************************/
+.wrapper{}
+.inner{width: 960px;margin:0 auto;}
+
+::selection{
+	/*background: #b01055;*/
+	/*color: #fff;*/
+}
+body{background-color: #fff; font-family: "knockouthtf28-juniorfeatherwt";}
+a{color: #000;}
+
+html,body{width: 100%; height: 100%; overflow: hidden;}
+/*@media(max-height: 769px){
+	html,body{overflow-y: auto;}
+}*/
+body.loading{opacity: 0; filter: alpha(opacity=0); -ms-opacity:0;}
+.mobile body.loading{opacity: 1; filter: alpha(opacity=100); -ms-opacity:1;}
+
+.drawingArea{position: absolute; top: 0; width: 100%; height: 100%; overflow: hidden!important; z-index: 1;}
+.drawingArea.pointer{cursor: pointer;}
+
+.monitor{position: absolute; top: 0; left: 0; width: 200px; height: 100px;}
+
+
+.canvasArea{background-color: #000;}
