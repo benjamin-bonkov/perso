@@ -1,0 +1,20 @@
+﻿npm init 
+# puis plusieurs fois entrée (créer le package.json)
+
+npm install -g grunt-cli 
+# commandeur grunt
+
+npm install grunt --save-dev 
+# install grunt dans le proj
+
+install grunt-contrib-sass --save-dev
+# sass package
+
+npm install grunt-contrib-concat --save-dev
+# concat js
+
+npm install grunt-contrib-uglify --save-dev
+# concat js
+
+npm install grunt-contrib-watch --save-dev
+# watch js
