@@ -1,7 +1,7 @@
 
 var supportCanvas = true
 try{
-	document.querySelector(".canvasArea canvas").getContext("2d");
+	document.createElement("canvas").getContext("2d");
 }catch(e){
 	supportCanvas = false
 }
@@ -33,6 +33,12 @@ if($("html").hasClass("lt-ie9") || !supportCanvas){//canvas marche pas
 		,	ctx = canvas.getContext("2d")
 		canvas.width = canvasWidth;
 		canvas.height = canvasHeight;
+		var canvasPoly = [
+			new Coord(0,0),
+			new Coord(canvas.width, 0),
+			new Coord(canvas.width, canvas.height),
+			new Coord(0, canvas.height)
+		]
 
 	// gestion resize
 		$(window).resize(function(){
@@ -40,19 +46,14 @@ if($("html").hasClass("lt-ie9") || !supportCanvas){//canvas marche pas
 			canvasHeight = $(".canvasArea").height();
 			canvas.width = canvasWidth;
 			canvas.height = canvasHeight;
-			canvasText.width = canvasWidth;
-			canvasText.height = canvasHeight;
+			canvasPoly = [
+				new Coord(0,0),
+				new Coord(canvas.width, 0),
+				new Coord(canvas.width, canvas.height),
+				new Coord(0, canvas.height)
+			]
 		});
 
-
-	//moving drawing 
-		var lineDiag = []
-		,	timerEnd;
-		$(".canvas").bind(move, moving);
-		function moving(e){
-			e.preventDefault();
-			monitorPos(e);
-		}
 
 	//recup position client, update l'objet coord fournis
 	    function getCursorPos(e){
@@ -73,29 +74,26 @@ if($("html").hasClass("lt-ie9") || !supportCanvas){//canvas marche pas
 
 		// TODO : loop data, set pixel pos
 		for (var x = 0; x < 20; x++) {
-			particules.push( new Particule({ ctx: ctx }) );
+			particules.push( new Particule({ ctx: ctx, canvasPoly: canvasPoly }) );
 		}
 		// TODO : start render
 		render();
 	}init();
 
 	var particuleInactive = []
-	,	dateStart = Date.now();
 	//rendering loop
 		var idAnimFrame;
 		function render(){
 			idAnimFrame = requestAnimationFrame(function(){
 				//loop that
 
-					dateNow = Date.now();
-					// t = dateNow - dateStart;
 				ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 				for (var i =  0; i < particules.length; i++) {
 					particules[i].render();
 					if(particules[i].actif) {
-						particules[i].update(dateNow);
+						particules[i].update(infinite=true);
 					}else{
-						particules[i] = new Particule({ ctx: ctx })
+						particules[i] = new Particule({ ctx: ctx, canvasPoly: canvasPoly })
 					}
 				}
 				render();

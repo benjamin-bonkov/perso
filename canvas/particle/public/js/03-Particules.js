@@ -16,9 +16,8 @@
             );
             this.coorCurrent = this.coordStart
             this.ctx = params.ctx;
-            this.startWidth = getRandomInt(0.01,0.5)
-            this.endWidth = 0.1;
-            this.currentWidth = this.startWidth || 5;
+            this.fixed = params.fixed || false;
+            this.w = getRandomInt(0.1,0.3);
 
             this.distX = this.coorEnd.x - this.coordStart.x ;
             this.dirX = ( (this.distX)<0 )? -1 : 1;
@@ -26,46 +25,42 @@
             this.dirY = ( (this.distY)<0 )? -1 : 1;
             this.actif = true;
 
-            this.duration = getRandomInt( 3000000, 6000000);
+            this.duration = getRandomInt( 500, 1000);
             this.vitX = this.distX / (this.duration);
-
-            this.vitWidth = (this.endWidth - this.startWidth)  / (this.duration)
             this.vitY = this.distY / (this.duration);
-            this.dateStart = Date.now();
         }
 
-        Particule.prototype.update = function(dateNow){
-            t = dateNow - this.dateStart
-            if(
-                (
-                    this.coorEnd.x == this.coorCurrent.x &&
-                    this.coorEnd.y == this.coorCurrent.y
-                )
-                ||
-                t >= this.duration
-            ){
-                // console.log("end");
-                this.actif = false
+        function isPointInPoly(poly, pt){
+            for(var c = false, i = -1, l = poly.length, j = l - 1; ++i < l; j = i)
+                ((poly[i].y <= pt.y && pt.y < poly[j].y) || (poly[j].y <= pt.y && pt.y < poly[i].y))
+                && (pt.x < (poly[j].x - poly[i].x) * (pt.y - poly[i].y) / (poly[j].y - poly[i].y) + poly[i].x)
+                && (c = !c);
+            return c;
+        }
+        Particule.prototype.update = function(){
+            this.bounce();
+
+            this.coorCurrent.x += this.vitX;
+            this.coorCurrent.y += this.vitY;
+        }
+
+
+        Particule.prototype.bounce = function(){
+            if (this.coorCurrent.y < 0 || this.coorCurrent.y > canvasHeight) {
+                this.vitX = this.vitX;
+                this.vitY = - this.vitY;
+            } else if (this.coorCurrent.x < 0 || this.coorCurrent.x > canvasWidth) {
+                this.vitX = - this.vitX;
+                this.vitY = this.vitY;
             }
-            if(
-                (this.dirX > 0 && this.coorEnd.x > this.coorCurrent.x) ||
-                (this.dirX < 0 && this.coorEnd.x < this.coorCurrent.x)
-            ){
-                this.coorCurrent.x = this.coordStart.x + this.vitX*t;
-            }else{
-                this.coorCurrent.x = this.coorEnd.x;
-            }
-            if(
-                (this.dirY > 0 && this.coorEnd.y > this.coorCurrent.y) ||
-                (this.dirY < 0 && this.coorEnd.y < this.coorCurrent.y)
-            ){
-                this.coorCurrent.y = this.coordStart.y + this.vitY*t;
-            }else{
-                this.coorCurrent.y = this.coorEnd.y;
-            }
-            if(this.currentWidth >= this.endWidth){
-                this.currentWidth = this.startWidth - this.vitWidth*t;
-            }
+        }
+
+        Particule.prototype.followMouse = function(){
+            this.bounce();
+            this.coorCurrent.x = this.coordStart.x + (mousePosDelta.x*this.vitX/this.duration)*this.vitX + this.vitX;
+            this.coorCurrent.y = this.coordStart.y + (mousePosDelta.y*this.vitY/this.duration)*this.vitY + this.vitY;
+            // console.log(this.coorCurrent);
+            // console.log(this.coorCurrent.y);
         }
 
         Particule.prototype.render = function(){
@@ -73,8 +68,9 @@
             this.ctx.save();
 
             this.ctx.strokeStyle = 'white';
+            this.ctx.fillStyle = 'white';
             
-            drawCircle(this.coorCurrent, this.currentWidth);
+            drawCircle(this.coorCurrent, this.w);
 
             this.ctx.restore();
         }

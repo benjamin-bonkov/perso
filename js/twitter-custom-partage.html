@@ -1,0 +1,98 @@
+<style>
+    
+    .pushTweet{margin-bottom: 10px; background: #666; text-align: center;}
+    .pushTweet p{text-transform: uppercase;}
+    .pushTweet .tweet{position: relative; width: 505px; margin: 0 auto 10px; font-size: 14px;}
+    .pushTweet .tweet #fakeArea{position: absolute; top: 0; right: 0; bottom: 0; left: 0; padding: 7px 10px; border-radius: 5px; background: #fff; text-align: left; font-family: Arial, sans-serif; color: transparent; white-space: pre-wrap;}
+    .pushTweet .tweet textarea{position: relative; display: block; width: 100%; height: 95px; padding: 10px; border-radius: 5px; border: none; background-color: transparent;}
+    .pushTweet .tweet #fakeArea, 
+    .pushTweet .tweet textarea{font-size: 14px; font-family: Arial, sans-serif; line-height: 1em;}
+    .pushTweet .tweet .hash,
+    .pushTweet .tweet .hashtag{color: #ff2953; border-radius: 2px; background: #ff2953; box-shadow: 0 0 0 1px #ff2953; font-size: 14px; white-space: pre-wrap; line-height: 20px; color: #000;}
+    .count{font-family: arial, sans-serif; color: #ff2953;}
+
+</style>
+<form class="pushTweet">
+    <div class="tweet">
+        <div id="fakeArea"></div>
+        <textarea name="" cols="30" rows="10" id="tweetArea">#insidelebanon</textarea>                      
+    </div>
+    <div>
+        <span class="count"></span>
+        <button class="btn">
+            submit
+        </button>
+    </div>
+</form>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    if (!window.jQuery) {
+        document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+    }
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    var getLinks = new RegExp("((http://)[a-zA-Z0-9\-/.]+)+","gi")
+    ,   getHashs = new RegExp("((#)[a-zA-Z0-9]+)+", "g");
+
+    //jeu tweet
+    var $pushTweet = $(".pushTweet")
+    ,   $tweet = $pushTweet.find("#tweetArea")
+    ,   $hash = $pushTweet.find(".hash")
+    ,   $count = $pushTweet.find(".count")
+    ,   $fakeArea = $pushTweet.find("#fakeArea")
+    ,   ctrlCaret = document.getElementById("tweetArea")
+    ,   url = "http://lebanon.eurosport.com/";
+    if($pushTweet.length > 0){
+
+        function updateCounter(){
+            $count.html(140 - ($tweet.val().length + url.length) );
+        }updateCounter();
+
+        function updateMsg(){
+            msgTxt = $tweet.val();
+            msgTxt = msgTxt.replace(getHashs , "<span class='hashtag'>$1</span>");
+            msgTxt = msgTxt.replace(getLinks , "<span class='link'>$1</span>");
+            $fakeArea.html(msgTxt);
+        }updateMsg();
+
+        $tweet.keyup(function(){
+            updateCounter();
+            updateMsg();
+        });
+        $tweet.keyup();
+
+        var share_window;
+        $pushTweet.submit(function(e){
+            ga('send', 'event', 'click', '[lebwf]::site::jeuboutontweeter');
+            e.preventDefault();
+            // var url = 'http://' + window.location.host;
+            var text = $fakeArea.text()+" "+"#insidelebanon";
+            var hashtag = "";
+            // window.open('https://twitter.com/share?url=' + encodeURI("http://lebanon.eurosport.com/") + '&text=' + text + '&hashtags=' + hashtag , 'twitter', 'menubar=no, location=no, width=400, height=300');
+
+            // https://dev.twitter.com/web/tweet-button/web-intent
+            var url = "https://twitter.com/intent/tweet?" + $.param({
+                url: encodeURI("http://lebanon.eurosport.com/"),
+                text: text,
+                // hashtags : 
+            });
+            
+            $(window).bind("message", function(event) {
+                event = event.originalEvent
+                if(event.source == share_window && event.data != "__ready__") {
+                    $(".successTweet").removeClass("hide");
+                    $pushTweet.hide();
+                }
+            });
+            share_window = window.open(url, 'twitter', 'menubar=no, location=no, width=400, height=300');
+            if($("html").hasClass("isIE")){
+                $(".successTweet").removeClass("hide");
+                $pushTweet.hide();              
+            }
+        });
+    }
+});
+</script>

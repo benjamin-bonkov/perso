@@ -26,45 +26,60 @@
             this.dirY = ( (this.distY)<0 )? -1 : 1;
             this.actif = true;
 
-            this.duration = getRandomInt( 3000000, 6000000);
+            this.duration = getRandomInt( 500, 1000);
             this.vitX = this.distX / (this.duration);
 
             this.vitWidth = (this.endWidth - this.startWidth)  / (this.duration)
             this.vitY = this.distY / (this.duration);
-            this.dateStart = Date.now();
         }
 
-        Particule.prototype.update = function(dateNow){
-            t = dateNow - this.dateStart
-            if(
-                (
-                    this.coorEnd.x == this.coorCurrent.x &&
-                    this.coorEnd.y == this.coorCurrent.y
-                )
-                ||
-                t >= this.duration
-            ){
-                // console.log("end");
-                this.actif = false
-            }
-            if(
-                (this.dirX > 0 && this.coorEnd.x > this.coorCurrent.x) ||
-                (this.dirX < 0 && this.coorEnd.x < this.coorCurrent.x)
-            ){
-                this.coorCurrent.x = this.coordStart.x + this.vitX*t;
+        function isPointInPoly(poly, pt){
+            for(var c = false, i = -1, l = poly.length, j = l - 1; ++i < l; j = i)
+                ((poly[i].y <= pt.y && pt.y < poly[j].y) || (poly[j].y <= pt.y && pt.y < poly[i].y))
+                && (pt.x < (poly[j].x - poly[i].x) * (pt.y - poly[i].y) / (poly[j].y - poly[i].y) + poly[i].x)
+                && (c = !c);
+            return c;
+        }
+        Particule.prototype.update = function(infinite){
+            if(infinite){
+                this.coorCurrent.x += this.vitX;
+                this.coorCurrent.y += this.vitY;
+
+                if(this.currentWidth >= this.endWidth){
+                    this.currentWidth -= this.vitWidth;
+                }
+                if(!isPointInPoly(canvasPoly, this.coorCurrent)){
+                    this.actif = false;
+                }
             }else{
-                this.coorCurrent.x = this.coorEnd.x;
-            }
-            if(
-                (this.dirY > 0 && this.coorEnd.y > this.coorCurrent.y) ||
-                (this.dirY < 0 && this.coorEnd.y < this.coorCurrent.y)
-            ){
-                this.coorCurrent.y = this.coordStart.y + this.vitY*t;
-            }else{
-                this.coorCurrent.y = this.coorEnd.y;
-            }
-            if(this.currentWidth >= this.endWidth){
-                this.currentWidth = this.startWidth - this.vitWidth*t;
+                if(
+                    (
+                        this.coorEnd.x == this.coorCurrent.x &&
+                        this.coorEnd.y == this.coorCurrent.y
+                    )
+                ){
+                    // console.log("end");
+                    this.actif = false
+                }
+                if(
+                    (this.dirX > 0 && this.coorEnd.x > this.coorCurrent.x) ||
+                    (this.dirX < 0 && this.coorEnd.x < this.coorCurrent.x)
+                ){
+                    this.coorCurrent.x += this.vitX;
+                }else{
+                    this.coorCurrent.x = this.coorEnd.x;
+                }
+                if(
+                    (this.dirY > 0 && this.coorEnd.y > this.coorCurrent.y) ||
+                    (this.dirY < 0 && this.coorEnd.y < this.coorCurrent.y)
+                ){
+                    this.coorCurrent.y += this.vitY;
+                }else{
+                    this.coorCurrent.y = this.coorEnd.y;
+                }
+                if(this.currentWidth >= this.endWidth){
+                    this.currentWidth -= this.vitWidth;
+                }
             }
         }
 
@@ -72,7 +87,8 @@
             // console.log(this.coorCurrent);
             this.ctx.save();
 
-            this.ctx.strokeStyle = 'white';
+            this.ctx.strokeStyle = 'transparent';
+            this.ctx.fillStyle = 'white';
             
             drawCircle(this.coorCurrent, this.currentWidth);
 

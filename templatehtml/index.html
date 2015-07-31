@@ -15,7 +15,7 @@
     <meta property="og:image" content="" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
 	<link rel="stylesheet" href="public/css/reset.css">	
 	<link rel="stylesheet" href="public/css/style.css">
 </head>
@@ -44,7 +44,7 @@
 		    if (trident > 0) {
 			    // IE 11 (or newer) => return version number
 			    var rv = ua.indexOf('rv:');
-			   document.documentElement.className+= " lt-ie11 ie+ua.substring(rv + 3, ua.indexOf('.', rv))";
+			   document.documentElement.className+= " isIE lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
 		    }
 	</script>
 </body>

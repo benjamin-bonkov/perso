@@ -32,20 +32,29 @@
 	<!-- /favicon -->
 </head>
 <body class="loading">
-	<div class="canvasArea page" style="height:500px;">
-		<div class="monitor">
-			<div class="state">
-				State : <span class="val"></span>
-			</div>
-			<div>
-				x : <span class="x"></span>
-			</div>
-			<div>
-				y : <span class="y"></span>
-			</div>
-		</div>
-		<canvas class="canvas"></canvas>
-	</div>
+
+	<style>
+		#parallaxMouse{position: relative; height: 630px; width: 100%; overflow: hidden;}
+		/*.layer0{background: url(./public/images/layer0.jpg) no-repeat center;}*/
+		/*.layer1{background: url(./public/images/layer1.png) no-repeat center;}*/
+		/*.layer2{background: url(./public/images/layer2.png) no-repeat center;}*/
+		.layer{position: absolute; top: -10%; right: -10%; left: -10%; bottom: -10%;  background-size: cover;}
+		.canvasArea canvas{width: 100%; height: 100%;}
+	</style>
+<section id="parallaxMouse" class="banner banner1">
+    <div class="layer layer0"></div>
+    <div class="layer canvasArea">
+        <canvas class="canvas"></canvas>
+    </div>
+    <div class="layer layer1"></div>
+    <h1 class="verticalCenter">
+        <span class="title-big">
+            Agence conseil <br>
+            en développement digital
+        </span>
+    </h1>
+    <div class="layer layer2"></div>
+</section><!-- /.banner1 -->
 
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script>

@@ -8,8 +8,6 @@ $(document).ready(function(){
 	,	offset = $parallaxMouse.offset()
 	,	pmw = $parallaxMouse.width()
 	,	pmh = $parallaxMouse.height();
-	console.log(offset);
-	$("#parallaxMouse").bind(move, moving);
 
 	var deltaY1 = -offset.top-(pmh/2)
 	,	deltaX1 = -offset.left-(pmw/2)
@@ -22,5 +20,7 @@ $(document).ready(function(){
 		$layer1.css({"transform": "translate("+((pos.x + deltaX1)/8)+"px, "+((pos.y + deltaY1)/4)+"px)"});
 		$layer2.css({"transform": "translate("+((pos.x + deltaX2)/20)+"px, "+((pos.y + deltaY2)/15)+"px)"});
 	}
+	$("#parallaxMouse").bind(move, moving);
+
 
 });
