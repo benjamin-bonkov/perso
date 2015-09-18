@@ -574,28 +574,6 @@
 	},
 	"expanded_folders":
 	[
-		"/D/wamp/www/sooyoos/dataville",
-		"/D/wamp/www/sooyoos/dataville/php",
-		"/D/wamp/www/sooyoos/dataville/php/application",
-		"/D/wamp/www/sooyoos/dataville/php/application/modules",
-		"/D/wamp/www/sooyoos/dataville/php/application/modules/default",
-		"/D/wamp/www/sooyoos/dataville/php/application/modules/default/views",
-		"/D/wamp/www/sooyoos/dataville/php/application/modules/default/views/scripts",
-		"/D/wamp/www/sooyoos/dataville/php/application/modules/default/views/scripts/index",
-		"/D/wamp/www/videoplus/site-ecommerce/modules",
-		"/D/wamp/www/videoplus/site-ecommerce/modules/HookLinks",
-		"/D/wamp/www/videoplus/site-ecommerce/modules/HookLinks/Config",
-		"/D/wamp/www/videoplus/site-ecommerce/modules/HookLinks/templates/frontOffice/default",
-		"/D/wamp/www/videoplus/site-ecommerce/modules/HookLinks/templates/frontOffice/default/assets",
-		"/D/wamp/www/videoplus/site-ecommerce/modules/HookLinks/templates/frontOffice/default/assets/css",
-		"/D/wamp/www/videoplus/site-ecommerce/templates",
-		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice",
-		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus",
-		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/assets",
-		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/assets/js",
-		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes",
-		"/D/wamp/www/videoplus/site-ecommerce/templates/frontOffice/videoplus/includes/search",
-		"/D/wamp/www/84paris/parrot/wp-content/themes/pinable3/css"
 	],
 	"file_history":
 	[
@@ -1155,33 +1133,6 @@
 		},
 		{
 			"path": "D:\\wamp\\www\\perso\\perso\\css"
-		},
-		{
-			"path": "D:\\wamp\\www\\84paris\\pia-nanosite-possession"
-		},
-		{
-			"path": "D:\\wamp\\www\\84paris\\piaget-mobile"
-		},
-		{
-			"path": "D:\\wamp\\www\\sooyoos\\dataville"
-		},
-		{
-			"path": "D:\\wamp\\www\\84paris\\pia-nl"
-		},
-		{
-			"path": "D:\\wamp\\www\\force-republicaine\\site-web"
-		},
-		{
-			"path": "D:\\wamp\\www\\pqr\\366-site"
-		},
-		{
-			"path": "D:\\wamp\\www\\pqr\\pod"
-		},
-		{
-			"path": "D:\\wamp\\www\\videoplus\\site-ecommerce"
-		},
-		{
-			"path": "D:\\wamp\\www\\84paris\\parrot\\wp-content\\themes\\pinable3"
 		}
 	],
 	"groups":
@@ -1257,6 +1208,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"D:\\backupOS\\Users\\ben\\Desktop\\projetsST\\ofee.sublime-workspace"
+			]
 		],
 		"width": 380.0
 	},

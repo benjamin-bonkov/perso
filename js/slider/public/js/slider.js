@@ -35,7 +35,7 @@ $(document).ready(function(){
 		var $this = $(this);
 		if(!$slider.data("lock")){//si pas d'animation en cours
 			$slider.data("lock", true);//on indique qu'une animation est en cours
-			if($this.hasClass("prev")){//click sur precedant
+			if($this.hasClass("prev")){//click sur precedent
 				numActif--;
 				slideOne(1);
 			}else{//click sur suivant
