@@ -46,11 +46,21 @@
 			$(".popin").append("<button class='close'>close</button>")
 			$(".showPopin").click(function(){
 				var $this = $(this)
+				openPopin($this);
+			});
+			function openPopin($this){
+				var actionBefore = $this.attr("data-before")
 				,	$target = $("#"+$this.attr("data-target"));
+
+				if(eval(actionBefore) == false){// if the prefuntion fail, don' show the popin
+					return;
+				}
+
+				$this.blur();
 				$target.show()
 					.closest(".contentPopin").show();
 				posPopin($target);
-			});
+			}
 			function posPopin($target){
 						console.log($target);
 				if(typeof $target === "undefined" || typeof $target === "object"){

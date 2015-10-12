@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>save html to image</title>
+	
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<script>
+			document.createElement('header');
+			document.createElement('nav');
+			document.createElement('section');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+			document.createElement('figure');
+		</script>
+	<![endif]-->
+	<div class="wrapper">
+		<div class="inner">
+			<div id="htmlToSave">
+				bloubi <br>
+				blouba
+			</div>
+			<button id="saveCanvas">create canvas from html</button>
+			<a id="saveImage" download="image.png" href="#" class="btn saveMarquage">save as image</a>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<script src="public/js/html2canvas.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			// download link IE / IOS won't work.
+	        // http://caniuse.com/#feat=download
+	        // http://stackoverflow.com/questions/18652750/any-fallback-client-side-solutions-for-the-html5-download-attribute
+	        var downloadAttrSupported = ("download" in document.createElement("a"))
+	        var canvasDL;
+	        if (downloadAttrSupported) {
+	            $("#saveMarquage").unbind("click");
+	            function download() {
+	                    var dt = canvasDL.toDataURL();
+	                    this.href = dt; //this may not work in the future..
+	            }
+	            document.getElementById('saveMarquage').addEventListener('click', download, false);
+	            $("#saveMarquage").removeClass("showPopin")
+	        }else{
+	            $("#saveMarquage").addClass("showPopin").attr("data-target","popinSaveMarquage");
+	        }
+
+	        function download() {
+	            var dt = canvasDL.toDataURL();
+	            this.href = dt; //this may not work in the future..
+	        }
+	        document.getElementById('saveImage').addEventListener('click', download, false);
+
+	        function generateCanvas(){
+	            html2canvas(
+	                document.getElementById("htmlToSave"), 
+	                {
+	                  onrendered: function(canvas) {
+	                    document.body.appendChild(canvas);
+	                    canvasDL = canvas;
+	                    $("#download").click();
+	                  },
+	                }
+	            );
+	        }
+	        document.getElementById('saveCanvas').addEventListener('click', generateCanvas, false);
+	    });
+	</script>
+</body>
+</html>
