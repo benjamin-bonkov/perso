@@ -28,6 +28,16 @@
 		#popin1 p a{color: #808080;}
 		#popin1 p img{margin: 5px 0 0 8px;}
 		#popin1 span.suiteSmall{cursor: pointer; background-position: 0 2px;}
+
+		/* via MQ */	
+		@media all and (orientation: portrait) {
+		}
+
+		/*@media all and (orientation: landscape) {*/
+		@media (max-width: 960px) and (orientation: landscape) {
+			.paysagePush{position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 900; background: url(../images/paysage.jpg) no-repeat center; -webkit-background-size: cover; background-size: cover;}
+		}
+
 	</style>
 
 	<script type="text/javascript" src="public/js/libs/jquery-1.8.2.min.js"></script>
@@ -47,7 +57,7 @@
 					//$('#kflowdivmap').height( $(window).height() - topHeight );
 
 					var portraitOrientation = window.matchMedia("(orientation:portrait)");
-					if ( portraitOrientation.matches ) {
+					if ( portraitOrientation.matches || $("input:focus").length > 0) { // disable this when keyboard input
 						$("body").removeClass("paysage").addClass("potrait");
 						$(".paysageSTP").addClass("active")
 					} else {

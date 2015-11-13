@@ -70,6 +70,8 @@
 						,   ph = $target.outerHeight();
 						if( wh > (ph+20) ){
 							$target.css({"margin-top" : (wh-ph)/2})
+						}else{
+							$target.css({"margin-top" : 0})
 						}
 					});
 				}else{
@@ -78,6 +80,8 @@
 					,   ph = $target.outerHeight();
 					if( wh > (ph+20) ){
 						$target.css({"margin-top" : (wh-ph)/2})
+					}else{
+						$target.css({"margin-top" : 0})
 					}
 				}
 			}posPopin();

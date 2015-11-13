@@ -96,8 +96,8 @@
 		strong{font-weight: bold;}
 		em{font-style: italic;}
 		em strong, strong em{font-weight: bold; font-style: italic;}
-		sup{position: relative; top: -0.5em; line-height: 0; vertical-align: baseline; font-size: 0.6em;}
-		sub{position: relative; top:  0.5em; line-height: 0; vertical-align: baseline; font-size: 0.6em;}
+		sup{ top: -0.5em; line-height: 0; position: relative; vertical-align: baseline; font-size: 0.6em;}
+		sub{ top: 0.5em; line-height: 0; position: relative; vertical-align: baseline; font-size: 0.6em;}
 		.ttu{text-transform: uppercase;}
 		.tac{text-align: center;}
 		.tal{text-align: left;}
@@ -176,5 +176,3 @@ body{
 }
 a{color: #000;}
 .errors{color: #ff0000;}
-
-p{margin-bottom: 1em;}

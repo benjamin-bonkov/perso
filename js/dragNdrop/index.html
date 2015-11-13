@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>home</title>
+	
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<script>
+			document.createElement('header');
+			document.createElement('nav');
+			document.createElement('section');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+			document.createElement('figure');
+		</script>
+	<![endif]-->
+	<div class="wrapper">
+		<div class="inner">
+			<p>
+				Code exemple from : <a href="http://chez-syl.fr/2012/03/drag-and-drop-html5-jquery/">http://chez-syl.fr/2012/03/drag-and-drop-html5-jquery/</a>
+			</p>
+			<p>
+				Utilisé (avec amour &lt;3) avec modifications sur <a href="http://o-fee.com/bar-a-b-o/">http://o-fee.com/bar-a-b-o/</a>
+			</p>
+			<style>
+				/* empêche la sélection */
+				[draggable] {
+				    -moz-user-select: none;
+				    -khtml-user-select: none;
+				    -webkit-user-select: none;
+				    user-select: none;
+				}
+				 
+				#liste li {
+				    margin:4px;
+				    width:75px;
+				    border: 1px solid #000;
+				    border-radius:2px;
+				    cursor: move;
+				    text-align:center;
+				    padding:2px;
+				    box-shadow: 1px 1px 12px #555;
+				    background-color:white;
+				    list-style-type:none;
+				}
+			</style>
+			<ul id="liste">
+			  <li draggable="true">A</li>
+			  <li draggable="true">B</li>
+			  <li draggable="true">C</li>
+			  <li draggable="true">D</li>
+			</ul>
+			 
+			<div id="log"></div>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	if (!window.jQuery) {
+	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	}
+	</script>
+	<script type="text/javascript" src="public/js/script.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+=' lt-ie10 ie10 ';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " isIE lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
+	</script>
+</body>
+</html>
