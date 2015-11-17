@@ -1,0 +1,215 @@
+<!doctype html>
+<html ng-app="app">
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>home</title>
+	
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link rel="stylesheet" href="./public/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="./public/bower_components/angular-xeditable/dist/css/xeditable.css">
+	<link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<script>
+			document.createElement('header');
+			document.createElement('nav');
+			document.createElement('section');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+			document.createElement('figure');
+		</script>
+	<![endif]-->
+	<div class="wrapper">
+		<div class="inner">
+			<div ng-controller="SimmulatorCtrl">
+				<h1>Simulateur</h1>
+
+				<h2 class="text-center">Simulation du {{ data.date }}</h2>
+
+				<div class="row">
+					<div class="col-md-2 h4"><strong>N° {{ data.numClient }}</strong></div>
+					<div class="col-md-2 h4"><strong>{{ data.raisonSociale }}</strong></div>
+					<div class="col-md-2 h4"><strong>{{ data.rattComm1 }}</strong></div>
+					<div class="col-md-2 h4"><strong>{{ data.rattComm2 }}</strong></div>
+					<div class="col-md-3 right text-right">
+						<div class="btn-group-vertical " role="group" aria-label="...">
+							<button class="btn btn-default">
+								<span class="glyphicon glyphicon-retweet left"></span>
+								<span>Nouvelle recherche</span>
+							</button>
+							<button class="btn btn-default">
+								<span class="glyphicon glyphicon-floppy-disk left"></span>
+								<span>Enregistrer</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-3">
+						<div class="panel panel-success text-center">
+							<div class="panel-heading">
+								<div class="panel-title ">
+									<strong>Gain mensuel</strong> 
+									<br>
+									{{ data.gainMensuel }} € HT
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 text-center">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="panel-title" editable-text="data.abo" buttons="no">
+									<strong class="dataBlock">{{ data.abo }} €/mois</strong> 
+									 <br>
+									Abonnement unitaire
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 text-center">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<div class="panel-title" editable-text="data.fraisService" buttons="no">
+									<strong class="dataBlock">{{ data.fraisService }}%</strong> <br> de frais de service
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 right">
+						<br>
+						<button ng-click="getData()" class="btn btn-warning left">Reset</button>
+						<div class="btn-group right" role="group" aria-label="...">
+							<button type="button" class="btn btn-default">PDF</button>
+							<button type="button" class="btn btn-default">EXCEL</button>
+						</div>
+					</div>
+				</div>
+
+				<div ng-repeat="noeud in data.noeuds">
+
+					<table class="table table-bordered tableRecap">
+						<thead>
+							<tr>
+								<th>Total peage HT</th>
+								<th>Total abonnement HT</th>
+								<th>Total fraisService HT</th>
+								<th>Total remise HT</th>
+								<th>Total frais CCP HT</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>{{noeud.totalPeageHT }} €</strong></td>
+								<td><strong>{{noeud.totalAbonnementHT }} €</strong></td>
+								<td><strong>{{noeud.totalFraisServiceHT }} €</strong></td>
+								<td><strong>{{noeud.totalRemiseHT }} €</strong></td>
+								<td><strong>{{noeud.totalFraisCCPHT }} €</strong></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="table table-bordered supports">
+						<thead>
+							<tr>
+								<th ng-click="sortType = 'numSupport'; sortReverse = !sortReverse" colspan="2" class="numSupport">
+									N° Support <span ng-if="sortType == 'numSupport'" ng-class="{glyphicon: sortType == 'numSupport', 'glyphicon-sort-by-attributes': !sortReverse, 'glyphicon-sort-by-attributes-alt': sortReverse}"></span>
+								</th>
+								<th ng-click="sortType = 'immatriculation'; sortReverse = !sortReverse" class="immatriculation">
+									Immatriculation <span ng-if="sortType == 'immatriculation'" ng-class="{glyphicon: sortType == 'immatriculation', 'glyphicon-sort-by-attributes': !sortReverse, 'glyphicon-sort-by-attributes-alt': sortReverse}"></span>
+								</th>
+								<th ng-click="sortType = 'classEuro'; sortReverse = !sortReverse" class="classEuro">
+									Class <br>Euro <span ng-if="sortType == 'classEuro'" ng-class="{glyphicon: sortType == 'classEuro', 'glyphicon-sort-by-attributes': !sortReverse, 'glyphicon-sort-by-attributes-alt': sortReverse}"></span>
+								</th>
+								<th ng-click="sortType = 'peageHT'; sortReverse = !sortReverse" class="peageHT">
+									Péage HT <span ng-if="sortType == 'peageHT'" ng-class="{glyphicon: sortType == 'peageHT', 'glyphicon-sort-by-attributes': !sortReverse, 'glyphicon-sort-by-attributes-alt': sortReverse}"></span>
+								</th>
+								<th ng-click="sortType = 'remiseHT'; sortReverse = !sortReverse" class="remiseHT">
+									Remise HT <span ng-if="sortType == 'remiseHT'" ng-class="{glyphicon: sortType == 'remiseHT', 'glyphicon-sort-by-attributes': !sortReverse, 'glyphicon-sort-by-attributes-alt': sortReverse}"></span>
+								</th>
+								<th ng-click="sortType = 'fraisCCPHT'; sortReverse = !sortReverse" class="fraisCCPHT">
+									Frais <br>CCP HT <span ng-if="sortType == 'fraisCCPHT'" ng-class="{glyphicon: sortType == 'fraisCCPHT', 'glyphicon-sort-by-attributes': !sortReverse, 'glyphicon-sort-by-attributes-alt': sortReverse}"></span>
+								</th>
+								<th ng-click="sortType = 'nbTransactions'; sortReverse = !sortReverse" class="nbTransactions">
+									Nombre <br>Transactions <span ng-if="sortType == 'nbTransactions'" ng-class="{glyphicon: sortType == 'nbTransactions', 'glyphicon-sort-by-attributes': !sortReverse, 'glyphicon-sort-by-attributes-alt': sortReverse}"></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody ng-repeat="support in noeud.supports | orderBy:sortType:sortReverse" ng-class="{'disabled-row': !support.status}">
+							<tr>
+								<td ng-init="support.open=0" ng-click="support.open = (support.open == 0)? 1 : 0" class="expend">
+									<span class="glyphicon" ng-class="{ 'glyphicon-chevron-down': support.open == 1 , 'glyphicon-chevron-up': !support.open}"></span>
+								</td>
+								<td>
+									<button ng-click="support.status = (support.status == 0)? 1 : 0" class="btn btn-default btn-sm left"><span class="glyphicon" ng-class="{'glyphicon-trash text-danger': support.status, 'glyphicon-repeat text-success': !support.status}"></span></button>
+									{{ support.numSupport }}
+								</td>
+								<td>{{ support.immatriculation }}</td>
+								<td> <div editable-text="support.classEuro" buttons="no">{{ support.classEuro }}</div></td>
+								<td>{{ support.peageHT }} €</td>
+								<td>{{ support.remiseHT }} €</td>
+								<td>{{ support.fraisCCPHT }} €</td>
+								<td>{{ support.nbTransactions }}</td>
+							</tr>
+							<tr ng-repeat="reseau in support.reseaux" ng-class="{hide: !support.open, 'disabled-row': !reseau.status}">
+								<td colspan="2" rowspan="100" ng-if="$index == 0" class="rowAdd text-center">
+									<button class="btn btn-default" ng-click="addReseau(support)"><span class="glyphicon glyphicon-plus"></span> Ajouter réseau</button>
+								</td>
+								<td colspan="2" class="reseau text-center">
+									<button ng-click="reseau.status = (reseau.status == 0)? 1 : 0" class="btn btn-default btn-sm left" ><span class="glyphicon" ng-class="{'glyphicon-trash text-danger': reseau.status, 'glyphicon-repeat text-success': !reseau.status}"></span></button>
+									{{ reseau.reseau }}
+								</td>
+								<td> <div editable-text="reseau.peageHT" buttons="no">{{ reseau.peageHT }} €</div></td>
+								<td> <div>{{ reseau.remiseHT }} €</div></td>
+								<td> <div>{{ reseau.fraisCCPHT }} €</div></td>
+								<td>
+									<div ng-if="reseau.reseau == 'CCIH'" editable-text="reseau.nbTransactions" buttons="no">
+										{{ reseau.nbTransactions }}
+									</div>
+									<div ng-if="reseau.reseau != 'CCIH'">
+										{{ reseau.nbTransactions }}
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="./public/bower_components/angular-xeditable/dist/js/xeditable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+	<script src="./public/js/script.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+=' lt-ie10 ie10 ';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " isIE lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
+	</script>
+</body>
+</html>

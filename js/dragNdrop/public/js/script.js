@@ -1,7 +1,10 @@
 $(document).ready(function(){
 	$("html").removeClass("no-js");
 
-	//drag n drop
+	// code exemple from :
+	// http://chez-syl.fr/2012/03/drag-and-drop-html5-jquery/
+	
+	// drag n drop
 		// ajoute la propriété pour le drop et le transfert de données
 		$.event.props.push('dataTransfer');
 

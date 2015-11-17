@@ -1,0 +1,131 @@
+{
+	"numClient": 872334,
+	"raisonSociale": "SARL Camion",
+	"rattComm1": "Ratt Comm1",
+	"rattComm2": "Ratt Comm2",
+	"date": "01/2015",
+	"abo": "25",
+	"fraisService": "2",
+	"gainMensuel": "300",
+	"noeuds":[
+		{
+			"flotteName": "flotte1",
+			"totalPeageHT" : 1900.98,
+			"totalAbonnementHT" : 69.00,
+			"totalFraisServiceHT" : 78.07,
+			"totalRemiseHT" : 170.00,
+			"totalFraisCCPHT" : 0.00,
+			"status": 1,
+			"supports": [
+				{
+					"numSupport": "0005-2",
+					"immatriculation": "YZ-1968-BV",
+					"classEuro": 4,
+					"peageHT": 539.23,
+					"remiseHT": -79.98,
+					"fraisCCPHT": 0,
+					"nbTransactions": 20,
+					"status": 1,
+					"reseaux": [
+						{
+							"reseau": "CCIH",
+							"peageHT": 156.00,
+							"remiseHT": -23.89,
+							"fraisCCPHT": 0,
+							"nbTransactions": 16,
+							"status": 1
+						},
+						{
+							"reseau": "ASF",
+							"peageHT": 367.00,
+							"remiseHT": -12.76,
+							"fraisCCPHT": 0,
+							"nbTransactions": 20,
+							"status": 0
+						},
+						{
+							"reseau": "SAPN",
+							"peageHT": 16.23,
+							"remiseHT": 0,
+							"fraisCCPHT": 16.00,
+							"nbTransactions": 20,
+							"status": 1
+						}
+					]
+				},
+				{
+					"numSupport": "0005-1",
+					"immatriculation": "YZ-1968-BV",
+					"classEuro": 2,
+					"peageHT": 50,
+					"remiseHT": -79.98,
+					"fraisCCPHT": 0,
+					"nbTransactions": 56,
+					"status": 0,
+					"reseaux": [
+						{
+							"reseau": "CCIH",
+							"peageHT": 156.00,
+							"remiseHT": -23.89,
+							"fraisCCPHT": 0,
+							"nbTransactions": 16,
+							"status": 1
+						},
+						{
+							"reseau": "ASF",
+							"peageHT": 367.00,
+							"remiseHT": -12.76,
+							"fraisCCPHT": 0,
+							"nbTransactions": 20,
+							"status": 1
+						},
+						{
+							"reseau": "SAPN",
+							"peageHT": 16.23,
+							"remiseHT": 0,
+							"fraisCCPHT": 16.00,
+							"nbTransactions": 20,
+							"status": 1
+						}
+					]
+				},
+				{
+					"numSupport": "0005-2",
+					"immatriculation": "YZ-1968-BV",
+					"classEuro": 4,
+					"peageHT": 539.23,
+					"remiseHT": -79.98,
+					"fraisCCPHT": 0,
+					"nbTransactions": 56,
+					"status": 1,
+					"reseaux": [
+						{
+							"reseau": "CCIH",
+							"peageHT": 156.00,
+							"remiseHT": -23.89,
+							"fraisCCPHT": 0,
+							"nbTransactions": 16,
+							"status": 1
+						},
+						{
+							"reseau": "ASF",
+							"peageHT": 367.00,
+							"remiseHT": -12.76,
+							"fraisCCPHT": 0,
+							"nbTransactions": 20,
+							"status": 1
+						},
+						{
+							"reseau": "SAPN",
+							"peageHT": 16.23,
+							"remiseHT": 0,
+							"fraisCCPHT": 16.00,
+							"nbTransactions": 20,
+							"status": 1
+						}
+					]
+				}
+			]
+		}
+	]
+}
