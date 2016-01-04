@@ -67,8 +67,8 @@
 		.alignMiddle{letter-spacing: -0.3em;}/*must have a fixed width*/
 		.verticalCenter:before,
 		.alignMiddle:before{content: " "; display: inline-block; vertical-align: middle; height: 100%; width: 0.1%; padding: 0!important;}
-		.verticalCenter>span,
-		.alignMiddle>span{display: inline-block; vertical-align: middle; width: 99%; letter-spacing: 0;}
+		.verticalCenter>*,
+		.alignMiddle>*{display: inline-block; vertical-align: middle; width: 99%; letter-spacing: 0;}
 
 	/***** general state *****/
 		.hide{display: none;}/*carefull, this hide to screen readers too*/

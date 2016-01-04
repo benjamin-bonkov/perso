@@ -11,18 +11,46 @@ app.controller('SimmulatorCtrl', ['$scope', '$http', '$localStorage', function (
 	$scope.sortReverse  = false;  // set the default sort order
 	$scope.gettingData = 1;
 
-	$scope.reseaux = ["ASF","SANEF", "APRR", "A'LIENOR", "CCIH"];
+	$scope.reseauxList = ["ASF","SANEF", "APRR", "A'LIENOR", "CCIH"];
+
+	$scope.selectedReseaux = function(toFilter, reseaux){
+		reseauxSelected = [];
+		for(var i = 0; i < reseaux.length; i++){
+			reseauxSelected.push(reseaux[i].reseau);
+		}
+		var filtered = []
+		for (var i = 0; i < toFilter.length; i++) {
+			if(reseauxSelected.indexOf(toFilter[i]) == -1){
+				filtered.push(toFilter[i]);
+			}
+		}
+		return filtered;
+
+	}
 
 	$scope.addReseau = function(support){
-		console.log(support);
 		support.reseaux.push({
-							"reseau": "undefined",
-							"peageHT": 156.00,
-							"remiseHT": -23.89,
-							"fraisCCPHT": 0,
-							"nbTransactions": 16,
-							"status": 1
-						})
+			"reseau": "undefined",
+			"peageHT": 0,
+			"remiseHT": 0,
+			"fraisCCPHT": 0,
+			"nbTransactions": 0,
+			"status": 1
+		});
+	}
+
+	$scope.addSupport = function(noeud){
+		noeud.supports.push({
+			"numSupport": "undefined",
+			"immatriculation": "undefined",
+			"classEuro": 0,
+			"peageHT": 0,
+			"remiseHT": 0,
+			"fraisCCPHT": 0,
+			"nbTransactions": 0,
+			"status": 1,
+			"reseaux": []
+		});
 	}
 
 	$scope.getData = function(){
