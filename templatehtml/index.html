@@ -16,10 +16,25 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-	<link rel="stylesheet" href="public/css/reset.css">	
-	<link rel="stylesheet" href="public/css/style.css">
+	<link rel="stylesheet" href="./public/css/reset.css">	
+	<link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
+	<script>
+		console.log("/!\\ CHANGE ANALYTICS ID /!\\");
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'XX-XXXXXXXX-X']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		  // label : no required
+		  // value : no required (number)
+		  // _gaq.push(['_trackEvent', 'categorie', 'action', 'label', 'value']);
+	</script>
 	<!--[if lt IE 9]>
 		<script>
 			document.createElement('header');
@@ -39,10 +54,10 @@
 	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script>
 	if (!window.jQuery) {
-	    document.write('<script src="public/js/libs/jquery-1.10.1.min.js"><\/script>');
+	    document.write('<script src="./public/js/libs/jquery-1.10.1.min.js"><\/script>');
 	}
 	</script>
-	<script type="text/javascript" src="public/js/script.js"></script>
+	<script type="text/javascript" src="./public/js/script.js"></script>
 	<script>
 		/*target ie10*/
 		if (Function('/*@cc_on return document.documentMode===10@*/')()){

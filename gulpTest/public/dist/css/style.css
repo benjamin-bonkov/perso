@@ -134,6 +134,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /*FIX TYPO*/
 
 /*	
@@ -369,23 +370,13 @@ sub {
 
 /*si pas de js :*/
 
-
-
 /*si on est sur ie :*/
-
-
 
 /*si on est sur ie<9 :*/
 
-
-
 /*si on est sur ie<8 :*/
 
-
-
 /*si on est sur ie<7 :*/
-
-
 
 /*pause les animation css3*/
 
@@ -448,8 +439,6 @@ sub {
 }
 
 /**************** CSS du site ci-après ***************/
-
-
 
 .inner {
   width: 960px;
