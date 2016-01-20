@@ -1,5 +1,5 @@
     // ***** ANCHOR SCROLLING ***** \\  
-        $(".anchorSmooth").click(function(e){
+        $(".scrollTo").click(function(e){
             e.preventDefault();
             var $this = $(this)
             ,   href = $this.attr("href")
