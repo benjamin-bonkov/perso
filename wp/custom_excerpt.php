@@ -3,7 +3,7 @@
 				<?php global $customLength; $customLength = 50; echo get_the_excerpt(); $customLength = 30;?>
 			</div><!-- .entry-summary -->
 
-<?php /* dan function.php */ 
+<?php /* dans function.php */ 
 /*custom excerpt*/
 function new_excerpt_length() { 
 	global $customLength; 

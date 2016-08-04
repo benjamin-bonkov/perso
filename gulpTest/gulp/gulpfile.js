@@ -3,15 +3,17 @@ var gulp = require('gulp');
 
 // Include Our Plugins
 var jshint = require('gulp-jshint')
+,   watch = require('gulp-watch')
 ,	concat = require('gulp-concat')
 ,	uglify = require('gulp-uglify')
 ,	rename = require('gulp-rename')
 ,	concatCss = require('gulp-concat-css')
-,	minifyCSS = require('gulp-minify-css')
+,	cleanCss = require('gulp-clean-css')
 ,	imagemin = require('gulp-imagemin')
-,	cache = require('gulp-cache')
-,	plumber = require('gulp-plumber')
-,	notify = require('gulp-notify');
+,   gulpif = require('gulp-if')
+,	cache = require('gulp-cache');
+var plumber = require('gulp-plumber'); 
+var notify = require('gulp-notify');
 
 var plumberErrorHandler = { 
     errorHandler: notify.onError({
@@ -22,10 +24,13 @@ var plumberErrorHandler = {
 
 var paths = {
 	scripts: [
-		'../public/js/*',
+		'../public/js/libs/jquery-3.0.0.min.js',
+		'../public/js/script.js',
 	],
 	styles: [
-		'../public/css/*'
+		'../public/css/reset.css',
+		'../public/icomoon/style.css',
+		'../public/css/style.css',
 	],
 	dest:"../public/dist",
 	images:"../public/images"
@@ -67,7 +72,7 @@ gulp.task('css', function () {
 		.pipe(concatCss("css/style.css"))
 		.pipe(gulp.dest(paths.dest+'/'))
 		.pipe(rename("/css/style.min.css"))
-		.pipe(minifyCSS({}))
+		.pipe(cleanCss())
 		.pipe(gulp.dest(paths.dest+'/'));
 });
 
@@ -78,7 +83,7 @@ gulp.task('css-dev', function () {
 		.pipe(concatCss("css/style.css"))
 		.pipe(gulp.dest(paths.dest+'/'))
 		.pipe(rename("/css/style.min.css"))
-		// .pipe(minifyCSS({}))
+		// .pipe(cleanCss())
 		.pipe(gulp.dest(paths.dest+'/'));
 });
 
@@ -98,6 +103,9 @@ gulp.task('watch', function() {
 gulp.task('watch-dev', function() {
 	gulp.watch(paths.scripts, ['scripts-dev']);
 	gulp.watch(paths.styles, ['css-dev']);
+	watch(paths.images+'/**/*', function() {
+        gulp.start('images');
+    });
 });
 
 // Default Task
@@ -107,7 +115,6 @@ gulp.task('dev', ['scripts-dev', 'css-dev', 'images', 'watch-dev']);
 
 gulp.task('delivery', ['scripts', 'css', 'images']);
 
-
-gulp.task('clear', function (done) {
-    return cache.clearAll(done);
+gulp.task('clear', function(){
+    cache.clearAll();
 });

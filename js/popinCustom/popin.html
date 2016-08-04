@@ -96,9 +96,13 @@
 			});
 
 			if(window.addEventListener){
-				window.addEventListener('resize', posPopin, false);
+				window.addEventListener('resize', function(){
+					posPopin();
+				}, false);
 			}else{
-				window.attachEvent ('onresize', posPopin);
+				window.attachEvent ('onresize', function(){
+					posPopin();
+				});
 			}
 		});
 	</script>

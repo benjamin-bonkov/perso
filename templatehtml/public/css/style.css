@@ -33,6 +33,10 @@
 
 
 /***** global *****/
+	[ng\:cloak], [ng-cloak], .ng-cloak {
+	  display: none !important;
+	}
+	
 	button{cursor: pointer; outline: none; font: inherit;}
 	a{text-decoration: none;}
 
@@ -59,7 +63,7 @@
 		.clearfix {*zoom: 1;}
 
 		/*
-		<div class="alignMiddle">
+		<div class="verticalCenter">
 			<span>Center me verticaly</span>
 		</span>
 		*/
@@ -99,8 +103,10 @@
 		sup{position: relative; top: -0.5em; line-height: 0; vertical-align: baseline; font-size: 0.6em;}
 		sub{position: relative; top:  0.5em; line-height: 0; vertical-align: baseline; font-size: 0.6em;}
 		.ttu{text-transform: uppercase;}
-		.tac{text-align: center;}
-		.tal{text-align: left;}
+		.tac,.text-center{text-align: center;}
+		.taj,.text-justify{text-align: justify;}
+		.tal,.text-left{text-align: left;}
+		.tar,.text-right{text-align: right;}
 	
 	/***** conditionnal state *****/
 		/*si pas de js :*/
@@ -117,7 +123,8 @@
 	/*pause les animation css3*/
 	.paused{ -webkit-animation-play-state: paused; -moz-animation-play-state: paused; -o-animation-play-state: paused; animation-play-state: paused;}
 
-	.btn{display: inline-block; margin: 0 auto; color: #fff; border-radius: 2px; text-transform: uppercase; text-align: center; font-size:11px; border:none; outline: none; cursor: pointer;
+	.btn{display: inline-block; margin: 0 auto; color: #fff; text-transform: uppercase; text-align: center; font-size:11px; 
+		border:none; outline: none; cursor: pointer; border-radius: 2px; 
 		background: #89004d;
 		background: -moz-linear-gradient(top, #d40078 0%, #89004d 100%);
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d40078), color-stop(100%,#89004d));
@@ -156,6 +163,14 @@
 	/* scroll IOS SMOOOOOOOTH */
 		/* -webkit-overflow-scrolling: touch; */
 
+	/* styled scrollbar (webkit) */
+	/*
+		.scrollbar-custom::-webkit-scrollbar {width: 5px; background: transparent;}
+		.scrollbar-custom::-webkit-scrollbar-track {background: transparent;}
+		.scrollbar-custom::-webkit-scrollbar-thumb {background: #737375; border-radius: 50px;}
+	*/
+
+	
 /**************** CSS du site ci-apres ***************/
 .wrapper{}
 
