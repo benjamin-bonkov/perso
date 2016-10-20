@@ -1,0 +1,32 @@
+http://stackoverflow.com/questions/5831877/how-do-i-create-a-link-to-add-an-entry-to-a-calendar
+
+Google Calendar Link
+
+<a href="http://www.google.com/calendar/event?action=TEMPLATE&text=Example%20Event&dates=20131124T010000Z/20131124T020000Z&details=Event%20Details%20Here&location=123%20Main%20St%2C%20Example%2C%20NY">Add to gCal</a>
+the parameters being:
+
+action=TEMPLATE (required)
+text (url encoded name of the event)
+dates (ISO date format, startdate/enddate - must have both start and end time - the button generator will let you leave the endtime blank, but you must have one or it won't work.)
+to use the user's timezone: 20131208T160000/20131208T180000
+to use global time, convert to UTC, then use 20131208T160000Z/20131208T180000Z
+all day events, you can use 20131208/20131209 - note that the button generator gets it wrong. You must use the following date as the end date for a one day all day event, or +1 day to whatever you want the end date to be.
+details (url encoded event description/details)
+location (url encoded location of the event - make sure it's an address google maps can read easily)
+
+
+OUTLOOK CALENDAR format (Without a need to create .ics) !!
+
+<a href="https://bay02.calendar.live.com/calendar/calendar.aspx?rru=addevent&dtstart=20151119T140000Z&dtend=20151119T160000Z&summary=Summary+of+the+event&location=Location+of+the+event&description=example+text.&allday=false&uid=">add to Outlook calendar</a>
+test it
+
+Best would be to url_encode the summary, location and description variable's values.
+
+For the sake of knowledge,
+
+YAHOO CALENDAR format
+
+<a href="https://calendar.yahoo.com/?v=60&view=d&type=20&title=Summary+of+the+event&st=20151119T090000&et=20151119T110000&desc=example+text.%0A%0AThis+is+the+text+entered+in+the+event+description+field.&in_loc=Location+of+the+event&uid=">add to Yahoo calendar</a>
+test it
+
+Doing it without a third party holds a lot of advantages for example using it in emails.

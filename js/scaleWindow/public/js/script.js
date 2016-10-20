@@ -4,54 +4,67 @@ $(document).ready(function(){
                     	'WebkitTransition'  in s ||
                     	'MozTransition' 	in s ||
                     	'msTransition' 		in s ||
-                    	'OTransition' 		in s;
+                    	'OTransition' 		in s
+    ,	idTimeoutLockScale = 0
+    ,	lockScale = false;
 
 	// fonction pour garder le ratio hauteur/largeur de la fenêtre
 	//!\ Le conteneur doit etre en overflow hidden /!\
 	function ratioWindow(){
-		var w = $(window).width()
-		,	h = $(window).height()
-		,	mw = 1920 //ratio a garder
-		,	mh = 1200 //ratio a garder
-		,	ratioH = 1
-		,	ratioW = 1
-		,	ratio  = 1;
+		if(!lockScale){
+			clearTimeout(idTimeoutLockScale);
+			var idTimeoutLockScale = setTimeout(function(){
+				lockScale = true;
+				var w = $(window).width()
+				,	h = $(window).height()
+				,	mw = 1920 //ratio a garder
+				,	mh = 1200 //ratio a garder
+				,	ratioH = 1
+				,	ratioW = 1
+				,	ratio  = 1;
 
-		if(h < mh){
-			ratioH = h/mh;
+				if(h < mh){
+					ratioH = h/mh;
+				}
+				if(h > mh){
+					ratioH = h/mh;
+				}
+
+				if(w < mw){
+					ratioW = w/mw;
+				}
+
+				if(w > mw){
+					ratioW = w/mw;
+				}
+
+				//on récupère le ratio le plus bas
+				if(ratioH <= ratioW){
+					ratio = ratioH;
+				}else{
+					ratio = ratioW;
+				}
+
+				//si IE < 9 ou si browser detect = safari on utilise le zoom, sinon le scale
+				// if($("html").hasClass("lt-ie9") || $("html").hasClass("Safari")){
+				if(!supportScale){
+					$(".toScale").css({"zoom": ratio});
+				}else{
+					$(".toScale").css({
+						"transform-origin": "0 0",
+						"transform": "scale("+ratio+")"
+					});
+				}
+
+
+				$(".toScale").delay(50).animate({"opacity":1},
+					50,
+					function(){
+						lockScale = false;
+					}
+				);
+			},500);
 		}
-		if(h > mh){
-			ratioH = h/mh;
-		}
-
-		if(w < mw){
-			ratioW = w/mw;
-		}
-
-		if(w > mw){
-			ratioW = w/mw;
-		}
-
-		//on récupère le ratio le plus bas
-		if(ratioH <= ratioW){
-			ratio = ratioH;
-		}else{
-			ratio = ratioW;
-		}
-
-		//si IE < 9 ou si browser detect = safari on utilise le zoom, sinon le scale
-		// if($("html").hasClass("lt-ie9") || $("html").hasClass("Safari")){
-		if(!supportScale){
-			$(".toScale").css({"zoom": ratio});
-		}else{
-			$(".toScale").css({
-				"transform-origin": "0 0",
-				"transform": "scale("+ratio+")"
-			});
-		}
-
-
-		$(".toScale").delay(50).animate({"opacity":1},50);
 	}
 	$(window).resize(ratioWindow);
 	ratioWindow();

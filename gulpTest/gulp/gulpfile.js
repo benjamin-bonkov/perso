@@ -29,7 +29,6 @@ var paths = {
 	],
 	styles: [
 		'../public/css/reset.css',
-		'../public/icomoon/style.css',
 		'../public/css/style.css',
 	],
 	dest:"../public/dist",

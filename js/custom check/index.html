@@ -4,10 +4,29 @@
 	form .radio{position: relative;}
 	form .radio:before{content: ""; z-index: 1; position: absolute; left: 0; top: 0; display: inline-block; width: 15px; height: 15px; vertical-align: middle; background: url(./check.jpg) 100% 0;}
 	form .radio.checked:before{background-position: 0 0;}
+
+	/* OR ONLY CSS */
+
+	.validation__checkbox{position: relative; margin-top: 5px; cursor: pointer;}
+	.validation__checkbox [type="checkbox"]{/*hide to humans only, screenreaders can still read it*/ position: absolute; width: 1px; /* Setting this to 0 make it invisible for VoiceOver */ height: 1px; /* Setting this to 0 make it invisible for VoiceOver */ padding: 0; margin: -1px; border: 0; clip: rect(0 0 0 0); overflow: hidden;}
+	.validation__checkbox [type="checkbox"] + .fakeCheckbox{content: ""; z-index: 1; display: inline-block; width:
+	34px; height: 30px; vertical-align: middle; background: url(../../images/check.png) no-repeat 0 0;}
+	.validation__checkbox [type="checkbox"]:focus + .fakeCheckbox{background-position: -34px 0;}
+	.validation__checkbox [type="checkbox"]:checked + .fakeCheckbox{background-position: 100% 0;}
+	.validation__checkbox span{margin-left: 15px; display: inline-block; vertical-align: middle;}
+
 </style>
 <form action="">
+	<h1>En JS</h1>
 	<label for="check1" class="radio checked"><input type="radio" name="action" value="check1" id="check1" checked>  check 1</label>
 	<label for="check2" class="radio"><input type="radio" name="action" value="check2" id="check2"> check 2</label>
+
+	<h1>En CSS</h1>
+    <label class="validation__checkbox">
+        <input type="checkbox" id="accept_conditions" value="accept_conditions" required>
+        <i class="fakeCheckbox"></i>
+        <span>En cochant cette case</span>
+    </label>
 </form>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script>

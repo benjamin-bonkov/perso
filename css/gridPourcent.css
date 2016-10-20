@@ -12,9 +12,9 @@
 
 	.grid{width: 100.8547008547008547%; margin-left: -0.8547008547008547%; margin-right: -0.8547008547008547%;}
 	.grid.noMargin{width: 100%; margin-left: 0; margin-right: 0;}
-	.grid [class*="col"]{float: left; width: 100%; margin-left: 0.8547008547008547%; margin-bottom: 0.8547008547008547%;}
-	.grid .right[class*="col"]{float: right;}
-	.grid.noMargin [class*="col"]{margin-left: 0; margin-bottom: 0;}
+	.grid [class*="col-"]{float: left; width: 100%; margin-left: 0.8547008547008547%; margin-bottom: 0.8547008547008547%;}
+	.grid .right[class*="col-"]{float: right;}
+	.grid.noMargin [class*="col-"]{margin-left: 0; margin-bottom: 0;}
 	
 	/* All device */
 		.grid .col-20{width: 19.145299145299145%;}

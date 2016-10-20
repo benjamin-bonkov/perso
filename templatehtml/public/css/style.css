@@ -72,7 +72,7 @@
 		.verticalCenter:before,
 		.alignMiddle:before{content: " "; display: inline-block; vertical-align: middle; height: 100%; width: 0.1%; padding: 0!important;}
 		.verticalCenter>*,
-		.alignMiddle>*{display: inline-block; vertical-align: middle; width: 99%; letter-spacing: 0;}
+		.alignMiddle>*{display: inline-block; vertical-align: middle; width: 99.8%; letter-spacing: 0;}
 
 	/***** general state *****/
 		.hide{display: none;}/*carefull, this hide to screen readers too*/
@@ -107,6 +107,21 @@
 		.taj,.text-justify{text-align: justify;}
 		.tal,.text-left{text-align: left;}
 		.tar,.text-right{text-align: right;}
+
+
+	/***** ratio video/iframe ****/
+		/*
+			<div class="video-container">
+				<iframe src="http://www.youtube.com/embed/dFVxGRekRSg" frameborder="0" width="560" height="315"></iframe>
+			</div>
+		*/
+		.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;}
+		/* 56.25% => ratio vimeo */
+		
+		.video-container iframe,
+		.video-container object,
+		.video-container embed {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
 	
 	/***** conditionnal state *****/
 		/*si pas de js :*/
@@ -170,6 +185,15 @@
 		.scrollbar-custom::-webkit-scrollbar-thumb {background: #737375; border-radius: 50px;}
 	*/
 
+	[draggable]:active {
+	    cursor: -webkit-grabbing;
+	    cursor: -moz-grabbing;
+	}
+
+	[draggable] {
+	    cursor: -webkit-grab;
+	    cursor: -moz-grab;
+	}
 	
 /**************** CSS du site ci-apres ***************/
 .wrapper{}

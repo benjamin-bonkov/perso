@@ -139,4 +139,9 @@
 
 body{background-color: #EFEEEC;}
 a{color: #000;}
-.errors{color: #ff0000;}
+.errors{color: #ff0000;
+-webkit-transition: all .5s;
+-moz-transition: all .5s;
+-ms-transition: all .5s;
+-o-transition: all .5s;
+transition: all .5s;}

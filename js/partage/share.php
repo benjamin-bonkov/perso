@@ -24,7 +24,7 @@ if(stripos($ua,'android') !== false) {
 <script>
 	$('.twitter').click(function(event) {
 		var width  = 575,
-		height = 200,
+		height = 260,
 		left   = ($(window).width()  - width)  / 2,
 		top    = ($(window).height() - height) / 2,
 		url    = "http://twitter.com/home?status=<?php echo $this->activeArticle->getTitle(); ?> on http://rolexgrandslam.eurosport.com<?php echo $this->baseUrl();?>/article/<?php echo $this->activeArticle->getArticleId();?>",
