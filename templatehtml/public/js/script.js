@@ -17,7 +17,7 @@ $(document).ready(function(){
 		,	out = "mouseout"
 		,	up = "mouseup";
 		if(isTouch){
-			triggerClick = "touchend";
+			triggerClick = "touchstart";
 			down = "touchstart";
 			move = "touchmove";
 			out = "touchleave";
