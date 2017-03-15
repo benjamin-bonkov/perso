@@ -43,7 +43,7 @@ NB newsletter :
 ```
 
 10) sur toute les `<img />`
-	=> style="border:none;border-radius:;display:block;outline:none;text-decoration:none;"
+	=> style="border:none;border-radius:0;display:block;outline:none;text-decoration:none;"
 		(évite des bordure auto en cas de lien et autres joyeuseté)
 
 11) pour toute adresse / numéros de téléphone, lien dont on veut empecher les styling automatique
@@ -126,3 +126,5 @@ NB newsletter :
 
 15) outlook web & office 365 supprime les bordures des tableaux se trouvant dans des `<a>`
 	=> mettre les bordures sur les `<td>`
+
+16) `<a>` contenat un `<table>` ne sont pas pris en compte sur outlook

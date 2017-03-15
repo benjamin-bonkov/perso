@@ -9,7 +9,7 @@
     }
     var triggerClick = "click";
     if(isTouchDevice()){
-        triggerClick = "touchend";
+        triggerClick = "touchstart";
     }
 
 

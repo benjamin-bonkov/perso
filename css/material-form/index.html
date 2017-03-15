@@ -1,0 +1,85 @@
+<div class="container">
+  
+  
+</div>
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Demo material design form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css"> 
+  <link rel="stylesheet" href="./material-form.css"> 
+</head>
+<body>
+  <div class="wrapper">
+    <form class="materialForm" action="">
+    <h1>Demo material design form</h1>
+    <div class="form-group">
+      <select>
+        <option>Value 1</option>
+        <option>Value 2</option>
+      </select>
+      <label class="control-label" for="select">Selectbox</label><i class="bar"></i>
+    </div>
+    <div class="form-group">
+      <input type="text" required="required"/>
+      <label class="control-label" for="input">Textfield</label><i class="bar"></i>
+    </div>
+    <div class="form-group">
+      <textarea required="required"></textarea>
+      <label class="control-label" for="textarea">Textarea</label><i class="bar"></i>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" checked="checked"/><i class="helper"></i>I'm the label from a checkbox
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+      </label>
+    </div>
+    <div class="form-radio">
+      <div class="radio">
+        <label>
+          <input type="radio" name="radio" checked="checked"/><i class="helper"></i>I'm the label from a radio button
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="radio"/><i class="helper"></i>I'm the label from a radio button
+        </label>
+      </div>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+      </label>
+    </div>
+    <div class="buttonContainer">
+      <button class="button" type="button"><span>Submit</span></button>
+    </div>
+  </form>
+  </div><!--/.wrapper-->  
+
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="./material-form.js"></script>
+  <script>
+    /*target ie10*/
+    if (Function('/*@cc_on return document.documentMode===10@*/')()){
+        document.documentElement.className+=' lt-ie10 ie10 ';
+    }
+    /*target ie11*/
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE ');
+        var trident = ua.indexOf('Trident/');
+        if (trident > 0) {
+          // IE 11 (or newer) => return version number
+          var rv = ua.indexOf('rv:');
+         document.documentElement.className+= " lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
+        }
+  </script>
+</body>
+</html>

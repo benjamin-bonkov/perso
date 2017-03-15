@@ -22,19 +22,74 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, unde, nesciunt, fugit voluptas praesentium suscipit earum dolorem est asperiores iure accusamus omnis aut quas itaque cumque reprehenderit accusantium tempore incidunt?
 		</p>
 	</div>
-<a href="#" data-target="popin1" class="showPopin">openPopin</a>
+<a href="#" data-target="popin1" class="js-showPopin">openPopin</a>
 	<style>
 		html,
 		body{width: 100%; height: 100%; overflow: auto;}
 		body{position: relative;}
 		.contentPopin{text-align: center; z-index: 999999999999; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: #000; background: rgba(0,0,0,0.72);}
 		.popin{display: inline-block; margin-top: 50px; width: 100%; max-width: 640px; height: 330px; background: #fff; text-align: left; padding-left: 20px; position: relative;}
-		.popin .close{position: absolute; top: 5px; right: 5px;}
-		#popin1 .title{margin: 50px 0; font-family: Helvetica, Arial; font-weight: bold; font-size: 32px; color: #2a333d;}
-		#popin1 p{color: #808080; font-size: 12px; font-family: Arial; line-height: 14px; }
-		#popin1 p a{color: #808080;}
-		#popin1 p img{margin: 5px 0 0 8px;}
-		#popin1 span.suiteSmall{cursor: pointer; background-position: 0 2px;}
+		.popin .close-button{position: absolute; top: 5px; right: 5px;}
+		.popin .title{margin: 50px 0; font-family: Helvetica, Arial; font-weight: bold; font-size: 32px; color: #2a333d;}
+		.popin p{color: #808080; font-size: 12px; font-family: Arial; line-height: 14px; }
+		.popin p a{color: #808080;}
+		.popin p img{margin: 5px 0 0 8px;}
+		.popin span.suiteSmall{cursor: pointer; background-position: 0 2px;}
+
+		/***** .close-button ***** base from http://codepen.io/MarvinVk/pen/ZYOdVa *****/
+			.close-button {position: relative; display: inline-block; height: 35px; width: 35px; box-sizing: border-box; line-height: 50px; background-color: transparent; border: none;}
+			.close-button i{ display: inline-block; width: 100%; height: 100%;
+				-webkit-transition: all .25s ease-out;
+				-moz-transition: all .25s ease-out;
+				-ms-transition: all .25s ease-out;
+				-o-transition: all .25s ease-out;
+				transition: all .25s ease-out;
+			}
+			.close-button i:before, 
+			.close-button i:after {content: ''; position: absolute; top: 50%; left: 50%; 
+				display: block; margin-top: -1px; margin-left: -20px; height: 4px; width: 30px; background-color: #6e7a9c;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-transition: all .25s ease-out;
+				-moz-transition: all .25s ease-out;
+				-ms-transition: all .25s ease-out;
+				-o-transition: all .25s ease-out;
+				transition: all .25s ease-out;
+			}
+			.close-button i:after {
+				-webkit-transform: rotate(-135deg);
+				-moz-transform: rotate(-135deg);
+				-ms-transform: rotate(-135deg);
+				-o-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+			}
+
+			.close-button:focus i{
+				-webkit-transform: scale(0);
+				-moz-transform: scale(0);
+				-ms-transform: scale(0);
+				-o-transform: scale(0);
+				transform: scale(0);
+			}
+
+
+			.close-button:hover i:after{
+				-webkit-transform: rotate(-225deg);
+				-moz-transform: rotate(-225deg);
+				-ms-transform: rotate(-225deg);
+				-o-transform: rotate(-225deg);
+				transform: rotate(-225deg);
+			}
+			.close-button:hover i:before{
+				-webkit-transform: rotate(-135deg);
+				-moz-transform: rotate(-135deg);
+				-ms-transform: rotate(-135deg);
+				-o-transform: rotate(-135deg);
+				transform: rotate(-135deg);
+			}
 	</style>
 
 	<script type="text/javascript" src="public/js/libs/jquery-1.8.2.min.js"></script>
@@ -43,8 +98,8 @@
 			$(".popin")
 					.css({"display":"none"})
 					.wrap($("<div class='contentPopin' style='display:none;'></div>"));
-			$(".popin").append("<button class='close'>close</button>")
-			$(".showPopin").click(function(){
+			$(".popin").append("<button class='js-close close-button'><i></i><span class='visuallyHidden'>close</span></button>")
+			$(".js-showPopin").click(function(){
 				var $this = $(this)
 				openPopin($this);
 			});
@@ -90,8 +145,7 @@
 				e.stopPropagation();
 			});
 
-			$("body").delegate(".contentPopin, .close", "click", function(){
-				$(this)
+			$("body").delegate(".contentPopin, .js-close", "click", function(){
 				$(".popin").hide().closest('.contentPopin').hide();;
 			});
 
