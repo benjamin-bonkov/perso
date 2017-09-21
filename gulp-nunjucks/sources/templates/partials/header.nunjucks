@@ -1,0 +1,18 @@
+<style>
+  .menuItem__link.active{font-weight: bold;}
+</style>
+<header>
+je suis le partial header
+
+<nav class="headerNav">
+  <div class="headerNav__content">
+    <ul class="headerNavList">
+      <li class="headerNavItem"><a href="./" class="menuItem__link {%if activePage == 'home' %} active {% endif %}">Home</a></li>
+      <li class="headerNavItem"><a href="./page1.html" class="menuItem__link {%if activePage == 'page1' %} active {% endif %}">page1</a>
+      </li>
+      <li class="headerNavItem"><a href="./page2.html" class="menuItem__link {%if activePage == 'page2' %} active {% endif %}">page2</a></li>
+      <li class="headerNavItem"><a href="" class="menuItem__link {%if activePage == 'page3' %} active {% endif %}">page3</a></li>
+    </ul><!-- headerNavList -->
+  </div><!-- headerNav__content -->
+</nav><!-- headerNav -->
+</header>

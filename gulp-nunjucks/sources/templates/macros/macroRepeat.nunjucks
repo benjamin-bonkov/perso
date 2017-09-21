@@ -1,0 +1,6 @@
+{% macro repeatText(repeat="1",text="defaultvalue") %}
+	{% for i in range(0, repeat) %}
+		{{ i }}
+		{{ text }}
+	{% endfor %}
+{% endmacro %}

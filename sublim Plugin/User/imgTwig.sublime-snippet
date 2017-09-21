@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+<img src="{{ asset('images/${1:}') }}" alt="${2:}" class="${3:}">
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>imgTwig</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

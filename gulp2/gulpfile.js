@@ -3,19 +3,18 @@ var gulp = require('gulp');
 
 // Include Our Plugins
 var jshint = require('gulp-jshint')
-,   watch = require('gulp-watch')
 ,	concat = require('gulp-concat')
 ,	uglify = require('gulp-uglify')
 ,	rename = require('gulp-rename')
+,	autoprefixer = require('gulp-autoprefixer')
 ,	concatCss = require('gulp-concat-css')
-,	cleanCss = require('gulp-clean-css')
+,	minifyCSS = require('gulp-minify-css')
 ,	imagemin = require('gulp-imagemin')
-,   gulpif = require('gulp-if')
 ,	cache = require('gulp-cache');
 var plumber = require('gulp-plumber'); 
 var notify = require('gulp-notify');
 
-var plumberErrorHandler = { 
+var plumberErrorHandler = {
     errorHandler: notify.onError({
         title: 'Gulp',
         message: 'Error: <%= error.message %>'
@@ -24,12 +23,20 @@ var plumberErrorHandler = {
 
 var paths = {
 	scripts: [
-		'../public/js/libs/jquery-3.0.0.min.js',
+		'../public/js/libs/jquery-1.12.0.min.js',
+		'../public/js/slick.min.js',
+		'../public/js/libs/markerclusterer.js',
+		'../public/js/map.js',
 		'../public/js/script.js',
+		'../public/js/panier.js'
 	],
 	styles: [
 		'../public/css/reset.css',
-		'../public/css/style.css',
+		'../public/icomoon/style.css',
+		'../public/css/slick.css',
+		'../public/css/slick-theme.css',
+		'../public/css/grid.css',
+		'../public/css/style.css'
 	],
 	dest:"../public/dist",
 	images:"../public/images"
@@ -71,7 +78,8 @@ gulp.task('css', function () {
 		.pipe(concatCss("css/style.css"))
 		.pipe(gulp.dest(paths.dest+'/'))
 		.pipe(rename("/css/style.min.css"))
-		.pipe(cleanCss())
+		.pipe(minifyCSS({}))
+        .pipe(autoprefixer({browsers: ['last 4 versions']}))
 		.pipe(gulp.dest(paths.dest+'/'));
 });
 
@@ -82,30 +90,27 @@ gulp.task('css-dev', function () {
 		.pipe(concatCss("css/style.css"))
 		.pipe(gulp.dest(paths.dest+'/'))
 		.pipe(rename("/css/style.min.css"))
-		// .pipe(cleanCss())
+		// .pipe(minifyCSS({}))
+        .pipe(autoprefixer({browsers: ['last 4 versions']}))
 		.pipe(gulp.dest(paths.dest+'/'));
 });
 
 gulp.task('images', function() {
-  return gulp.src(paths.images+'/**/*')
+    return gulp.src(paths.images+'/**/*')
         .pipe(plumber(plumberErrorHandler))
-    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest(paths.dest+'/images'));
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+        .pipe(gulp.dest(paths.dest+'/images'));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
 	gulp.watch(paths.scripts, ['scripts']);
 	gulp.watch(paths.styles, ['css']);
-    gulp.watch(paths.images+'/**/*', ['images']);
 });
 // Watch Files For Changes
 gulp.task('watch-dev', function() {
 	gulp.watch(paths.scripts, ['scripts-dev']);
 	gulp.watch(paths.styles, ['css-dev']);
-	watch(paths.images+'/**/*', function() {
-        gulp.start('images');
-    });
 });
 
 // Default Task
@@ -114,7 +119,3 @@ gulp.task('default', ['scripts', 'css', 'images', 'watch']);
 gulp.task('dev', ['scripts-dev', 'css-dev', 'images', 'watch-dev']);
 
 gulp.task('delivery', ['scripts', 'css', 'images']);
-
-gulp.task('clear', function(){
-    cache.clearAll();
-});

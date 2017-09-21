@@ -3,19 +3,19 @@ var gulp = require('gulp');
 
 // Include Our Plugins
 var jshint = require('gulp-jshint')
-,   watch = require('gulp-watch')
 ,	concat = require('gulp-concat')
 ,	uglify = require('gulp-uglify')
 ,	rename = require('gulp-rename')
+,	autoprefixer = require('gulp-autoprefixer')
 ,	concatCss = require('gulp-concat-css')
-,	cleanCss = require('gulp-clean-css')
+,   cleanCSS = require('gulp-clean-css')
 ,	imagemin = require('gulp-imagemin')
-,   gulpif = require('gulp-if')
-,	cache = require('gulp-cache');
-var plumber = require('gulp-plumber'); 
-var notify = require('gulp-notify');
+,	cache = require('gulp-cache')
+,   less = require('gulp-less')
+,   plumber = require('gulp-plumber')
+,   notify = require('gulp-notify');
 
-var plumberErrorHandler = { 
+var plumberErrorHandler = {
     errorHandler: notify.onError({
         title: 'Gulp',
         message: 'Error: <%= error.message %>'
@@ -24,12 +24,20 @@ var plumberErrorHandler = {
 
 var paths = {
 	scripts: [
-		'../public/js/libs/jquery-3.0.0.min.js',
+		'../public/js/libs/jquery-3.2.1.min.js',
+		'../public/js/plugins/jquery.tablesorter.min.js',
+		'../public/js/material-form.js',
+		'../public/js/scroll-anchor.js',
+		'../public/js/popin.js',
+		'../public/js/header.js',
 		'../public/js/script.js',
+		'../public/js/tables.js'
 	],
+    stylesWatchDir: [
+        '../public/less/**'
+    ],
 	styles: [
-		'../public/css/reset.css',
-		'../public/css/style.css',
+		'../public/less/styles.less'
 	],
 	dest:"../public/dist",
 	images:"../public/images"
@@ -60,7 +68,7 @@ gulp.task('scripts-dev', function() {
 		.pipe(concat('all.js'))
 		.pipe(gulp.dest(paths.dest+'/js'))
 		.pipe(rename('all.min.js'))
-		// .pipe(uglify({ mangle: false }))
+		.pipe(uglify({ mangle: false }))
 		.pipe(gulp.dest(paths.dest+'/js'));
 });
 
@@ -68,10 +76,12 @@ gulp.task('scripts-dev', function() {
 gulp.task('css', function () {
 	return gulp.src(paths.styles)
         .pipe(plumber(plumberErrorHandler))
+        .pipe(less())
 		.pipe(concatCss("css/style.css"))
 		.pipe(gulp.dest(paths.dest+'/'))
 		.pipe(rename("/css/style.min.css"))
-		.pipe(cleanCss())
+		.pipe(cleanCSS({}))
+        .pipe(autoprefixer({browsers: ['last 3 versions']}))
 		.pipe(gulp.dest(paths.dest+'/'));
 });
 
@@ -79,33 +89,38 @@ gulp.task('css', function () {
 gulp.task('css-dev', function () {
 	return gulp.src(paths.styles)
         .pipe(plumber(plumberErrorHandler))
+        .pipe(less())
 		.pipe(concatCss("css/style.css"))
 		.pipe(gulp.dest(paths.dest+'/'))
 		.pipe(rename("/css/style.min.css"))
-		// .pipe(cleanCss())
+		.pipe(cleanCSS({}))
+        .pipe(autoprefixer({browsers: ['last 3 versions']}))
 		.pipe(gulp.dest(paths.dest+'/'));
 });
 
 gulp.task('images', function() {
-  return gulp.src(paths.images+'/**/*')
+    return gulp.src(paths.images+'/**/*')
         .pipe(plumber(plumberErrorHandler))
-    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest(paths.dest+'/images'));
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+        .pipe(gulp.dest(paths.dest+'/images'));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
 	gulp.watch(paths.scripts, ['scripts']);
-	gulp.watch(paths.styles, ['css']);
+	gulp.watch(paths.stylesWatchDir, ['css']);
     gulp.watch(paths.images+'/**/*', ['images']);
 });
 // Watch Files For Changes
 gulp.task('watch-dev', function() {
 	gulp.watch(paths.scripts, ['scripts-dev']);
-	gulp.watch(paths.styles, ['css-dev']);
-	watch(paths.images+'/**/*', function() {
-        gulp.start('images');
-    });
+	gulp.watch(paths.stylesWatchDir, ['css-dev']);
+    gulp.watch(paths.images+'/**/*', ['images']);
+});
+
+// Clear cache
+gulp.task('clear', function(){
+    cache.clearAll();
 });
 
 // Default Task
@@ -113,8 +128,4 @@ gulp.task('default', ['scripts', 'css', 'images', 'watch']);
 // dev Task
 gulp.task('dev', ['scripts-dev', 'css-dev', 'images', 'watch-dev']);
 
-gulp.task('delivery', ['scripts', 'css', 'images']);
-
-gulp.task('clear', function(){
-    cache.clearAll();
-});
+gulp.task('delivery', ['scripts', 'css']);

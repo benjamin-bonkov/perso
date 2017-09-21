@@ -1,0 +1,7 @@
+{% extends "layout.nunjucks" %}
+{% set activePage = 'home' %}
+{% block content %}
+
+{% import 'macros/macroRepeat.nunjucks' as repeat %}
+  {{ repeat.repeatText(50,"home <br>")}}
+{% endblock %}

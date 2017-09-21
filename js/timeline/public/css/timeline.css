@@ -1,0 +1,67 @@
+/***********************************
+ storia
+***********************************/
+.storyDates{
+	height: 69px; overflow: hidden;
+	background-color: #fff; box-shadow: 0 4px 20px rgba(9, 77, 165, 0.20);
+}
+.storyDates.sticky{z-index: 99; position: fixed; top: 0; left: 0; right: 0;}
+.customize-support .storyDates.sticky{top: 92px;}
+
+.storyDates__content{}
+.storyDates__TranslateWrap{
+	white-space: nowrap; position: absolute; left: 50%;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
+}
+.storyDates__link{
+	float: left; height: 69px; width: 70px; padding: 0 10px; margin: 0 15px;
+	font-weight: bold; font-size: 18px; line-height: 69px; color: #094da5; text-decoration: none;	
+}
+.storyDates__link.active{border-bottom: 5px solid #f49811;}
+
+.storyContainer{
+	padding-top: 60px; position: relative;
+}
+.story__middleLine{position: absolute; top: 90px; bottom: 0; left: 50%; width: 1px; background: #094da5;}
+.story__list{}
+.storyItem{
+	position: relative; float: left; clear: left; width: 50%; padding: 20px 5% 40px; text-align: center;
+}
+.storyItem:before{
+	content:"";
+	position: absolute; left: 100%; 
+	width: 30px; height: 30px; margin-left: -15px; margin-top: 10px;
+	border: 3px solid #fff; background: #094da5; border-radius: 100%;
+}
+.storyItem:nth-child(even){
+	float: right; clear: right;
+}
+.storyItem:nth-child(even):before{
+	position: absolute; left: auto; right: 100%; margin-left: 0; margin-right: -15px;
+}
+.storyItem:nth-child(2){margin-top: 250px;}
+.storyItem__title{position: relative; font-size: 45px; line-height: 1.2; padding-bottom: 35px; margin-bottom: 35px;}
+.storyItem__title:before{position: absolute;
+    content: '\2014';
+    left: 50%; bottom: -15px;
+    font-size: 48px; font-size: 4.8rem; line-height: 48px; line-height: 4.8rem; color: inherit;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+.storyItem__content{white-space: pre-line;}
+.storyItem__content img{display: block; margin: 20px auto;}
+
+/* inconsistance entre les mediakiri et js $(window).width(), on passe par un classe ajouté en js du coup */
+	.storyContainer--mobile{padding-top: 20px;}
+	.storyContainer--mobile .story__middleLine{display: none;}
+	.storyContainer--mobile .storyItem{
+		float: none; width: 100%; max-width: 530px; margin-left: auto; margin-right: auto;
+	}
+	.storyContainer--mobile .storyItem:nth-child(even){float: none;}
+	.storyContainer--mobile .storyItem:nth-child(2){margin-top: 0;}
+	.storyContainer--mobile .storyItem:before{display: none;}

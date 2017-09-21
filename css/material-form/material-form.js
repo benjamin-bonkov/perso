@@ -9,7 +9,7 @@
     if($(".materialForm").length > 0){
         $("input, textarea").each(function(){
             toggleHasValueClass($(this));
-        }).on( "focusout", function(){
+        }).on( "change focusout", function(){
             toggleHasValueClass($(this));
         });
     }

@@ -16,37 +16,53 @@
 </head>
 <body>
 
-	<div id="popin1" class="popin" style="display: none;">
-		<div class="title">IMAH POPIN</div>
+	<a href="#" data-target="popin1" class="js-showPopin">openPopin</a>
+
+	<div id="popin1" class="popin" role="dialog" style="display: none;" >
+		<div class="popin__title">IMAH POPIN</div>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, unde, nesciunt, fugit voluptas praesentium suscipit earum dolorem est asperiores iure accusamus omnis aut quas itaque cumque reprehenderit accusantium tempore incidunt?
 		</p>
 	</div>
-<a href="#" data-target="popin1" class="js-showPopin">openPopin</a>
 	<style>
 		html,
 		body{width: 100%; height: 100%; overflow: auto;}
 		body{position: relative;}
-		.contentPopin{text-align: center; z-index: 999999999999; width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: #000; background: rgba(0,0,0,0.72);}
-		.popin{display: inline-block; margin-top: 50px; width: 100%; max-width: 640px; height: 330px; background: #fff; text-align: left; padding-left: 20px; position: relative;}
-		.popin .close-button{position: absolute; top: 5px; right: 5px;}
-		.popin .title{margin: 50px 0; font-family: Helvetica, Arial; font-weight: bold; font-size: 32px; color: #2a333d;}
+		.contentPopin{
+			z-index: 999999999999; position: fixed; top: 0; left: 0; 
+			width: 100%; height: 100%; 
+			text-align: center; 
+			background: #000; background: rgba(0,0,0,0.72);
+		}
+		.popin{
+			position: relative;
+			display: inline-block; 
+			width: 100%; max-width: 640px; margin-top: 50px;
+			text-align: left;
+			background: #fff; 
+		}
+		.popin__title{margin: 50px 0; font-family: Helvetica, Arial; font-weight: bold; font-size: 32px; color: #2a333d;}
 		.popin p{color: #808080; font-size: 12px; font-family: Arial; line-height: 14px; }
 		.popin p a{color: #808080;}
 		.popin p img{margin: 5px 0 0 8px;}
 		.popin span.suiteSmall{cursor: pointer; background-position: 0 2px;}
 
-		/***** .close-button ***** base from http://codepen.io/MarvinVk/pen/ZYOdVa *****/
-			.close-button {position: relative; display: inline-block; height: 35px; width: 35px; box-sizing: border-box; line-height: 50px; background-color: transparent; border: none;}
-			.close-button i{ display: inline-block; width: 100%; height: 100%;
+		/***** .popin__close ***** base from http://codepen.io/MarvinVk/pen/ZYOdVa *****/
+			.popin__close {
+				position: absolute; top: 5px; right: 5px;
+				display: inline-block; height: 35px; width: 35px; box-sizing: border-box; 
+				line-height: 50px; 
+				background-color: transparent; border: none;
+			}
+			.popin__close i{ display: inline-block; width: 100%; height: 100%;
 				-webkit-transition: all .25s ease-out;
 				-moz-transition: all .25s ease-out;
 				-ms-transition: all .25s ease-out;
 				-o-transition: all .25s ease-out;
 				transition: all .25s ease-out;
 			}
-			.close-button i:before, 
-			.close-button i:after {content: ''; position: absolute; top: 50%; left: 50%; 
+			.popin__close i:before, 
+			.popin__close i:after {content: ''; position: absolute; top: 50%; left: 50%; 
 				display: block; margin-top: -1px; margin-left: -20px; height: 4px; width: 30px; background-color: #6e7a9c;
 				-webkit-transform: rotate(-45deg);
 				-moz-transform: rotate(-45deg);
@@ -59,7 +75,7 @@
 				-o-transition: all .25s ease-out;
 				transition: all .25s ease-out;
 			}
-			.close-button i:after {
+			.popin__close i:after {
 				-webkit-transform: rotate(-135deg);
 				-moz-transform: rotate(-135deg);
 				-ms-transform: rotate(-135deg);
@@ -67,7 +83,7 @@
 				transform: rotate(-135deg);
 			}
 
-			.close-button:focus i{
+			.popin__close:focus i{
 				-webkit-transform: scale(0);
 				-moz-transform: scale(0);
 				-ms-transform: scale(0);
@@ -76,14 +92,14 @@
 			}
 
 
-			.close-button:hover i:after{
+			.popin__close:hover i:after{
 				-webkit-transform: rotate(-225deg);
 				-moz-transform: rotate(-225deg);
 				-ms-transform: rotate(-225deg);
 				-o-transform: rotate(-225deg);
 				transform: rotate(-225deg);
 			}
-			.close-button:hover i:before{
+			.popin__close:hover i:before{
 				-webkit-transform: rotate(-135deg);
 				-moz-transform: rotate(-135deg);
 				-ms-transform: rotate(-135deg);
@@ -98,7 +114,7 @@
 			$(".popin")
 					.css({"display":"none"})
 					.wrap($("<div class='contentPopin' style='display:none;'></div>"));
-			$(".popin").append("<button class='js-close close-button'><i></i><span class='visuallyHidden'>close</span></button>")
+			$(".popin").append("<button class='js-close popin__close'><i></i><span class='visuallyHidden'>close</span></button>")
 			$(".js-showPopin").click(function(){
 				var $this = $(this)
 				openPopin($this);

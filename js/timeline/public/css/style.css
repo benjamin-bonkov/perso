@@ -68,11 +68,11 @@
 		</span>
 		*/
 		.verticalCenter,
-		.alignMiddle{letter-spacing: -0.3em; white-space: nowrap;}/*must have a fixed width*/
+		.alignMiddle{letter-spacing: -0.3em;}/*must have a fixed width*/
 		.verticalCenter:before,
 		.alignMiddle:before{content: " "; display: inline-block; vertical-align: middle; height: 100%; width: 0.1%; padding: 0!important;}
 		.verticalCenter>*,
-		.alignMiddle>*{display: inline-block; vertical-align: middle; width: 99.8%; letter-spacing: 0; white-space: normal;}
+		.alignMiddle>*{display: inline-block; vertical-align: middle; width: 99.8%; letter-spacing: 0;}
 
 	/***** general state *****/
 		.hide{display: none;}/*carefull, this hide to screen readers too*/
@@ -197,7 +197,7 @@
 
 	img{max-width: 100%;}
 
-	/*::selection{background: #b01055; color: #fff;}*/
+	::selection{/*background: #b01055; color: #fff;*/}
 
 	body{line-height: 1.2;
 		background-color: #EFEEEC; 
