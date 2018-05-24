@@ -111,11 +111,16 @@
 	<script type="text/javascript" src="public/js/libs/jquery-1.8.2.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".popin")
-					.css({"display":"none"})
-					.wrap($("<div class='contentPopin' style='display:none;'></div>"));
-			$(".popin").append("<button class='js-close popin__close'><i></i><span class='visuallyHidden'>close</span></button>")
-			$(".js-showPopin").click(function(){
+			window.initPopin =function($popin){
+				$popin
+						.css({"display":"none"})
+						.wrap($("<div class='contentPopin' style='display:none;'></div>"));
+				$popin.append("<button class='js-close popin__close'><i></i><span class='visuallyHidden'>close</span></button>")
+			}
+			$(".popin").each(function(){
+				window.initPopin($(this));
+			})
+			$("body").on("click", ".js-showPopin", function(){
 				var $this = $(this)
 				openPopin($this);
 			});
@@ -133,7 +138,6 @@
 				posPopin($target);
 			}
 			function posPopin($target){
-						console.log($target);
 				if(typeof $target === "undefined" || typeof $target === "object"){
 					$(".popin").each(function(){
 						var $target = $(this);
@@ -161,8 +165,11 @@
 				e.stopPropagation();
 			});
 
+			window.closePopin = function(){
+				$(".popin").hide().closest('.contentPopin').hide();
+			}
 			$("body").delegate(".contentPopin, .js-close", "click", function(){
-				$(".popin").hide().closest('.contentPopin').hide();;
+				window.closePopin();
 			});
 
 			if(window.addEventListener){

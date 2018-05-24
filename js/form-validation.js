@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var $this = $(this)
 		,	$form__group = $this.closest(".form__group")
 		,	$form__error = $form__group.find(".form__error");
-		if($this.val() == ""){
+		if($.trim($this.val()) == ""){
 			$form__group.addClass("errors");
 			$form__error.show();
 		}else{

@@ -1,3 +1,13 @@
+
+<!-- facebook -->
+<a href="https://www.facebook.com/sharer/sharer.php?u=www.url-to-share.fr" target="_blank" class="share-article__link share-article__link-facebook">share facebook</a>
+<!-- twitter -->
+<a href="https://twitter.com/home?status=Titre de l'article www.url-to-share.fr" target="_blank" class="share-article__link share-article__link-twitter">share twitter</a>
+<!-- linkedin -->
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=www.url-to-share.fr&title=Titre de l'article&summary=Description de l'article&source=Bip&Go" target="_blank" class="share-article__link share-article__link-linkedin">share linkedin</a>
+<!-- plus.google -->
+<a href="https://plus.google.com/share?url=www.url-to-share.fr" target="_blank" class="share-article__link share-article__link-linkedin">share google</a>
+
 <?php
 	// pas apple ni android
 $urlShareFb = "http://www.facebook.com/sharer.php?s=100&p[url]=http://h.sooyoos.com/usnap-voeux/&p[images][0]=http://h.sooyoos.com/usnap-voeux/public/images/boite-a-voeux.png&p[title]=Avec la boite à voeux, découvre toi aussi plein de façons différentes de souhaiter la bonne année...&p[summary]=u SNAP VOUS SOUHAITE UNE BONNE ANNÉE. En 2013, les publicités nationales de votre journal s'enrichissent avec U SNAP. Vous pouvez désormais flasher votre page afin d'y retrouver des promotions, informations, offres privilégiées...&display=popup";

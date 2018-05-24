@@ -125,10 +125,10 @@
 	            } else {
 	                $(".js-toggleNav").addClass("active");
 	                $menuContainer.addClass("active");
+		            setTimeout(function(){
+		                $headerNav__content.addClass("active");
+		            }, 200);
 	            }
-	            setTimeout(function(){
-	                $headerNav__content.addClass("active");
-	            }, 200);
 	        }
 	        $(".js-toggleNav").on("click", function(e){
 	            toggleNav(e);
@@ -143,14 +143,14 @@
 	<div class="wrapper">
 		<header class="header inner">
 			<div class="header__wrapper clearfix">
-				<nav class="header__nav" role="navigation" aria-label="menu principal">
-					<div class="header__nav-content">
+				<nav class="header__nav js-header__nav" role="navigation" aria-label="menu principal">
+					<div class="header__nav-content js-header__nav-content">
 						<ul class="header__navList">
-							<li class="header__navItem"><a href="" class="menuItem__link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="menuItem__link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="menuItem__link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="menuItem__link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="menuItem__link">Menu item</a></li>
+							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
+							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
+							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
+							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
+							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
 						</ul><!-- header__navList -->
 					</div><!-- header__nav-content -->
 				</nav><!-- header__nav -->

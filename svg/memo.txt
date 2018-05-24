@@ -1,0 +1,2 @@
+ratio :
+preserveAspectRatio="xMinYMin slice"

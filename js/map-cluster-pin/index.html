@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Marker Clustering</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+      * element that contains the map. */
       #map {
         height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
         height: 100%;
         margin: 0;
         padding: 0;
-      }
-    </style>
-  </head>
-  <body>
+    }
+</style>
+</head>
+<body>
     <div id="map"></div>
     <script>
 
@@ -27,7 +27,7 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 3,
           center: {lat: -28.024, lng: 140.887}
-        });
+      });
 
         // Create an array of alphabetical characters used to label the markers.
         var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -40,14 +40,15 @@
           return new google.maps.Marker({
             position: location,
             label: labels[i % labels.length]
-          });
         });
+      });
 
         // Add a marker clusterer to manage the markers.
         var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-      }
-      var locations = [
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
+        );
+    }
+    var locations = [
         {lat: -31.563910, lng: 147.154312},
         {lat: -33.718234, lng: 150.363181},
         {lat: -33.727111, lng: 150.371124},
@@ -71,12 +72,9 @@
         {lat: -42.734358, lng: 147.501315},
         {lat: -42.735258, lng: 147.438000},
         {lat: -43.999792, lng: 170.463352}
-      ]
-    </script>
-    <script src="./markerclusterer.js">
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
-    </script>
-  </body>
+    ];
+</script>
+<script src="./markerclusterer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+</body>
 </html>

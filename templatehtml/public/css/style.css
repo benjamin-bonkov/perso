@@ -81,13 +81,15 @@
 		.visuallyHidden{/*hide to humans only, screenreaders can still read it*/ position: absolute; width: 1px; /* Setting this to 0 make it invisible for VoiceOver */ height: 1px; /* Setting this to 0 make it invisible for VoiceOver */ padding: 0; margin: -1px; border: 0; clip: rect(0 0 0 0); overflow: hidden;}
 	
 	/***** form *****/
-    ::-webkit-input-placeholder{font-style: italic;}
-              :-moz-placeholder{font-style: italic;}
-             ::-moz-placeholder{font-style: italic;}
-		input[type="submit"]{cursor: pointer; }
+	    ::-webkit-input-placeholder{font-style: italic;}
+	              :-moz-placeholder{font-style: italic;}
+	             ::-moz-placeholder{font-style: italic;}
+			input[type="submit"]{cursor: pointer; }
 		/*fix safari */
+		/*textarea,*/
+		/*select,*/
 		input[type="submit"],
-		input[type="search"]{-webkit-appearance: none; /*-webkit-border-radius: 2px; border-radius: 2px;*/ }
+		input[type="search"]{-webkit-appearance: none;}
 
 		
 	/***** general typo *****/
@@ -133,7 +135,8 @@
 	/*pause les animation css3*/
 	.paused{ -webkit-animation-play-state: paused; -moz-animation-play-state: paused; -o-animation-play-state: paused; animation-play-state: paused;}
 
-	.btn{display: inline-block; margin: 0 auto; color: #fff; text-transform: uppercase; text-align: center; font-size:11px; 
+	.btn{display: inline-block; margin: 0 auto; 
+		color: #fff; text-transform: uppercase; text-align: center; font-size:11px; 
 		border:none; outline: none; cursor: pointer; border-radius: 2px; 
 		background: #89004d;
 		background: -moz-linear-gradient(top, #d40078 0%, #89004d 100%);
@@ -190,14 +193,29 @@
 	    cursor: -moz-grab;
 	}
 	
+	img{max-width: 100%;}
+	
 /**************** CSS du site ci-apres ***************/
 	.wrapper{}
 
 	.inner{max-width:100%; width: 960px;margin:0 auto;}
 
-	img{max-width: 100%;}
 
 	/*::selection{background: #b01055; color: #fff;}*/
+
+	/* REM polify */
+		html {
+		  box-sizing: border-box;
+		  font-size: .625em; /* fallback IE8+ */
+		  font-size: calc(1em * .625); /* IE9-IE11 math fixing */
+		}
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+		body {
+		  font-size: 1.4em; /* base font-size is equivalent "14px" */
+		}
+	/*.blabla {font-size: 18px; font-size: 1.8rem;} /* 18px */
 
 	body{line-height: 1.2;
 		background-color: #EFEEEC; 

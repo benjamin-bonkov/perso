@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(function($){
 	$("html").removeClass("no-js");
 
 	function isTouchDevice(){

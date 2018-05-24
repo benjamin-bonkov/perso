@@ -2,6 +2,16 @@
         'attr': {'class': 'materialForm'}
 }) }}
 
+    <div class="form-group">
+        {{ form_label(form.monInputTexte, null, {
+            'label': 'label texte'
+        }) }}
+        {{ form_widget(form.monInputTexte,{
+            'attr': {'class':'form-control'}
+        }) }}
+        <div class="form-errors">{{ form_errors(form.monInputTexte) }}</div>
+    </div>
+
     <div class="form-group form-group--hasIcon">
     	{{ form_errors(form.customerId) }}
         <div class="iconBlock alignMiddle">
@@ -10,7 +20,6 @@
     	{{ form_widget(form.customerId,{
 	            'attr': {'class': ''}
 	    }) }}
-	    {# null = label définit dans la déclaration du formulaire, à changer si besoin #}
         {{ form_label(form.customerId, null, {
 	            'label_attr': {'class': 'control-label'}
 	    }) }}<i class="bar"></i>
@@ -19,9 +28,11 @@
 	<div class="form-radio">
 		{% for child in form.radio %}
 		    <div class="radio">
-		        <label>{{ form_widget(child, {'attr': { 'class': 'required', 'value': child.vars.value  } }) }}
-		        <i class="helper"></i>
-		        {{ child.vars.label }} </label>
+		        <label>
+		        	{{ form_widget(child, {'attr': { 'class': 'required', 'value': child.vars.value  } }) }}
+			        <i class="helper"></i>
+			        {{ child.vars.label }} 
+			    </label>
 		    </div>
 		{% endfor %}
 	</div>

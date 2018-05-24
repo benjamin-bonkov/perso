@@ -1,0 +1,21 @@
+
+  .triangle(@direction:top,@height,@width,@color){
+    width: 0; height: 0; border-style: solid;
+    border-width: 0 @width/2 @height @width/2;
+    border-color: transparent transparent @color transparent;
+  }
+  .triangle(@direction:right,@height,@width,@color) when (@direction=right){
+    width: 0; height: 0; border-style: solid;
+    border-width: @width/2 0 @width/2 @height;
+    border-color: transparent transparent transparent @color;
+  }
+  .triangle(@direction:bottom,@height,@width,@color) when (@direction=bottom){
+    width: 0; height: 0; border-style: solid;
+    border-width: @height @width/2 0 @width/2;
+    border-color: @color transparent transparent transparent;
+  }
+  .triangle(@direction:left,@height,@width,@color) when (@direction=left){
+    width: 0; height: 0; border-style: solid;
+    border-width: @width/2 @height @width/2 0;
+    border-color: transparent @color transparent transparent;
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<style type="text/css">	
+  .btn--file{position: relative; width: 160px; height: 26px; margin: 20px auto 0; font-size: 15px; text-transform: uppercase; font-weight: bold; text-align: center; background: #fff;}
+  .btn--file [type="file"]{cursor: pointer; opacity: 0; filter: alpha(opacity=0); position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+</style>
+
+<div class="inputBlock--file">
+    <div class="btn btn--file verticalCenter">
+        <div class="btn__bg"></div>
+        <span>Parcourir</span>
+        <input type="file" id="form_bill" name="form_bill" data-max-size="2048" accept="image/jpeg,image/jpg,image/png"  required>
+    </div>
+    <div class="fileName js-fileName"></div>
+</div><!-- /.inputBlock -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $("#form_bill").change(function(){
+        var selectedFile = document.getElementById('form_bill').files[0];
+        console.log(selectedFile);
+        $(".js-fileName").text(selectedFile.name);
+    });
+// file preview 
+    /*
+        <div class="js-file">
+            <div class="form-group">
+                <label class="control-label required" for="whatever">Photos</label>
+                <input type="file" id="whatever" name="whatever[]" required="required" accept=".jpg, .png" multiple="multiple">
+            </div>
+            <div class="filePreview js-filePreview"></div>
+        </div>
+    */
+    $(".js-file [type=file]").change(function(){
+        previewFiles(this);
+    });
+    function previewFiles(input){
+        $filePreview = $(input).closest(".js-file").find(".js-filePreview");
+        if (input.files && input.files[0]) {
+            $filePreview.html("");
+            for (var i = 0; i < input.files.length; i++) {
+                readAndPreview(input.files[i], $filePreview);
+            }
+        }
+    }
+    function readAndPreview(file, $filePreview) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            console.log(e);
+            var $filePreviewItem = $(
+                "<div class='filePreview-item js-filePreview-item'>"+
+                    "<img class='filePreview-item__img' src='"+e.target.result+"' alt='"+file.name+"'' />"+
+                    "<span class='filePreview-item__name'>"+file.name+"</span>"+
+                "</div>"
+            );
+            $filePreview.append($filePreviewItem);
+        }
+        reader.readAsDataURL(file);
+    }
+
+</script>
+</body>
+</html>
