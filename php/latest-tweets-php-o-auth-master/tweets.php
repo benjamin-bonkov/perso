@@ -74,10 +74,11 @@
 	){           // Twitter style days. [about an hour ago] (Default : true)
 
 		// Twitter keys (You'll need to visit https://apps.twitter.com/ and register to get these.
-		$consumerkey         = "noYOsb01DrNHrsCKb16DQglHa";
-		$consumersecret      = "nKla1ObvweWJllmkrjJRUKtqHigRMblW1WlKw6MQgqEUSM9d9g";
-		$accesstoken         = "404724944-OYamW6VZV4pXIF5shee02HeI9SPuzVKUSgMW4yDE";
-		$accesstokensecret   = "IrHqbVdltudCJqlqOmTLJ6O4Osm4UMKxIZcr2NwGClIQW";
+		die("change key");
+		$consumerkey         = "xxx";
+		$consumersecret      = "xxx";
+		$accesstoken         = "xxx";
+		$accesstokensecret   = "xxx";
 		
 		// Seconds to cache feed (Default : 3 minutes).
 		$cachetime           = 6*3;
