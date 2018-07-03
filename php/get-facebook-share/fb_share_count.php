@@ -8,14 +8,14 @@ function helper_get_share_count_by_url($source_url){
 	$total = 0;
 	/* OK, mais TRES limité*/
 
-	$facebookAppId = "129971684293963";
-	$facebookAppSecret = "7580c7757d95697c644b1b2591217665";
+	$facebookAppId = "xxx";
+	$facebookAppSecret = "xxx";
 	try {
 		$fb = new \Facebook\Facebook([
-		  'app_id' => '129971684293963',
-		  'app_secret' => '7580c7757d95697c644b1b2591217665',
+		  'app_id' => 'xxx',
+		  'app_secret' => 'xxx',
 		  'default_graph_version' => 'v2.10',
-		  'default_access_token' => '129971684293963|7580c7757d95697c644b1b2591217665', // optional
+		  'default_access_token' => 'xxx|xxx', // optional
 		]);
 		$request = $fb->get('?id='.urlencode($source_url).'&fields=og_object{engagement}');
 		// var_dump($request);

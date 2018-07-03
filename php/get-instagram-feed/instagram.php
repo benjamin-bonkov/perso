@@ -1,7 +1,7 @@
 <?php
 // use this instagram access token generator http://instagram.pixelunion.net/
 function display_latest_instagram(
-	$access_token="3045581.3a81a9f.c6ee1f39614749caae724110409f6108",
+	$access_token="xxxx",
 	$count = 9,
 	$cache_file  = './instagram.json'
 ){
@@ -38,7 +38,7 @@ function display_latest_instagram(
 
 }
 display_latest_instagram(
-	$access_token="1711451541.1677ed0.df910bc1495a4885b61a573261c30688",
+	$access_token="xxx",
 	$count = 9,
 	$cache_file = './instagram.json'
 );

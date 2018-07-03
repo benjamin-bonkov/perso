@@ -1,12 +1,12 @@
 <?php
 // get id page on https://findmyfbid.com
 function display_latest_facebook(
-	$facebookPageId = "116455261255",
+	$facebookPageId = "xxxx",
 	$cache_file  = './facebook.json',
 	$count = 50
 ){
-	$facebookAppId = "129971684293963";
-	$facebookAppSecret = "7580c7757d95697c644b1b2591217665";
+	$facebookAppId = "xxxx";
+	$facebookAppSecret = "xxxx";
 
 	// Seconds to cache feed (Default : 3 minutes).
 	$cachetime           = 6*3;
@@ -54,7 +54,7 @@ function display_latest_facebook(
 
 }
 display_latest_facebook(
-	$facebookPageId = "116455261255",
+	$facebookPageId = "xxx",
 	$cache_file  = './facebook.json',
 	$count = 50
 );

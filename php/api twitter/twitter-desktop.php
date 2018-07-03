@@ -5,10 +5,10 @@
 </div>
 
 <?php 
-$consumer_key='CY0RsmW4H7czBp8gbpyLw'; //Provide your application consumer key
-$consumer_secret='bEZDGl0SKIjffCrhaYqBZUM5mUCVquArisRSWTAXhTw'; //Provide your application consumer secret
-$oauth_token = '266714640-mfXlo56hC2AfwNJkiEB96jS7Uhw1WhtTerrHMppg'; //Provide your oAuth Token
-$oauth_token_secret = 'TqcMPkC1oqmfxnYXdaBC45Kvpkq3hXjD50rOfLhLORD9i'; //Provide your oAuth Token Secret
+$consumer_key='xxx'; //Provide your application consumer key
+$consumer_secret='xxx'; //Provide your application consumer secret
+$oauth_token = 'xxx-xxx'; //Provide your oAuth Token
+$oauth_token_secret = 'xxx'; //Provide your oAuth Token Secret
 
 require_once('twitteroauth/twitteroauth/twitteroauth.php');
 $connection = new TwitterOAuth($consumer_key, $consumer_secret, $oauth_token, $oauth_token_secret);
@@ -34,6 +34,6 @@ function convertLinkFromTweet($tweet){
 		<?php echo $tweet->user->screen_name; ?>
 		<?php echo convertLinkFromTweet($tweet->text); ?>
 	</div>
-		<!-- <?php var_dump($tweet->entities->url); ?> -->
+	<!-- <?php var_dump($tweet->entities->url); ?> -->
 <?php endforeach; ?>
 </div>
