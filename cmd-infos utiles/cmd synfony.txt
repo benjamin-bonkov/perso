@@ -1,4 +1,38 @@
 composer install
-php app/console doctrine:schema:update --force
-php app/console assets:install
-php app/console assetic:dump --watch
+php bin/console doctrine:schema:update --force
+php bin/console assets:install
+php bin/console assetic:dump --watch
+
+#(supprime toutes les table)
+php bin/console doctrine:schema:drop --force 
+#(mise à jour de la base)
+php bin/console doctrine:schema:update --force 
+#(création des tables)
+php bin/console doctrine:schema:create 
+#(ajoute des données fictives pour test)
+php bin/console doctrine:fixtures:load -n 
+
+#(génère le fichier des routes en javascript)
+php bin/console fos:js-routing:dump 
+
+#(par défaut env de dév, on peut le rajouter en param --env=TON_ENVIRONNEMENT)
+php bin/console cache:clear 
+
+php bin/console assets:install --symlink
+
+#(lorsque vous modifiez des fichiers css/js, laisser le watch pour que ces fichiers soient copiés dans /web)
+php bin/console assetic:watch 
+
+#clear cache
+php bin/console c:c
+
+
+# docker exmple
+docker exec -it docker_php php app/console doctrine:schema:update --force
+
+# start projet / MAJ db
+docker-compose exec php php bin/console d:d:d --force 
+docker-compose exec php php bin/console d:d:c 
+docker-compose exec php php bin/console d:s:u -f
+docker-compose exec php php bin/console hautelook:fixtures:load --no-interaction
+docker-compose exec php php bin/console ft:database:init

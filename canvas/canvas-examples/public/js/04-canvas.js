@@ -31,7 +31,7 @@ $(document).ready(function(){
 		}
 	});
 
-	function exempleLine1(){
+	function exempleLine1($canvas){
 		$canvas[0].ctx = $canvas[0].getContext("2d");
 		$canvas[0].state = "waiting";
 		$canvas[0].timerEnd = "";

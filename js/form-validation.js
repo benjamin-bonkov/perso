@@ -12,11 +12,16 @@ $(document).ready(function(){
 		}
 	});
 
+	// from html5 input[type=email] (prend pas en compte les .fr/.com etc passe même sans)
+	// var emailRegexp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+	// from https://emailregex.com/ does the job beter
+	var emailRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	$(".js-valid-email").focusout(function(){
 		var $this = $(this)
 		,	$form__group = $this.closest(".form__group")
 		,	$form__error = $form__group.find(".form__error");
-        if( /^[a-zA-Z0-9_\.\-\+]+@[a-zA-Z0-9_\.-]+\.[a-zA-Z]{2,6}$/.test($this.val()) ){
+		// https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
+        if( .test($this.val()) ){
 			$form__group.removeClass("errors");
 			$form__error.hide();
 		}else{

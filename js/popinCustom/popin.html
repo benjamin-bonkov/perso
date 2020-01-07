@@ -30,27 +30,17 @@
 		body{position: relative;}
 		.contentPopin{
 			z-index: 999999999999; position: fixed; top: 0; left: 0; 
-			width: 100%; height: 100%; 
-			text-align: center; 
-			background: #000; background: rgba(0,0,0,0.72);
+			width: 100%; height: 100%; text-align: center; background: #000; background: rgba(0,0,0,0.72);
 		}
 		.popin{
-			position: relative;
-			display: inline-block; 
-			width: 100%; max-width: 640px; margin-top: 50px;
-			text-align: left;
-			background: #fff; 
+			position: relative; display: inline-block; width: 100%; max-width: 640px; margin-top: 50px; text-align: left; background: #fff; 
 		}
-		.popin__title{margin: 50px 0; font-family: Helvetica, Arial; font-weight: bold; font-size: 32px; color: #2a333d;}
-		.popin p{color: #808080; font-size: 12px; font-family: Arial; line-height: 14px; }
-		.popin p a{color: #808080;}
-		.popin p img{margin: 5px 0 0 8px;}
-		.popin span.suiteSmall{cursor: pointer; background-position: 0 2px;}
+		.popin__title{margin: 50px 0; font-weight: bold; font-size: 32px;}
 
 		/***** .popin__close ***** base from http://codepen.io/MarvinVk/pen/ZYOdVa *****/
 			.popin__close {
 				position: absolute; top: 5px; right: 5px;
-				display: inline-block; height: 35px; width: 35px; box-sizing: border-box; 
+				display: inline-block; height: 35px; width: 35px; padding: 0;
 				line-height: 50px; 
 				background-color: transparent; border: none;
 			}
@@ -62,7 +52,8 @@
 				transition: all .25s ease-out;
 			}
 			.popin__close i:before, 
-			.popin__close i:after {content: ''; position: absolute; top: 50%; left: 50%; 
+			.popin__close i:after {
+				content: ''; position: absolute; top: 50%; left: 50%; 
 				display: block; margin-top: -1px; margin-left: -20px; height: 4px; width: 30px; background-color: #6e7a9c;
 				-webkit-transform: rotate(-45deg);
 				-moz-transform: rotate(-45deg);
@@ -83,15 +74,14 @@
 				transform: rotate(-135deg);
 			}
 
-			.popin__close:focus i{
+			/*.popin__close:focus i{
 				-webkit-transform: scale(0);
 				-moz-transform: scale(0);
 				-ms-transform: scale(0);
 				-o-transform: scale(0);
 				transform: scale(0);
-			}
-
-
+			}*/
+			
 			.popin__close:hover i:after{
 				-webkit-transform: rotate(-225deg);
 				-moz-transform: rotate(-225deg);

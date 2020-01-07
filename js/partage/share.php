@@ -4,7 +4,7 @@
 <!-- twitter -->
 <a href="https://twitter.com/home?status=Titre de l'article www.url-to-share.fr" target="_blank" class="share-article__link share-article__link-twitter">share twitter</a>
 <!-- linkedin -->
-<a href="https://www.linkedin.com/shareArticle?mini=true&url=www.url-to-share.fr&title=Titre de l'article&summary=Description de l'article&source=Bip&Go" target="_blank" class="share-article__link share-article__link-linkedin">share linkedin</a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=www.url-to-share.fr&title=Titre de l'article&summary=Description de l'article&source=Source-titre" target="_blank" class="share-article__link share-article__link-linkedin">share linkedin</a>
 <!-- plus.google -->
 <a href="https://plus.google.com/share?url=www.url-to-share.fr" target="_blank" class="share-article__link share-article__link-linkedin">share google</a>
 

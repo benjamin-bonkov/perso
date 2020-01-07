@@ -58,9 +58,9 @@
 	/*****header****/
 		.header{position: relative; height: 50px;}
 		.header__wrapper{position: relative; height: 100%;}
-		.header__nav{float: left; position: relative; height: 100%; padding-top: 10px;}
+		.headerNav{float: left; position: relative; height: 100%; padding-top: 10px;}
 		.header__logo{position: absolute; top: 0; left: 0; z-index: 500;}
-		.header__navItem{float: left; margin: 0 5px; color: #ffffff;}
+		.headerNav__item{float: left; margin: 0 5px; color: #ffffff;}
 		.menuItem__link{display: block; padding: 5px;}
 		/*** MENU MOBILE ***/
 		.header__toggleNav{
@@ -83,37 +83,41 @@
 			.header__toggleNav{display: block;}
 			.header{position: fixed; top: 0; left: 0; right: 0; z-index: 9999;}
 			.header__logo{z-index: 9500; left: 20px;}
-			.header__nav{
+			.headerNav{
 				z-index: 9400; position: fixed; top: 50px; left: 0; right: 0; bottom: 0; 
-				float: none; max-height: 0; padding-top: 0; 
+				float: none; padding-top: 0; 
+				max-height: 0; /* ou max-width: 0; */
 				text-align: center; background: transparent;
 				transition: all .3s ease-in-out; 
 			}
-			.header__nav.active{background: #fff; max-height: 100%;}
-			.header__nav-content{
+			.headerNav.active{
+				max-height: 100%; /* ou max-width: 100%; */
+				background: #fff; 
+			}
+			.headerNav__content{
 				position: relative; width: 100%; height: 100%; overflow-y: auto;
 				opacity: 0; filter: alpha(opacity=0); visibility: hidden; 
 				transition: all .2s ease-in-out; 
 			}
-			.header__nav-content.active{opacity: 1; filter: alpha(opacity=100); visibility: visible;}
-			.header__navItem{float: none; position: relative;}
+			.headerNav__content.active{opacity: 1; filter: alpha(opacity=100); visibility: visible;}
+			.headerNav__item{float: none; position: relative;}
 		}
 
 		@media (max-width: 767px){
 		    .header__wrapper{position: static;}
-		    .header__nav{top: 50px;}
-		    .header__nav.active{padding-bottom: 50px;}
+		    .headerNav{top: 50px;}
+		    .headerNav.active{padding-bottom: 50px;}
 		    .header__logo{width: 105px; left: 15px;}
 		    .header__logo img{max-width: 100%;}
 		    .header__toggleNav{top: 0;}
-		    .header__nav-content{}
+		    .headerNav__content{}
 		}
 </style>
 <script>
 	$(document).ready(function(){
 	    // MENU MOBILE
-	        var $menuContainer = $(".header__nav")
-	        ,   $headerNav__content = $(".header__nav-content");
+	        var $menuContainer = $(".js-headerNav")
+	        ,   $headerNav__content = $(".js-headerNav__content");
 	        function toggleNav(e){
 	            e.stopPropagation();
 	            if($(".js-toggleNav").hasClass("active")){
@@ -143,17 +147,17 @@
 	<div class="wrapper">
 		<header class="header inner">
 			<div class="header__wrapper clearfix">
-				<nav class="header__nav js-header__nav" role="navigation" aria-label="menu principal">
-					<div class="header__nav-content js-header__nav-content">
-						<ul class="header__navList">
-							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
-							<li class="header__navItem"><a href="" class="header__navItem-link">Menu item</a></li>
-						</ul><!-- header__navList -->
-					</div><!-- header__nav-content -->
-				</nav><!-- header__nav -->
+				<nav class="headerNav js-headerNav" role="navigation" aria-label="menu principal">
+					<div class="headerNav__content js-headerNav__content">
+						<ul class="headerNavList">
+							<li class="headerNav__item"><a href="" class="headerNav__item-link">Menu item</a></li>
+							<li class="headerNav__item"><a href="" class="headerNav__item-link">Menu item</a></li>
+							<li class="headerNav__item"><a href="" class="headerNav__item-link">Menu item</a></li>
+							<li class="headerNav__item"><a href="" class="headerNav__item-link">Menu item</a></li>
+							<li class="headerNav__item"><a href="" class="headerNav__item-link">Menu item</a></li>
+						</ul><!-- headerNavList -->
+					</div><!-- headerNav__content -->
+				</nav><!-- headerNav -->
 
 				<button class="header__toggleNav js-toggleNav show-lg" title="Ouvrir le menu">
 					<span></span>

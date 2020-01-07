@@ -1,5 +1,5 @@
     // ***** ANCHOR SCROLLING ***** \\  
-        $(".scrollTo").click(function(e){
+        $(".js-scrollTo").click(function(e){
             e.preventDefault();
             var $this = $(this)
             ,   href = $this.attr("href")
