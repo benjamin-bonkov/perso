@@ -1,0 +1,16 @@
+{% extends 'email/base_email.html.twig' %}
+
+{% block weburl %}{{ absolute_url(path('email_sample')) }}{% endblock %}
+
+{% block title %}Example email{% endblock %}
+
+{% block body %}
+
+	<p>
+		Bonjour,
+		<br>
+		<br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus distinctio quae hic vel vero enim architecto inventore recusandae iusto cum iste illo blanditiis voluptates excepturi fuga sit maxime, fugit quibusdam.
+	</p>
+
+{% endblock %}

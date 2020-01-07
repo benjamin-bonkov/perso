@@ -1,0 +1,114 @@
+/***** colors *****/
+  @white: #ffffff;
+  @black: #000000;
+  @bg-bloc-grey: #f7f6f5;
+  @grey: #d1d1d1;
+  @grey-light: #a3a3a3;
+  @grey-lighter: #d0d0d0;
+  @orange: #ff8437; /* f4823f ? #ff8437 */
+  @orange-lighter: #faf6ec;
+  @blue: #3fbfe2; /* 7dbfe5 ? #23b1e1*/
+  @darkblue: #3f62a3;
+  @red: #f94935;
+  @light-red: #f4958a;
+  @green: #60da53;
+  @light-green: #94f48a;
+  @gold: #e0b23c;
+  @light-gold: #f4d68a;
+  @success_green: #65e971;
+  @color_type: @orange; 
+  @red-calendar:#e53a4f;
+
+  @text_color: #393939;
+  @error_color: @red;
+  @success_color: @green;
+
+/***** structure *****/
+  @inner_padding: 15px;
+  @inner_width: (1200px+@inner_padding);
+
+/***** values *****/
+  @inputFontSize: 14;
+  @inputPaddingVertical: 9px;
+  @inputPaddingHorizontal: 15px;
+  @inputWidth:210px;
+
+/***** breakpoints *****/
+  @xs-min: 420px;
+  @sm-min: 768px;
+  @md-min: 992px;
+  @lg-min: 1280px;
+  @xl-min: @inner_width;
+
+  @xs-max: (@xs-min - 1px);
+  @sm-max: (@sm-min - 1px);
+  @md-max: (@md-min - 1px);
+  @lg-max: (@lg-min - 1px);
+  @xl-max: (@xl-min - 1px);
+
+/***** mixins *****/
+  .font() {
+      font-family: "Open Sans", sans-serif;
+  }
+
+  .svg {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: currentColor;
+  }
+  /* ==========================================
+    Single-colored icons can be modified like so:
+      .icon-name {
+        font-size: 32px;
+        color: red;
+      }
+  ========================================== */
+
+  .font-size(@size, @line: (@size * 1.2)) {
+    @fontPx: @size;
+    @fontRem: (@size / 10);
+    @linePx: @line;
+    @lineRem: (@line / 10);
+
+    font-size: ~"@{fontPx}px";
+    line-height: ~"@{linePx}px";
+    
+    font-size: ~"@{fontRem}rem";
+    line-height: ~"@{lineRem}rem";
+  }
+
+  .transition(@prop: all, @time: .2s, @anim: ease-out) {
+    transition: @prop @time @anim;
+  }
+
+  .shadow(){box-shadow: 0 3px 3px rgba(75,76,74,.20);}
+
+  .opacity(@opacity) {
+      @mfopacity: @opacity*100;
+      @fopacity: "alpha(opacity=@{mfopacity})";
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{mfopacity})";
+      filter: ~"@{fopacity}";
+      opacity: @opacity;
+  }
+
+  .clearfix{
+      &:before,
+      &:after {content: " "; display: table;}
+      &:after {clear: both;}
+      *zoom: 1;
+  }
+  .clearfix(){
+      &:before,
+      &:after {content: " "; display: table;}
+      &:after {clear: both;}
+      *zoom: 1;
+  }
+
+  .alignMiddle(){
+      letter-spacing: -0.3em;
+      &:before{content: " "; display: inline-block; vertical-align: middle; height: 100%; width: 0.01%; padding: 0!important;}
+      &>.content-align{display: inline-block; vertical-align: middle; width: 99.5%; letter-spacing: 0; line-height: normal;}
+  }

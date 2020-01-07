@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ absolute_url(asset('/dist/images/favicon/apple-touch-icon.png')) }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ absolute_url(asset('/dist/images/favicon/favicon-32x32.png')) }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ absolute_url(asset('/dist/images/favicon/favicon-16x16.png')) }}">
+    <link rel="manifest" href="{{ absolute_url(asset('/dist/images/favicon/site.webmanifest')) }}">
+    <link rel="mask-icon" href="{{ absolute_url(asset('/dist/images/favicon/safari-pinned-tab.svg')) }}" color="#267d8a">
+    <meta name="apple-mobile-web-app-title" content="Clover">
+    <meta name="application-name" content="Clover">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>{% block title %}Email Title{% endblock %}</title>
+
+    <!-- ligne de 1000 espace http://www.emailonacid.com/blog/details/C13/ensure_that_your_entire_email_is_rendered_by_default_in_the_iphone_ipad -->
+
+    <!-- fin ligne de 1000 espace -->
+
+    <!--[if !mso]><!-- -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+
+    <!--[if mso]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+
+    <!--[if lte mso 11]>
+    <style type="text/css">
+        .outlook-group-fix {
+            width:100% !important;
+        }
+    </style>
+    <![endif]-->
+    <style type="text/css">
+        .ReadMsgBody {width: 100%; background-color: #f0f4fa;}
+        .ExternalClass {width: 100%; background-color: #f0f4fa;}
+        #outlook a { padding: 0; }
+        body{width: 100%; margin:0; padding:0; -webkit-font-smoothing: antialiased;}
+        body, td {font-family: Arial, Helvetica, Geneva, sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+        body, #body_style {background:#f0f4fa; min-height:1000px; color:#313131; font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+        table, table td { border-collapse:collapse; }
+        @media only screen and (max-width:580px) {
+            body { min-width:320px; width:100% !important; margin:0 auto; padding:0; }
+            table[class="blockMobile"] {width:100% !important;}
+            table[class="block3"], a[class="block3"] {min-width: 100% !important; margin: 0 auto;}
+            img[class="miaouFluidImage"] { width:100% !important; height:auto !important; }
+            a[class="miaouShowOnMobile"] { max-height:none !important; font-size:13px !important; display:block !important; text-decoration:none; background:#73c040; padding:10px; text-align:center; }
+        }
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            /* ipad (tablets, smaller screens, etc) */
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            /* Put your iPhone 4g styles in here */
+        }
+        @media only screen and (-webkit-device-pixel-ratio:.75){
+            /* Put CSS for low density (ldpi) Android layouts in here */
+        }
+        @media only screen and (-webkit-device-pixel-ratio:1){
+            /* Put CSS for medium density (mdpi) Android layouts in here */
+        }
+        @media only screen and (-webkit-device-pixel-ratio:1.5){
+            /* Put CSS for high density (hdpi) Android layouts in here */
+        }
+    </style>
+
+
+    <!--[if IEMobile 7]>
+    <style type="text/css">
+        /* Targeting Windows Mobile */
+    </style>
+    <![endif]-->
+
+    <!--[if gte mso 9]>
+    <style>
+        /* Target Outlook 2007 and 2010 */
+    </style>
+    <![endif]-->
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="-webkit-text-size-adjust:none; padding:0; margin:0; background: #f0f4fa; color: #313131; font-family: Arial, Helvetica, sans-serif;" face="Arial, Helvetica, sans-serif">
+
+<span id="body_style" style="padding:15px; display:block">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f4fa">
+<tbody><tr><td width="100%">
+<table cellpadding="0" cellspacing="0" border="0" width="600" align="center" style="margin:0 auto;" bgcolor="#f0f4fa">
+    <tr><td>
+    <!-- START header -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr><td height="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                <tr>
+                    <td style="text-align: center; font-size: 14px">Si cet e-mail ne s'affiche pas correctement, <a href="{% block weburl %}{% endblock %}" style="text-decoration: underline">Cliquez ici</a></td>
+                </tr>
+                <tr><td height="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+            </tbody>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+            <tbody>
+            <tr>
+                <td width="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td>
+                <td>
+                    <table cellpadding="0" cellspacing="0" border="0" width="580" align="center" style="margin:0 auto;" bgcolor="#ffffff">
+                        <tbody>
+                        <tr height="10"><td height="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                        <tr height="32">
+                            <td height="32">
+                                <a href="#" style="border:none;border-radius:0;outline:none;text-decoration:none;">
+                                    <img src="{{ absolute_url(asset('/dist/images/emails/logo.png')) }}" style="border:none;border-radius:0;outline:none;text-decoration:none;" height="32" alt="logo">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr height="10"><td height="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td width="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td>
+            </tr>
+            </tbody>
+        </table>
+    <!-- END header -->
+
+    <!-- START content -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr height="50"><td height="50" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td>
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" border="0" width="580" align="center" style="margin:0 auto;">
+                            <tbody><tr><td>
+                                {% block body %}{% endblock %}    
+                            </td></tr></tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr height="50"><td height="50" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td>
+            </tbody>
+        </table>
+    <!-- END content -->
+
+    <!-- START footer -->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+            <tbody>
+            <tr>
+                <td width="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td>
+                <td>
+                    <table cellpadding="0" cellspacing="0" border="0" width="580" class="" align="center" style="margin:0 auto;" bgcolor="#FFFFFF">
+                        <tbody>
+                        <tr height="10"><td height="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                        <tr height="32">
+                            <td height="32">
+                                <table cellpadding="0" cellspacing="0" border="0" align="center">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <table class="blockMobile" cellpadding="0" cellspacing="0" border="0" align="left" valign="middle">
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#" style="border:none;border-radius:0;outline:none;text-decoration:none;">
+                                                            <img src="{{ absolute_url(asset('/dist/images/emails/logo.png')) }}" style="border:none;border-radius:0;outline:none;text-decoration:none;" height="32" alt="logo">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table width="75" height="10" class="blockMobile" cellpadding="0" cellspacing="0" border="0" align="left" valign="middle">
+                                                <tbody>
+                                                <tr><td style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table class="blockMobile" cellpadding="0" cellspacing="0" border="0" align="left" valign="middle">
+                                                <tbody>
+                                                <tr height="15"><td style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="#" style="display: inline-block; margin-right: 10px; color: #000000; text-decoration: none; font-size: 11px; font-size: 11px!important;">Actualités</a>
+                                                        <a href="#" style="display: inline-block; margin-right: 10px; color: #000000; text-decoration: none; font-size: 11px; font-size: 11px!important;">Contact</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table width="30" height="10" class="blockMobile" cellpadding="0" cellspacing="0" border="0" align="left" valign="middle">
+                                                <tbody>
+                                                <tr><td style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table class="blockMobile" cellpadding="0" cellspacing="0" border="0" align="left" valign="middle">
+                                                <tbody>
+                                                <tr height="15"><td style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="https://www.facebook.com/" style="display: inline-block;" target="_blank">
+                                                            <img src="facebook.png" style="display:block; border:none;border-radius:0;display:block;outline:none;text-decoration:none;" alt="facebook">
+                                                        </a>
+                                                        &nbsp;&nbsp;&nbsp;
+                                                        <a href="https://twitter.com/" style="display: inline-block;" target="_blank">
+                                                            <img src="twitter.png" style="display:block; border:none;border-radius:0;display:block;outline:none;text-decoration:none;" alt="twitter">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr height="10"><td height="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td></tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td width="10" style="font-size: 1px; font-size: 1px!important; border:none;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">&nbsp;</td>
+            </tr>
+            </tbody>
+        </table>
+    <!-- END footer -->
+    </td></tr>
+</table>
+</td></tr></tbody>
+</table>
+</span>
+
+</body>
+</html>

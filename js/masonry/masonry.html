@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>	<html class="no-js ie lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js ie lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>	<html class="no-js ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Masonry</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+	<style>
+		/* wall */
+			.grid-sizer{width: 23%;}
+			.gutter-sizer{width: 2%;}
+			.masonry__content{margin-top: 20px; margin-left: -2%;}
+			.masonryItem{
+				width: 23%;
+				padding: 10px;
+				margin-left: 2%; margin-bottom: 2%;
+				font-size: 14px; color: grey;
+				box-shadow: 2px 2px 2px rgba(150,150,150,8); border-radius: 10px; background-color: #ffffff; overflow: hidden;
+			}
+			.masonryItem--column2{width: 48%;}
+			.masonryItem--column3{width: 73%;}
+			.masonryItem--column4{width: 98%;}
+			.masonryItem__content{ padding: 20px 20px 0 20px;}
+			.masonryItem__video,
+			.masonryItem__img{}
+			.masonryItem__img img{width: 100%;}
+			.masonryItem__video iframe{border-radius: 10px 10px 0 0}
+			.masonryItem__type{margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px;}
+			.masonryItem__title{
+				margin-bottom: 15px; font-size: 32px; font-weight: 700; word-break: break-word;
+			}
+			.masonryItem__title .big{font-size: 80px; line-height: 32px; font-weight: 600;}
+			.masonryItem__extract{margin-bottom: 25px; font-size: 18px;}
+			.masonryItem__video{position: relative;}
+			.masonryItem__videoBtn{
+				position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+				display: block; width: 100%; height: 100%; color: #fff; background: none; border: none;
+				background-size: cover; background-position: center;
+			}
+			.masonryItem__videoBtn svg{width: 50px; height: 70px;}
+			.masonryItem__link{
+				display: inline-block; margin-bottom: 15px; font-size: 18px; font-weight: 700; color: blue;
+			}
+			.masonryItem__link:hover,
+			.masonryItem__link:focus{color: green;}
+			.masonryItem__hightPotential{
+				position: absolute; top: 25px; right: 25px; color: green; 
+				pointer-events: none; 
+			}
+			.masonryItem__hightPotential svg{width: 90px; height: 120px;}
+			.masonryItem__footer{
+				height: 55px; 
+				padding-left: 20px; padding-right: 20px;
+				color: #aaaaaa; border-top: 1px solid #999; overflow: hidden;
+			}
+			.masonryItem__tag{float: left; width: 50%; height: 100%; font-weight: 500;}
+			.masonryItem__date{float: right; width: 50%; height: 100%; text-align: right;}
+			.masonryItem__column_size{}
+			.masonryItem__status{}
+
+			.masonryItem--blue{color: #fff; border: none; background-color: green;}
+			.masonryItem--blue a{color: #fff;}
+
+			.masonryItem--suscriber{opacity: .3; filter: alpha(opacity=30);}
+			.masonryItem--hightPotential>*{opacity: .3; filter: alpha(opacity=30);}
+			.masonryItem--hightPotential .masonryItem__link,
+			.masonryItem--hightPotential .masonryItem__hightPotential{opacity: 1; filter: alpha(opacity=100);}
+
+			.feedMore{margin-top: 80px;}
+			.feedMore-loader{margin-top: 80px; display: none;}
+
+
+			@media (max-width: 1280px) {
+				.masonryItem,
+				.grid-sizer{width: 48%;}
+			}
+			@media (max-width: 768px) {
+				.home__wall{float: none; width: 100%; padding-right: 0;}
+				.feedMore{margin-top: 40px;}
+				.feedMore-loader{margin-top: 40px;}
+			}
+			@media (max-width: 520px) {
+				.masonryItem,
+				.grid-sizer{width: 98%;}
+			}
+
+	</style>
+
+	<div class="inner">
+		<div class="masonry__content js-masonry">
+			<div class="grid-sizer js-grid-sizer"></div>
+			<div class="gutter-sizer js-gutter-sizer"></div>
+
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column
+			">
+				<div class="title">block column--1</div>
+			</div><!-- masonryItem -->
+			
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column
+			">
+				<div class="title">block column--1</div>
+			</div><!-- masonryItem -->
+			
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column
+			">
+				<div class="title">block column--1</div>
+			</div><!-- masonryItem -->
+			
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column
+			">
+				<div class="title">block column--1</div>
+			</div><!-- masonryItem -->
+
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column2
+			">
+				<div class="title">block column--2</div>
+			</div><!-- masonryItem -->
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column2
+			">
+				<div class="title">block column--2</div>
+			</div><!-- masonryItem -->
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column3
+			">
+				<div class="title">block column--3</div>
+			</div><!-- masonryItem -->
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column1
+			">
+				<div class="title">block column--1</div>
+			</div><!-- masonryItem -->
+
+			<div class="
+				masonryItem
+				js-masonryItem
+				masonryItem--column4
+			">
+				<div class="title">block column--4</div>
+			</div><!-- masonryItem -->
+		</div><!-- masonry__content -->
+
+
+		<div class="text-center">
+			<button type="button" class="feedMore btn btn-white js-showMoreFeed {#{% if feedItemsTotal > 13 %}hide{% endif %}#}" data-target="./more.html" data-pageNumber="2">Charger plus de contenu</button>
+			<div class="feedMore-loader js-showMoreFeed-loader">
+				<svg width="90" height="90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-eclipse" style="background:0 0"><path d="M71.678 30.708a30 30 0 0 0-41.174 43.643 30 33-46.667 0 1 41.174-43.643" fill="#029cb4"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51.5;360 50 51.5" keyTimes="0;1" dur="0.9s" begin="0s" repeatCount="indefinite"/></path></svg>
+			</div>
+		</div>
+	</div><!-- inner -->
+
+	<script type="text/javascript" src="public/js/libs/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="public/js/libs/masonry.pkgd.js"></script>
+	<script type="text/javascript" src="public/js/libs/imagesloaded.pkgd.min.js"></script>
+	<script>
+
+		window.initMasonry = function(){
+			var masonryOptions = {
+				// horizontalOrder: true,
+				itemSelector: '.js-masonryItem',
+				columnWidth: '.js-grid-sizer',
+				gutter: '.js-gutter-sizer',
+				percentPosition: true,
+			};
+
+			var $feed = $(".js-masonry").masonry(masonryOptions);
+			$feed.imagesLoaded().progress( function() {
+			  $feed.masonry('layout');
+			});
+
+			function majFeed($feed, $items){
+				$feed.append( $items )
+					.masonry( 'appended', $items )
+					.masonry('reloadItems');   
+				$feed.imagesLoaded().progress( function() {
+					$feed.masonry('layout');
+				});
+			}
+
+			var $ajaxLoader = $(".js-showMoreFeed-loader");
+			var $showMoreFeed = $(".js-showMoreFeed");
+
+			$showMoreFeed.click(function(){
+				var $showMoreFeed = $(this)
+				,   pageNumber = parseInt($showMoreFeed.attr('data-pageNumber'))
+				,	target = $showMoreFeed.attr("data-target");
+
+				$("html").addClass("loading-ajax");
+				$showMoreFeed.fadeOut(120, function(){
+					$ajaxLoader.fadeIn(120);
+				});
+
+				var datas = {
+					"pageNumber": pageNumber
+				};
+
+				$.ajax({
+					url: target,
+					data: datas,
+				})
+				.done(function(rep) {
+					if(rep){
+						var $items = $(rep);
+					$showMoreFeed.attr('data-pageNumber', pageNumber + 1);
+						majFeed($feed, $items);
+						$("html").removeClass("loading-ajax");
+					}else{
+						$("html").removeClass("loading-ajax");
+					}
+				})
+				.always(function(rep) {
+					$("html").removeClass("loading-ajax");
+					$ajaxLoader.fadeOut(120, function(){
+						$showMoreFeed.fadeIn(120);
+					});
+				});
+
+
+			});
+		}
+
+		jQuery(function($){
+			window.initMasonry();
+		});
+	</script>
+</body>
+</html>

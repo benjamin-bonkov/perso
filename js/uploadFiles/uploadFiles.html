@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>	<html class="no-js ie lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>	<html class="no-js ie lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>	<html class="no-js ie" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>uploadfile</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol id="icon-cloud" viewBox="0 0 44 32">
+				<title>cloud</title>
+				<path d="M22.194 0c3.303 0 6.606 1.239 9.135 3.768 2.116 2.116 3.355 4.852 3.716 7.639 5.213 0.465 9.342 4.903 9.342 10.271 0 5.677-4.645 10.323-10.323 10.323h-25.29c-4.852 0-8.774-3.923-8.774-8.774s3.923-8.774 8.774-8.774h0.619c-0.465-3.819 0.774-7.742 3.716-10.684 2.477-2.529 5.781-3.768 9.084-3.768zM22.194 10.839c-0.258 0-0.465 0.052-0.671 0.258l-5.677 5.161c-0.413 0.361-0.465 1.084-0.103 1.445s1.084 0.413 1.445 0.052l3.974-3.613v11.148c0 0.568 0.465 1.032 1.032 1.032s1.032-0.465 1.032-1.032v-11.097l3.974 3.613c0.413 0.361 1.084 0.361 1.445-0.052s0.361-1.084-0.103-1.445l-5.677-5.161c-0.103-0.206-0.413-0.31-0.671-0.31z"></path>
+			</symbol>
+			<symbol id="icon-more" viewBox="0 0 32 32">
+				<title>more</title>
+				<path d="M29.933 18.063h-27.867c-1.144 0-2.067-0.923-2.067-2.067s0.923-2.067 2.067-2.067h27.867c1.144 0 2.067 0.923 2.067 2.067s-0.93 2.067-2.067 2.067z"></path>
+				<path d="M15.997 32c-1.144 0-2.067-0.923-2.067-2.067v-27.867c0-1.144 0.923-2.067 2.067-2.067s2.067 0.923 2.067 2.067v27.867c0 1.137-0.923 2.067-2.067 2.067z"></path>
+			</symbol>
+		</defs>
+	</svg>
+
+	<style>
+		
+		.btn__remove{
+		    position: relative; display: inline-block; height: 25px; width: 25px; padding: 0; box-sizing: border-box; 
+		    line-height: 50px; 
+		    background-color: transparent; border: none;
+		}
+		.btn__remove i{ display: inline-block; width: 100%; height: 100%;
+		    -webkit-transition: all .25s ease-out;
+		    -moz-transition: all .25s ease-out;
+		    -ms-transition: all .25s ease-out;
+		    -o-transition: all .25s ease-out;
+		    transition: all .25s ease-out;
+		}
+		.btn__remove i:before, 
+		.btn__remove i:after {content: ''; position: absolute; top: 50%; left: 50%; 
+		    display: block; margin-top: 0; margin-left: -10px; height: 2px; width: 20px; background-color: red;
+		    -webkit-transform: rotate(-45deg);
+		    -moz-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		    -o-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+		    -webkit-transition: all .25s ease-out;
+		    -moz-transition: all .25s ease-out;
+		    -ms-transition: all .25s ease-out;
+		    -o-transition: all .25s ease-out;
+		    transition: all .25s ease-out;
+		}
+		.btn__remove i:after {
+		    -webkit-transform: rotate(-135deg);
+		    -moz-transform: rotate(-135deg);
+		    -ms-transform: rotate(-135deg);
+		    -o-transform: rotate(-135deg);
+		    transform: rotate(-135deg);
+		}
+
+		.btn__remove:hover i:after{
+		    -webkit-transform: rotate(-225deg);
+		    -moz-transform: rotate(-225deg);
+		    -ms-transform: rotate(-225deg);
+		    -o-transform: rotate(-225deg);
+		    transform: rotate(-225deg);
+		}
+		.btn__remove:hover i:before{
+		    -webkit-transform: rotate(-135deg);
+		    -moz-transform: rotate(-135deg);
+		    -ms-transform: rotate(-135deg);
+		    -o-transform: rotate(-135deg);
+		    transform: rotate(-135deg);
+		}
+
+		.fileUpload{}
+		.dropZone{
+			width: 390px; max-width: 100%; padding: 30px; margin: 0 auto 30px; 
+			text-align: center; 
+			background: #f0f4fa; border: 2px solid transparent; border-radius: 5px;
+		}
+		.dropZone__title{display: block; margin-bottom: 25px; font-size: 16px; font-weight: 900; text-transform: uppercase; color: #23c4e3}
+		.dropZone__input{display: none;}
+		.dropZone__trigger{display: block; margin-top: 20px; padding: 10px; font-size: 16px; cursor: pointer;}
+		.dropZone-icon{display: block; width: 45px; height: 33px; margin: 0 auto 10px; fill: #b2c1ce;}
+		.dropZone__trigger-icon{display: inline-block; width: 20px; height: 20px; margin-right: 5px; vertical-align: bottom; fill: #23c4e3}
+
+		.filesList{}
+		.filesList__item{
+			.clearfix();
+		    position: relative; display: block; padding: 10px 50px 10px 20px; width: 258px; max-width: 100%; margin: 10px auto;
+		    .font(); font-size: 14px; font-weight: 500; font-style: italic; text-align: left; text-transform: uppercase; color: #b2c1ce;
+		    border: 1px solid #fff; background-color: #fff; border-radius: 50px; outline: none; cursor: pointer;
+		}
+		.filesList__item-fileName{float: left;}
+		.filesList__item-fileSize{float: right;}
+		.filesList__item-remove{position: absolute; right: 10px; top: 50%; margin-top: -14px;}
+		.filesList__item-remove i:before, 
+		.filesList__item-remove i:after{background-color: #b2c1ce;}
+
+
+		.dropZone.dropReady{border: 2px solid #23c4e3}
+		.dropZone.dragover{background: #b2c1ce;}
+		.dragover .dropZone-icon{fill: #8792a1;}
+	</style>
+	<form action="./" method="post" role="form" enctype="multipart/form-data">
+		<div class="fileUpload js-fileUpload">
+			<div class="dropZone js-dropZone">
+				<label for="inputFile" class="dropZone__title">Importer des documents</label>
+				<input type="file" id="inputFile" name="inputFile" multiple
+					class="dropZone__input"
+					{% if input.required is defined and input.required == true %}required{% endif %}
+				/>
+
+				<li class="filesList__item working js-template-filesList__item js-template-filesList__item clearfix" style="display: none;">
+					<span class="filesList__item-fileName js-fileName"></span>
+					<span class="filesList__item-fileSize js-fileSize"></span>
+					<button type="button" class="btn__remove filesList__item-remove js-cancelFileUpload"><i></i></button>
+				</li>
+
+				<ul class="filesList js-filesList">
+					
+				</ul>
+
+				<label for="inputFile" class="dropZone__trigger">
+					<svg class="dropZone-icon icon icon-cloud"><use xlink:href="#icon-cloud"></svg>
+
+					<svg class="dropZone__trigger-icon icon icon-more"><use xlink:href="#icon-more"></svg>
+					Ajouter un document
+				</label>
+			</div>
+		</div>
+	</form>
+
+	<script type="text/javascript" src="public/js/libs/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="public/js/libs/jQuery-File-Upload-master/js/vendor/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="public/js/libs/jQuery-File-Upload-master/js/jquery.iframe-transport.js"></script>
+	<script type="text/javascript" src="public/js/libs/jQuery-File-Upload-master/js/jquery.fileupload.js"></script>
+	<script>
+		alert("remplacer action form")
+		// adapté de :
+		// https://tutorialzine.com/2013/05/mini-ajax-file-upload-form (suppression de la dépendance de knop)
+		// utilise la version basique de : https://github.com/blueimp/jQuery-File-Upload
+		window.uploadFiles = function(){
+		    $('body').on("dragover",function(){
+		        $('.js-dropZone').addClass("dropReady");
+		    });
+		    $('body').on("dragleave",function(){
+		        $('.js-dropZone').removeClass("dragover");
+		        $('.js-dropZone').removeClass("dropReady");
+		    });
+		    $('.js-dropZone').on("dragover",function(){
+		        $(this).addClass("dragover");
+		    });
+		    $('.js-dropZone').on("dragleave",function(){
+		        $(this).removeClass("dragover");
+		    });
+		    $('.js-dropZone').on("drop",function(){
+		        console.log("drop");
+		        $('.js-dropZone').removeClass("dragover");
+		        $('.js-dropZone').removeClass("dropReady");
+		    });
+		    
+		    $('.js-fileUpload').each(function(){
+		        console.log("fileUploadInit");
+		        var $fileupload = $(this)
+		        ,   $dropzone = $fileupload.find('.js-dropZone')
+		        ,   $filesList = $fileupload.find('.js-filesList');
+		        console.log({$fileupload});
+		        console.log({$dropzone});
+		        $fileupload.fileupload({
+
+		            // This element will accept file drag/drop uploading
+		            dropZone: $dropzone,
+		        
+		            // This function is called when a file is added to the queue;
+		            // either via the browse button, or via drag/drop:
+		            add: function (e, data) {
+		                console.log("fileupload add");
+		                var $tpl = $('.js-template-filesList__item').clone().removeClass("js-template-filesList__item");
+
+		                // Append the file name and file size
+		                $tpl.find('.js-fileName').text(data.files[0].name);
+		                $tpl.find('.js-fileSize').text(formatFileSize(data.files[0].size));
+
+		                // Add the HTML to the UL element
+		                data.context = $tpl.appendTo($filesList).fadeIn();
+
+
+		                // Listen for clicks on the cancel icon
+		                $tpl.find('.js-cancelFileUpload').click(function(){
+
+		                    if($tpl.hasClass('working')){
+		                        jqXHR.abort();
+		                    }
+		                    console.log("must add AJAX to remove file");
+		                    $tpl.fadeOut(function(){
+		                        $tpl.remove();
+		                    });
+
+		                });
+
+		                // Automatically upload the file once it is added to the queue
+		                var jqXHR = data.submit();
+		            },
+		            progress: function(e, data){
+		                console.log("fileupload progress");
+		                // Calculate the completion percentage of the upload
+		                var progress = parseInt(data.loaded / data.total * 100, 10);
+
+		                if(progress == 100){
+		                    data.context.removeClass('working');
+		                }
+		            },
+
+
+		            fail:function(e, data){
+		                console.log("fileupload fail");
+		                // Something has gone wrong!
+		                data.context.addClass('error');
+		            },
+
+		            done: function (e, data) {
+		                console.log("fileupload done");
+		            }
+		        });
+		    });
+		    
+		    // Prevent the default action when a file is dropped on the window
+		    $(document).on('drop dragover', function (e) {
+		        e.preventDefault();
+		    });
+
+
+		    // Helper function that formats the file sizes
+		    function formatFileSize(bytes) {
+		        if (typeof bytes !== 'number') {
+		            return '';
+		        }
+
+		        if (bytes >= 1000000000) {
+		            return (bytes / 1000000000).toFixed(2) + ' GB';
+		        }
+
+		        if (bytes >= 1000000) {
+		            return (bytes / 1000000).toFixed(2) + ' MB';
+		        }
+
+		        return (bytes / 1000).toFixed(2) + ' KB';
+		    }
+		};
+		jQuery(function($){
+			window.uploadFiles();
+		});
+	</script>
+</body>
+</html>
